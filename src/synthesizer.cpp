@@ -3,6 +3,7 @@
 #include "../include/utilities.h"
 #include "../include/delta.h"
 
+#include <algorithm>
 #include <cassert>
 #include <cmath>
 
@@ -69,9 +70,8 @@ void Synthesizer::initialize(const Parameters &p) {
             10,
             m_audioParameters.inputSampleNoiseFrequencyCutoff,
             m_audioSampleRate);
-
-        m_filters[i].antialiasing.setCutoffFrequency(1900.0f, m_audioSampleRate);
     }
+    setInputAntialiasingCutoffBelowSimulationNyquist();
 
     m_levelingFilter.p_target = m_audioParameters.levelerTarget;
     m_levelingFilter.p_maxLevel = m_audioParameters.levelerMaxGain;
@@ -275,6 +275,16 @@ void Synthesizer::setInputSampleRate(double sampleRate) {
     if (sampleRate != m_inputSampleRate) {
         std::lock_guard<std::mutex> lock(m_lock0);
         m_inputSampleRate = sampleRate;
+        setInputAntialiasingCutoffBelowSimulationNyquist();
+    }
+}
+
+// Was a fixed 1.9 kHz cut. The input is the physics signal at
+// simulation_frequency, so only content above its Nyquist limit is aliasing.
+void Synthesizer::setInputAntialiasingCutoffBelowSimulationNyquist() {
+    const float cutoff = std::min(0.45f * m_inputSampleRate, 0.45f * m_audioSampleRate);
+    for (int i = 0; i < m_inputChannelCount; ++i) {
+        m_filters[i].antialiasing.setCutoffFrequency(cutoff, m_audioSampleRate);
     }
 }
 

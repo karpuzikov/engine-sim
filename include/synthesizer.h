@@ -85,6 +85,7 @@ class Synthesizer {
 
         void setInputSampleRate(double sampleRate);
         double getInputSampleRate() const { return m_inputSampleRate; }
+        void setInputAntialiasingCutoffBelowSimulationNyquist();
 
         int16_t renderAudio(int inputOffset);
 
