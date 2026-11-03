@@ -37,6 +37,13 @@ class PistonEngineSimulator : public Simulator {
 
         DerivativeFilter m_derivativeFilter;
 
+        // Off (default): the original signal, exhaust runner pressure divided
+        // by cylinder count and exhaust length squared. On: the sound pressure
+        // 1 m from each tailpipe, from the volume flow every cylinder pushes
+        // out, delayed by its trip through the hot exhaust (monopole source:
+        // p = rho / (4 pi r) dQ/dt). Big engines are then louder by physics.
+        bool m_physicalExhaustSound = false;
+
     protected:
         virtual void simulateStep_() override;
 
@@ -46,6 +53,7 @@ class PistonEngineSimulator : public Simulator {
         
     protected:
         virtual void writeToSynthesizer() override;
+        void writePhysicalExhaustSound();
 
     protected:
         DelayFilter *m_delayFilters;
@@ -66,6 +74,8 @@ class PistonEngineSimulator : public Simulator {
         Vehicle *m_vehicle;
 
         double *m_exhaustFlowStagingBuffer;
+        double *m_lastTailpipeVolumeFlow;
+        double m_delayFilterSampleRate;
 
         int m_fluidSimulationSteps;
 };

@@ -21,6 +21,7 @@ public:
         const int samples = static_cast<int>(std::round(delay * audioFrequency));
         const int capacity = samples + 32;
 
+        m_history.destroy();
         m_history.initialize(capacity);
         m_latencySamples = samples;
     }
