@@ -38,6 +38,7 @@ class IgnitionModule : public Part {
         void resetIgnitionEvents();
 
         double getTimingAdvance();
+        Function *getTimingCurve() const { return m_timingCurve; }
 
         bool m_enabled;
 
