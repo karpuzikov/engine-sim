@@ -492,6 +492,8 @@ public node intake_parameters {
     input runner_length: 4.0 * units.inch;
     input runner_flow_rate: k_carb(200.0);
     input velocity_decay: 0.25;
+    input supply_pressure: 1.0 * units.atm;
+    input supply_temperature: (25.0 + 273.15) * units.K;
 }
 
 private node _intake => __engine_sim__intake {
@@ -505,6 +507,8 @@ private node _intake => __engine_sim__intake {
     input throttle_gamma [float];
     input runner_length [float];
     input velocity_decay [float];
+    input supply_pressure [float];
+    input supply_temperature [float];
     alias output __out [intake_channel];
 }
 
@@ -520,6 +524,8 @@ public node intake {
     input throttle_gamma: parameters.throttle_gamma;
     input runner_length: parameters.runner_length;
     input velocity_decay: parameters.velocity_decay;
+    input supply_pressure: parameters.supply_pressure;
+    input supply_temperature: parameters.supply_temperature;
     alias output __out [_intake]:
         _intake(
             plenum_volume: plenum_volume,
@@ -531,7 +537,9 @@ public node intake {
             idle_throttle_plate_position: idle_throttle_plate_position,
             throttle_gamma: throttle_gamma,
             runner_length: runner_length,
-            velocity_decay: velocity_decay
+            velocity_decay: velocity_decay,
+            supply_pressure: supply_pressure,
+            supply_temperature: supply_temperature
         );
 }
 

@@ -38,6 +38,8 @@ namespace es_script {
             addInput("throttle_gamma", &m_throttleGammaUnused);
             addInput("runner_length", &m_parameters.RunnerLength);
             addInput("velocity_decay", &m_parameters.VelocityDecay);
+            addInput("supply_pressure", &m_parameters.SupplyPressure);
+            addInput("supply_temperature", &m_parameters.SupplyTemperature);
 
             ObjectReferenceNode<IntakeNode>::registerInputs();
         }
