@@ -286,6 +286,8 @@ void Engine::calculateDisplacement() {
         }
     }
 
+    delete[] min_s;
+    delete[] max_s;
     m_displacement = displacement;
 }
 

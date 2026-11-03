@@ -1,4 +1,5 @@
 #include "../include/compiler.h"
+#include <cstdlib>
 
 es_script::Compiler::Output *es_script::Compiler::s_output = nullptr;
 
@@ -32,7 +33,16 @@ void es_script::Compiler::initialize() {
 bool es_script::Compiler::compile(const piranha::IrPath &path) {
     bool successful = false;
 
-    std::ofstream file("error_log.log", std::ios::out);
+    // Resolve engine definitions relative to the script, not the host's cwd.
+    piranha::IrPath scriptDirectory;
+    path.getParentPath(&scriptDirectory);
+    piranha::IrPath scriptLibrary = scriptDirectory.append("../es/");
+    m_compiler->addSearchPath(scriptLibrary.toString());
+    // Write error_log.log only where a host asks (never into a game folder).
+    std::ofstream file;
+    if (const char *logPath = std::getenv("MTES_SCRIPT_LOG_PATH")) {
+        if (*logPath) file.open(logPath, std::ios::out);
+    }
     piranha::IrCompilationUnit *unit = m_compiler->compile(path);
     if (unit == nullptr) {
         file << "Can't find file: " << path.toString() << "\n";

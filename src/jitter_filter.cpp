@@ -8,7 +8,8 @@ JitterFilter::JitterFilter() {
 }
 
 JitterFilter::~JitterFilter() {
-    /* void */
+    delete[] m_history;
+    m_history = nullptr;
 }
 
 void JitterFilter::initialize(

@@ -5,6 +5,7 @@
 
 #include <algorithm>
 #include <cassert>
+#include <array>
 #include <cmath>
 
 #undef min
@@ -16,6 +17,7 @@ Synthesizer::Synthesizer() {
     m_inputBufferSize = 0;
     m_inputWriteOffset = 0.0;
     m_inputSamplesRead = 0;
+    m_latency = 0;
 
     m_audioBufferSize = 0;
 
@@ -125,6 +127,8 @@ void Synthesizer::destroy() {
     m_audioBuffer.destroy();
 
     for (int i = 0; i < m_inputChannelCount; ++i) {
+        delete[] m_inputChannels[i].transferBuffer;
+        m_inputChannels[i].transferBuffer = nullptr;
         m_inputChannels[i].data.destroy();
         m_filters[i].convolution.destroy();
     }
@@ -166,6 +170,7 @@ void Synthesizer::waitProcessed() {
 }
 
 void Synthesizer::writeInput(const double *data) {
+    std::lock_guard<std::mutex> lock(m_lock0);
     m_inputWriteOffset += (double)m_audioSampleRate / m_inputSampleRate;
     if (m_inputWriteOffset >= (double)m_inputBufferSize) {
         m_inputWriteOffset -= (double)m_inputBufferSize;
@@ -195,7 +200,7 @@ void Synthesizer::writeInput(const double *data) {
 }
 
 void Synthesizer::endInputBlock() {
-    std::unique_lock<std::mutex> lk(m_inputLock); 
+    std::unique_lock<std::mutex> lk(m_lock0); 
 
     for (int i = 0; i < m_inputChannelCount; ++i) {
         m_inputChannels[i].data.removeBeginning(m_inputSamplesRead);
@@ -225,12 +230,12 @@ void Synthesizer::renderAudio() {
     m_cv0.wait(lk0, [this] {
         const bool inputAvailable =
             m_inputChannels[0].data.size() > 0
-            && m_audioBuffer.size() < 2000;
+            && m_audioBuffer.size() < 16384;
         return !m_run || (inputAvailable && !m_processed);
     });
 
     const int n = std::min(
-        std::max(0, 2000 - (int)m_audioBuffer.size()),
+        std::max(0, 16384 - (int)m_audioBuffer.size()),
         (int)m_inputChannels[0].data.size());
 
     for (int i = 0; i < m_inputChannelCount; ++i) {
@@ -248,8 +253,18 @@ void Synthesizer::renderAudio() {
         m_filters[i].jitterFilter.setJitterScale(m_audioParameters.inputSampleNoise);
     }
 
-    for (int i = 0; i < n; ++i) {
-        m_audioBuffer.write(renderAudio(i));
+    // A 150-ms host frame needs 6615 samples: render up to two such packets
+    // per batch and publish them in small chunks under short locks.
+    std::array<int16_t, 1024> rendered;
+    for (int offset = 0; offset < n; offset += 1024) {
+        const int chunk = std::min(1024, n - offset);
+        for (int i = 0; i < chunk; ++i) {
+            rendered[i] = renderAudio(offset + i);
+        }
+        {
+            std::lock_guard<std::mutex> lock(m_lock0);
+            for (int i = 0; i < chunk; ++i) m_audioBuffer.write(rendered[i]);
+        }
     }
 
     m_cv0.notify_one();
