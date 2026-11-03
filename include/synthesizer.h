@@ -28,6 +28,9 @@ class Synthesizer {
             float levelerTarget = 30000.0f;
             float levelerMaxGain = 1.9f;
             float levelerMinGain = 0.00001f;
+            // 0: hard clip at full scale. Else |sample| above this fraction of
+            // full scale bends smoothly (tanh) toward full scale.
+            float softClipKnee = 0.0f;
         };
 
         struct Parameters {

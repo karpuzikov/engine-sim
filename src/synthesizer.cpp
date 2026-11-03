@@ -343,7 +343,12 @@ int16_t Synthesizer::renderAudio(int inputSample) {
     signal = m_antialiasing.fast_f(signal);
 
     m_levelingFilter.p_target = m_audioParameters.levelerTarget;
-    const float v_leveled = m_levelingFilter.f(signal) * m_audioParameters.volume;
+    float v_leveled = m_levelingFilter.f(signal) * m_audioParameters.volume;
+    const float knee = m_audioParameters.softClipKnee * INT16_MAX;
+    if (knee > 0 && std::abs(v_leveled) > knee) {
+        const float headroom = INT16_MAX - knee;
+        v_leveled = std::copysign(knee + headroom * std::tanh((std::abs(v_leveled) - knee) / headroom), v_leveled);
+    }
     int r_int = std::lround(v_leveled);
     if (r_int > INT16_MAX) {
         r_int = INT16_MAX;
