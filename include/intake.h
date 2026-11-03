@@ -60,6 +60,10 @@ class Intake : public Part {
         inline void setSupplyPressure(double pressure) { m_supplyPressure = pressure; }
         inline double getSupplyTemperature() const { return m_supplyTemperature; }
         inline void setSupplyTemperature(double temperature) { m_supplyTemperature = temperature; }
+        // Oxygen molecules per fuel molecule (before the fixed 0.8 enrichment).
+        // A diesel host leans this out at part load: diesels meter fuel, not air.
+        inline double getMolecularAfr() const { return m_molecularAfr; }
+        inline void setMolecularAfr(double afr) { m_molecularAfr = afr; }
 
         GasSystem m_system;
         double m_throttle;
