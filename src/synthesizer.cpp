@@ -342,6 +342,18 @@ int16_t Synthesizer::renderAudio(int inputSample) {
 
     signal = m_antialiasing.fast_f(signal);
 
+    const float ratio = m_audioParameters.compressorRatio;
+    if (ratio > 0) {
+        const double smoothing = 1.0 / (m_audioParameters.compressorSeconds * m_audioSampleRate);
+        m_compressorMeanSquare += smoothing * ((double)signal * signal - m_compressorMeanSquare);
+        const double reference = m_audioParameters.compressorReferenceRms;
+        const double level = std::sqrt(m_compressorMeanSquare) / reference;
+        const double gain = level > 0
+            ? std::min((double)m_audioParameters.compressorMaxGain, std::pow(level, 1.0 / ratio - 1.0))
+            : 1.0;
+        signal = static_cast<float>(signal * gain);
+    }
+
     m_levelingFilter.p_target = m_audioParameters.levelerTarget;
     float v_leveled = m_levelingFilter.f(signal) * m_audioParameters.volume;
     const float knee = m_audioParameters.softClipKnee * INT16_MAX;

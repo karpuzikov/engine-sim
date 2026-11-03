@@ -31,6 +31,13 @@ class Synthesizer {
             // 0: hard clip at full scale. Else |sample| above this fraction of
             // full scale bends smoothly (tanh) toward full scale.
             float softClipKnee = 0.0f;
+            // 0: off. Else a slow RMS compressor before the leveler: the
+            // output RMS is (input RMS / compressorReferenceRms)^(1/ratio)
+            // times compressorReferenceRms, over a compressorSeconds window.
+            float compressorRatio = 0.0f;
+            float compressorReferenceRms = 1.0f;
+            float compressorSeconds = 0.3f;
+            float compressorMaxGain = 30.0f;
         };
 
         struct Parameters {
@@ -99,6 +106,7 @@ class Synthesizer {
     //protected:
         ButterworthLowPassFilter<float> m_antialiasing;
         LevelingFilter m_levelingFilter;
+        double m_compressorMeanSquare = 0.0;
         InputChannel *m_inputChannels;
         AudioParameters m_audioParameters;
         int m_inputChannelCount;
