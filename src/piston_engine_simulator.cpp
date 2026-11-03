@@ -389,10 +389,10 @@ void PistonEngineSimulator::writePhysicalExhaustSound() {
         for (int i = 0; i < cylinderCount; ++i) {
             Piston *piston = m_engine->getPiston(i);
             CylinderHead *head = m_engine->getHead(piston->getCylinderBank()->getIndex());
-            const double exhaustLength =
-                head->getHeaderPrimaryLength(piston->getCylinderIndex())
-                + head->getExhaustSystem(piston->getCylinderIndex())->getLength();
-            m_delayFilters[i].initialize(exhaustLength / ExhaustGasSpeedOfSound, m_delayFilterSampleRate);
+            // Only the primary: the exhaust system's own propagation belongs to
+            // its impulse response (the host's model of the real pipe).
+            const double primaryLength = head->getHeaderPrimaryLength(piston->getCylinderIndex());
+            m_delayFilters[i].initialize(primaryLength / ExhaustGasSpeedOfSound, m_delayFilterSampleRate);
         }
     }
 

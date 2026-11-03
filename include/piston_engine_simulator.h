@@ -39,9 +39,10 @@ class PistonEngineSimulator : public Simulator {
 
         // Off (default): the original signal, exhaust runner pressure divided
         // by cylinder count and exhaust length squared. On: the sound pressure
-        // 1 m from each tailpipe, from the volume flow every cylinder pushes
-        // out, delayed by its trip through the hot exhaust (monopole source:
-        // p = rho / (4 pi r) dQ/dt). Big engines are then louder by physics.
+        // 1 m from the exhaust, from the volume flow every cylinder pushes out,
+        // delayed along its primary (monopole source: p = rho / (4 pi r) dQ/dt).
+        // The exhaust system's impulse response models the pipe to the tail.
+        // Big engines are then louder by physics.
         bool m_physicalExhaustSound = false;
 
     protected:
