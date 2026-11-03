@@ -15,6 +15,8 @@ class IgnitionModule : public Part {
             Function *timingCurve;
             double revLimit = units::rpm(6000.0);
             double limiterDuration = 0.5 * units::sec;
+            // 1 for a four-stroke, 2 for a two-stroke (a spark every revolution).
+            double sparksPerCycle = 1;
         };
 
         struct SparkPlug {
@@ -54,6 +56,7 @@ class IgnitionModule : public Part {
         double m_revLimit;
         double m_revLimitTimer;
         double m_limiterDuration;
+        int m_sparksPerCycle;
 };
 
 #endif /* ATG_ENGINE_SIM_IGNITION_MODULE_H */

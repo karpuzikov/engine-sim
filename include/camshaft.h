@@ -24,6 +24,10 @@ class Camshaft : public Part {
 
             // Base radius
             double baseRadius = units::distance(600, units::thou);
+
+            // 1 for a four-stroke; 2 makes every lobe act once per crank
+            // revolution, for two-stroke valves and piston-controlled ports.
+            double lobesPerCycle = 1;
         };
 
     public:
@@ -52,6 +56,7 @@ class Camshaft : public Part {
         double m_advance;
         double m_baseRadius;
         int m_lobes;
+        int m_lobesPerCycle;
 };
 
 #endif /* ATG_ENGINE_SIM_CAMSHAFT_H */
