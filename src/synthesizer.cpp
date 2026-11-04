@@ -355,6 +355,7 @@ int16_t Synthesizer::renderAudio(int inputSample) {
     }
 
     m_levelingFilter.p_target = m_audioParameters.levelerTarget;
+    m_levelingFilter.p_maxLevel = m_audioParameters.levelerMaxGain;
     float v_leveled = m_levelingFilter.f(signal) * m_audioParameters.volume;
     const float knee = m_audioParameters.softClipKnee * INT16_MAX;
     if (knee > 0 && std::abs(v_leveled) > knee) {
