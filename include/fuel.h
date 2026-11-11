@@ -23,6 +23,12 @@ class Fuel {
             double maxBurningEfficiency = 0.8;
             double maxTurbulenceEffect = 2.0;
             double maxDilutionEffect = 50.0;
+            // Leanest charge (oxygen molecules per fuel molecule divided by the stoichiometric ratio) that the flame can still start in.
+            // Gasoline: 1.9. A diesel burns by injection into excess air, so it sets this very large (EngineVoice patch).
+            double leanIgnitionLimit = 1.9;
+            // Relative standard deviation of each combustion's burn efficiency, on top of Engine Simulator's
+            // turbulence-gated randomness (which a fast-turbulence or very lean engine never sees). 0 = off.
+            double cycleToCycleVariation = 0.0;
             Function *turbulenceToFlameSpeedRatio = nullptr;
         };
 
@@ -39,6 +45,8 @@ class Fuel {
         inline double getMaxBurningEfficiency() const { return m_maxBurningEfficiency; }
         inline double getMaxTurbulenceEffect() const { return m_maxTurbulenceEffect; }
         inline double getMaxDilutionEffect() const { return m_maxDilutionEffect; }
+        inline double getLeanIgnitionLimit() const { return m_leanIgnitionLimit; }
+        inline double getCycleToCycleVariation() const { return m_cycleToCycleVariation; }
 
         double flameSpeed(
             double turbulence,
@@ -62,6 +70,8 @@ class Fuel {
         double m_lowEfficiencyAttenuation;
         double m_maxTurbulenceEffect;
         double m_maxDilutionEffect;
+        double m_leanIgnitionLimit;
+        double m_cycleToCycleVariation;
 
         Function *m_turbulenceToFlameSpeedRatio;
 };

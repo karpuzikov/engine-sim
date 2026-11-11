@@ -173,7 +173,7 @@ void CombustionChamber::ignite() {
         const double afr = m_system.mix().p_o2 / m_system.mix().p_fuel;
         const double equivalenceRatio = afr / m_fuel->getMolecularAfr();
         if (equivalenceRatio < 0.5) return;
-        else if (equivalenceRatio > 1.9) return;
+        else if (equivalenceRatio > m_fuel->getLeanIgnitionLimit()) return;
 
         const double idealInert = m_system.mix().p_o2 / 0.7;
         const double dilution = (m_system.mix().p_inert / idealInert) - 1;
@@ -213,6 +213,15 @@ void CombustionChamber::ignite() {
             (mixingFactor * rand_s + (1 - mixingFactor));
         m_flameEvent.efficiency =
             efficiencyAttenuation * maxBurningEfficiency;
+
+        const double cycleToCycleVariation = m_fuel->getCycleToCycleVariation();
+        if (cycleToCycleVariation > 0) {
+            // Sum of three uniforms, scaled to unit standard deviation: close to normal, bounded at +-3.
+            double unitNormal = 0;
+            for (int i = 0; i < 3; ++i) unitNormal += (double)rand() / RAND_MAX;
+            unitNormal = (unitNormal - 1.5) * 2.0;
+            m_flameEvent.efficiency *= clamp(1.0 + cycleToCycleVariation * unitNormal, 0.0, 2.0);
+        }
         m_flameEvent.flameSpeed = m_fuel->flameSpeed(
             turbulence,
             afr,

@@ -61,6 +61,8 @@ public node fuel => __engine_sim__fuel {
     input low_efficiency_attenuation [float]: 0.6;
     input max_turbulence_effect [float]: 2.0;
     input max_dilution_effect [float]: 10.0;
+    input lean_ignition_limit [float]: 1.9;
+    input cycle_to_cycle_variation [float]: 0.0;
     alias output __out [fuel_channel];
 }
 

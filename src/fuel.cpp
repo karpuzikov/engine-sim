@@ -12,6 +12,8 @@ Fuel::Fuel() {
     m_molecularAfr = 0.0;
     m_maxBurningEfficiency = 0.0;
     m_maxDilutionEffect = 0.0;
+    m_leanIgnitionLimit = 1.9;
+    m_cycleToCycleVariation = 0.0;
     m_maxTurbulenceEffect = 0.0;
     m_burningEfficiencyRandomness = 0.0;
     m_lowEfficiencyAttenuation = 0.0;
@@ -30,6 +32,8 @@ void Fuel::initialize(const Parameters &params) {
     m_burningEfficiencyRandomness = params.burningEfficiencyRandomness;
     m_maxBurningEfficiency = params.maxBurningEfficiency;
     m_maxDilutionEffect = params.maxDilutionEffect;
+    m_leanIgnitionLimit = params.leanIgnitionLimit;
+    m_cycleToCycleVariation = params.cycleToCycleVariation;
     m_maxTurbulenceEffect = params.maxTurbulenceEffect;
     m_lowEfficiencyAttenuation = params.lowEfficiencyAttenuation;
 }
@@ -53,7 +57,8 @@ double Fuel::laminarBurningVelocity(double molecularAfr, double T, double P) con
     constexpr double er_m = 1.21;
     constexpr double B_m = units::distance(30.5, units::cm) / units::sec;
     constexpr double B_er = -units::distance(54.9, units::cm) / units::sec;
-    const double er = molecularAfr / m_molecularAfr;
+    // The correlation is only valid up to the gasoline lean limit; leaner charges (diesel) keep that limit's flame speed.
+    const double er = std::fmin(molecularAfr / m_molecularAfr, 1.9);
     const double alpha = 2.4 - 0.271 * std::pow(er, 3.51);
     const double beta = -0.357 + 0.14 * std::pow(er, 2.77);
 
