@@ -53,6 +53,12 @@ class Synthesizer {
             RingBuffer<float> data;
             float *transferBuffer = nullptr;
             double lastInputSample = 0.0f;
+
+            // The physics settles into a period-3 oscillation that is heard as a whistle at
+            // simulation_frequency / 3. This notch state removes it before upsampling.
+            // shortcut: filters the symptom; the solver's period-3 mode itself is not found yet.
+            double whistleNotchInput1 = 0.0, whistleNotchInput2 = 0.0;
+            double whistleNotchOutput1 = 0.0, whistleNotchOutput2 = 0.0;
         };
 
         struct ProcessingFilters {

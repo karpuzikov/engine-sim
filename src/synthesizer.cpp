@@ -169,6 +169,21 @@ void Synthesizer::waitProcessed() {
     }
 }
 
+// RBJ notch at a third of the input (simulation) rate, Q = 6: cos(w0) = -0.5 there.
+static double removeSimulationThirdWhistle(Synthesizer::InputChannel &channel, double input) {
+    constexpr double quality = 6.0;
+    const double alpha = std::sqrt(3.0) / 2.0 / (2.0 * quality);
+    const double a0 = 1.0 + alpha;
+    const double output =
+        (input + channel.whistleNotchInput1 + channel.whistleNotchInput2
+            - channel.whistleNotchOutput1 - (1.0 - alpha) * channel.whistleNotchOutput2) / a0;
+    channel.whistleNotchInput2 = channel.whistleNotchInput1;
+    channel.whistleNotchInput1 = input;
+    channel.whistleNotchOutput2 = channel.whistleNotchOutput1;
+    channel.whistleNotchOutput1 = output;
+    return output;
+}
+
 void Synthesizer::writeInput(const double *data) {
     std::lock_guard<std::mutex> lock(m_lock0);
     m_inputWriteOffset += (double)m_audioSampleRate / m_inputSampleRate;
@@ -178,6 +193,7 @@ void Synthesizer::writeInput(const double *data) {
 
     for (int i = 0; i < m_inputChannelCount; ++i) {
         RingBuffer<float> &buffer = m_inputChannels[i].data;
+        const double inputSample = removeSimulationThirdWhistle(m_inputChannels[i], data[i]);
         const double lastInputSample = m_inputChannels[i].lastInputSample;
         const size_t baseIndex = buffer.writeIndex();
         const double distance =
@@ -188,12 +204,12 @@ void Synthesizer::writeInput(const double *data) {
             if (s >= m_inputBufferSize) s -= m_inputBufferSize;
 
             const double f = s / distance;
-            const double sample = lastInputSample * (1 - f) + data[i] * f;
+            const double sample = lastInputSample * (1 - f) + inputSample * f;
 
             buffer.write(m_filters[i].antialiasing.fast_f(static_cast<float>(sample)));
         }
 
-        m_inputChannels[i].lastInputSample = data[i];
+        m_inputChannels[i].lastInputSample = inputSample;
     }
 
     m_lastInputSampleOffset = m_inputWriteOffset;
