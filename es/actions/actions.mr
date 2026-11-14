@@ -216,6 +216,33 @@ public node harmonic_cam_lobe {
     )    
 }
 
+public node _generate_piston_port_lobe => __engine_sim__generate_piston_port_lobe {
+    input stroke [float];
+    input rod_length [float];
+    input open_before_bdc [float];
+    input steps [int];
+    input function [function];
+}
+
+// Two-stroke port opened and closed by the piston, as a lobe profile for a
+// camshaft with lobes_per_cycle: 2 placed at the cylinder's bottom dead center.
+public node piston_port_lobe {
+    input stroke;
+    input rod_length;
+    input open_before_bdc;
+    input steps: 100;
+    alias output __out: generated_function;
+
+    function generated_function()
+    _generate_piston_port_lobe(
+        stroke: stroke,
+        rod_length: rod_length,
+        open_before_bdc: open_before_bdc,
+        steps: steps,
+        function: generated_function
+    )
+}
+
 public node set_vehicle => __engine_sim__set_vehicle {
     input vehicle [vehicle];
 }

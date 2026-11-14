@@ -166,14 +166,30 @@ bool CombustionChamber::popLitLastFrame() {
     return lit;
 }
 
+void CombustionChamber::injectFuel(double fuelMass) {
+    if (fuelMass <= 0) return;
+
+    GasSystem::Mix fuelOnly;
+    fuelOnly.p_fuel = 1.0;
+    fuelOnly.p_inert = 0.0;
+    fuelOnly.p_o2 = 0.0;
+    m_system.gainN(fuelMass / m_fuel->getMolecularMass(), m_system.kineticEnergyPerMol(), fuelOnly);
+}
+
 void CombustionChamber::ignite() {
     if (!m_lit) {
         if (m_system.mix().p_fuel == 0) return;
 
+        // A compression-ignition charge lights only in hot enough air and burns
+        // as a diffusion flame at the spray's edge, so no lean limit applies.
+        const bool compressionIgnition = m_engine->getIgnitionModule()->isCompressionIgnition();
+        if (compressionIgnition
+            && m_system.temperature() < m_engine->getIgnitionModule()->getAutoignitionTemperature()) return;
+
         const double afr = m_system.mix().p_o2 / m_system.mix().p_fuel;
         const double equivalenceRatio = afr / m_fuel->getMolecularAfr();
         if (equivalenceRatio < 0.5) return;
-        else if (equivalenceRatio > 1.9) return;
+        else if (equivalenceRatio > 1.9 && !compressionIgnition) return;
 
         const double idealInert = m_system.mix().p_o2 / 0.7;
         const double dilution = (m_system.mix().p_inert / idealInert) - 1;
@@ -215,7 +231,7 @@ void CombustionChamber::ignite() {
             efficiencyAttenuation * maxBurningEfficiency;
         m_flameEvent.flameSpeed = m_fuel->flameSpeed(
             turbulence,
-            afr,
+            compressionIgnition ? std::fmin(afr, m_fuel->getMolecularAfr()) : afr,
             m_system.temperature(),
             m_system.pressure(),
             calculateFiringPressure(),

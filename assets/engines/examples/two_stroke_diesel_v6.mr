@@ -1,0 +1,198 @@
+import "engine_sim.mr"
+
+// Example: a 9.0 L two-stroke V6 diesel with a blower (123 x 127 mm, 60 degree V, like a Detroit Diesel 6V92).
+// Uniflow scavenging: the blower pushes air in through ports the piston uncovers near bottom dead center,
+// exhaust leaves through cam-driven valves in the head. Every cylinder fires every revolution.
+// Port and valve timings are typical values, not measured ones.
+
+units units()
+constants constants()
+impulse_response_library ir_lib()
+
+private node wires {
+    output wire1: ignition_wire();
+    output wire2: ignition_wire();
+    output wire3: ignition_wire();
+    output wire4: ignition_wire();
+    output wire5: ignition_wire();
+    output wire6: ignition_wire();
+}
+
+label cycle(2 * 360 * units.deg)
+
+public node two_stroke_diesel_v6 {
+    alias output __out: engine;
+    wires wires()
+
+    engine engine(
+        name: "Two-stroke diesel V6 9.0 L (example)",
+        starter_torque: 500 * units.lb_ft,
+        starter_speed: 200 * units.rpm,
+        redline: 2100 * units.rpm,
+        fuel: diesel_fuel(),
+        simulation_frequency: 20000
+    )
+
+    label stroke(127 * units.mm)
+    label bore(123 * units.mm)
+    label rod_length(254 * units.mm)
+    label compression_height(75 * units.mm)
+    label compression_ratio(17.0)
+
+    crankshaft c0(
+        throw: stroke / 2,
+        flywheel_mass: 50 * units.kg,
+        mass: 80 * units.kg,
+        friction_torque: 50 * units.lb_ft,
+        moment_of_inertia: 2.5,
+        position_x: 0.0,
+        position_y: 0.0,
+        tdc: 60 * units.deg
+    )
+
+    // Each journal at its cylinder's firing angle, shifted by its bank angle.
+    rod_journal rj1(angle: 0.0 * units.deg)
+    rod_journal rj2(angle: 240.0 * units.deg)
+    rod_journal rj3(angle: 120.0 * units.deg)
+    rod_journal rj4(angle: 0.0 * units.deg)
+    rod_journal rj5(angle: 240.0 * units.deg)
+    rod_journal rj6(angle: 120.0 * units.deg)
+    c0.add_rod_journal(rj1).add_rod_journal(rj2).add_rod_journal(rj3).add_rod_journal(rj4).add_rod_journal(rj5).add_rod_journal(rj6)
+
+    piston_parameters piston_params(
+        mass: 3.5 * units.kg,
+        compression_height: compression_height,
+        wrist_pin_position: 0.0,
+        displacement: 0.0
+    )
+
+    connecting_rod_parameters cr_params(
+        mass: 4.0 * units.kg,
+        moment_of_inertia: rod_moment_of_inertia(mass: 4.0 * units.kg, length: rod_length),
+        center_of_mass: 0.0,
+        length: rod_length
+    )
+
+    cylinder_bank_parameters bank_params(
+        bore: bore,
+        deck_height: stroke / 2 + rod_length + compression_height
+    )
+
+    // Roots blower: air arrives at the ports above atmospheric pressure.
+    intake intake(
+        plenum_volume: 10.0 * units.L,
+        plenum_cross_section_area: 100.0 * units.cm2,
+        intake_flow_rate: k_carb(3000.0),
+        runner_flow_rate: k_carb(600.0),
+        idle_flow_rate: k_carb(0.0),
+        idle_throttle_plate_position: 0.99,
+        supply_pressure: 1.5 * units.atm
+    )
+
+    exhaust_system_parameters es_params(
+        outlet_flow_rate: k_carb(1500.0),
+        primary_tube_length: 15.0 * units.inch,
+        primary_flow_rate: k_carb(500.0),
+        velocity_decay: 1.0,
+        volume: 100.0 * units.L
+    )
+    exhaust_system exhaust0(es_params, audio_volume: 1.0, impulse_response: ir_lib.default_0)
+    exhaust_system exhaust1(es_params, audio_volume: 1.0, impulse_response: ir_lib.default_0)
+
+    cylinder_bank b0(bank_params, angle: -30.0 * units.deg)
+    b0
+        .add_cylinder(piston: piston(piston_params, blowby: 0), connecting_rod: connecting_rod(cr_params), rod_journal: rj1, intake: intake, exhaust_system: exhaust0, ignition_wire: wires.wire1)
+        .add_cylinder(piston: piston(piston_params, blowby: 0), connecting_rod: connecting_rod(cr_params), rod_journal: rj2, intake: intake, exhaust_system: exhaust0, ignition_wire: wires.wire2)
+        .add_cylinder(piston: piston(piston_params, blowby: 0), connecting_rod: connecting_rod(cr_params), rod_journal: rj3, intake: intake, exhaust_system: exhaust0, ignition_wire: wires.wire3)
+    engine.add_cylinder_bank(b0)
+    cylinder_bank b1(bank_params, angle: 30.0 * units.deg)
+    b1
+        .add_cylinder(piston: piston(piston_params, blowby: 0), connecting_rod: connecting_rod(cr_params), rod_journal: rj4, intake: intake, exhaust_system: exhaust1, ignition_wire: wires.wire4)
+        .add_cylinder(piston: piston(piston_params, blowby: 0), connecting_rod: connecting_rod(cr_params), rod_journal: rj5, intake: intake, exhaust_system: exhaust1, ignition_wire: wires.wire5)
+        .add_cylinder(piston: piston(piston_params, blowby: 0), connecting_rod: connecting_rod(cr_params), rod_journal: rj6, intake: intake, exhaust_system: exhaust1, ignition_wire: wires.wire6)
+    engine.add_cylinder_bank(b1)
+    engine.add_crankshaft(c0)
+
+    // Intake ports open 48 degrees before bottom dead center; exhaust valves open about
+    // 90 degrees before it and close about 60 degrees after (lobe centered 15 degrees before it).
+    camshaft_parameters per_revolution(advance: 0 * units.deg, base_radius: 1.0 * units.inch, lobes_per_cycle: 2)
+    harmonic_cam_lobe exhaust_lobe(duration_at_50_thou: 140 * units.deg, gamma: 1.0, lift: 350 * units.thou, steps: 100)
+    camshaft ports0(per_revolution, lobe_profile: piston_port_lobe(stroke: stroke, rod_length: rod_length, open_before_bdc: 48 * units.deg))
+    camshaft exhaust_valves0(per_revolution, lobe_profile: exhaust_lobe)
+    ports0
+        .add_lobe((0 + 180) * units.deg)
+        .add_lobe((240 + 180) * units.deg)
+        .add_lobe((120 + 180) * units.deg)
+    exhaust_valves0
+        .add_lobe((0 + 165) * units.deg)
+        .add_lobe((240 + 165) * units.deg)
+        .add_lobe((120 + 165) * units.deg)
+    b0.set_cylinder_head(
+        generic_small_engine_head(
+            chamber_volume: (constants.pi / 4 * bore * bore * stroke) / (compression_ratio - 1),
+            flow_attenuation: 2.3,
+            intake_camshaft: ports0,
+            exhaust_camshaft: exhaust_valves0
+        )
+    )
+    camshaft ports1(per_revolution, lobe_profile: piston_port_lobe(stroke: stroke, rod_length: rod_length, open_before_bdc: 48 * units.deg))
+    camshaft exhaust_valves1(per_revolution, lobe_profile: exhaust_lobe)
+    ports1
+        .add_lobe((300 + 180) * units.deg)
+        .add_lobe((180 + 180) * units.deg)
+        .add_lobe((60 + 180) * units.deg)
+    exhaust_valves1
+        .add_lobe((300 + 165) * units.deg)
+        .add_lobe((180 + 165) * units.deg)
+        .add_lobe((60 + 165) * units.deg)
+    b1.set_cylinder_head(
+        generic_small_engine_head(
+            chamber_volume: (constants.pi / 4 * bore * bore * stroke) / (compression_ratio - 1),
+            flow_attenuation: 2.3,
+            intake_camshaft: ports1,
+            exhaust_camshaft: exhaust_valves1, flip_display: true
+        )
+    )
+
+    function injection_timing(500 * units.rpm)
+    injection_timing
+        .add_sample(0 * units.rpm, 4 * units.deg)
+        .add_sample(500 * units.rpm, 4 * units.deg)
+        .add_sample(1000 * units.rpm, 8 * units.deg)
+        .add_sample(2000 * units.rpm, 12 * units.deg)
+        .add_sample(2500 * units.rpm, 12 * units.deg)
+
+    engine.add_ignition_module(
+        diesel_injection_pump(
+            timing_curve: injection_timing,
+            max_fuel_per_injection: 150 * units.g / 1000,
+            idle_speed: 600 * units.rpm,
+            governed_speed: 2100 * units.rpm,
+            firings_per_cycle: 2
+        )
+            .connect_wire(wires.wire1, (0 / 720.0) * cycle)
+            .connect_wire(wires.wire6, (60 / 720.0) * cycle)
+            .connect_wire(wires.wire3, (120 / 720.0) * cycle)
+            .connect_wire(wires.wire5, (180 / 720.0) * cycle)
+            .connect_wire(wires.wire2, (240 / 720.0) * cycle)
+            .connect_wire(wires.wire4, (300 / 720.0) * cycle)
+    )
+}
+
+private node two_stroke_diesel_v6_vehicle {
+    alias output __out:
+        vehicle(mass: 14000 * units.kg, drag_coefficient: 0.6, cross_sectional_area: (100 * units.inch) * (120 * units.inch),
+                diff_ratio: 4.1, tire_radius: 20 * units.inch, rolling_resistance: 0.006 * 14000 * units.kg * 9.81);
+}
+
+private node two_stroke_diesel_v6_transmission {
+    alias output __out:
+        transmission(max_clutch_torque: 2000 * units.lb_ft)
+        .add_gear(3.5).add_gear(2.0).add_gear(1.4).add_gear(1.0).add_gear(0.8);
+}
+
+public node main {
+    set_engine(two_stroke_diesel_v6())
+    set_vehicle(two_stroke_diesel_v6_vehicle())
+    set_transmission(two_stroke_diesel_v6_transmission())
+}

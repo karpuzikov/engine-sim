@@ -6,6 +6,23 @@
 To get the newest releases of the game, [click here](https://github.com/Engine-Simulator/engine-sim-community-edition).
 ---
 
+## Diesel and two-stroke engines (this fork)
+
+This fork adds compression ignition and two-stroke cycles to the simulation. Existing engine scripts behave as before.
+
+**Diesel** (example: `assets/engines/examples/diesel_i6.mr`)
+- `diesel_fuel()`: diesel's mass, heat and oxygen demand.
+- `diesel_injection_pump(timing_curve, max_fuel_per_injection, idle_speed, governed_speed)` replaces the ignition module. The timing curve gives the start of injection; fuel is injected into the cylinder and burns only if the compressed air is hotter than `autoignition_temperature` (default 210 °C, diesel's autoignition temperature).
+- The pedal meters fuel, not air: the intake has no throttle plate and carries air only. An idle governor holds `idle_speed`; a maximum-speed governor cuts fuel above `governed_speed`.
+
+**Two-stroke** (examples: `two_stroke_single.mr`, a piston-ported scooter engine; `two_stroke_diesel_v6.mr`, a blower-scavenged uniflow diesel)
+- `firings_per_cycle: 2` on the ignition module or injection pump fires every cylinder every revolution.
+- `lobes_per_cycle: 2` on a camshaft opens its valves every revolution.
+- `piston_port_lobe(stroke, rod_length, open_before_bdc)` describes a port the piston uncovers near bottom dead center, as a lobe for such a camshaft. Place it at the cylinder's bottom dead center (`add_lobe(firing angle + 180 deg)`).
+- Intake `supply_pressure` feeds the ports from a blower or a pumping crankcase.
+
+Not modelled: the crankcase as a separate pumping volume (its pressure is given as `supply_pressure`), and fuel evaporation cooling.
+
 ## What is this?
 
 This is a real-time internal combustion engine simulation **designed specifically to produce engine audio and simulate engine response characteristics.** It is NOT a scientific tool and cannot be expected to provide accurate figures for the purposes of engineering or engine tuning.

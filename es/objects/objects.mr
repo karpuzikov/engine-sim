@@ -458,12 +458,14 @@ public node camshaft_parameters {
     input advance: 0.0;
     input base_radius: 0.0;
     input lobe_profile: function();
+    input lobes_per_cycle: 1;
 }
 
 private node _camshaft => __engine_sim__camshaft {
     input advance [float];
     input base_radius [float];
     input lobe_profile [function];
+    input lobes_per_cycle [float];
     alias output __out [camshaft_channel];
 }
 
@@ -472,11 +474,13 @@ public node camshaft {
     input advance: parameters.advance;
     input base_radius: parameters.base_radius;
     input lobe_profile: parameters.lobe_profile;
+    input lobes_per_cycle: parameters.lobes_per_cycle;
     alias output __out [_camshaft]:
         _camshaft(
             advance: advance,
             base_radius: base_radius,
-            lobe_profile: lobe_profile
+            lobe_profile: lobe_profile,
+            lobes_per_cycle: lobes_per_cycle
         );
 }
 
@@ -492,6 +496,8 @@ public node intake_parameters {
     input runner_length: 4.0 * units.inch;
     input runner_flow_rate: k_carb(200.0);
     input velocity_decay: 0.25;
+    input supply_pressure: 1.0 * units.atm;
+    input supply_temperature: (25.0 + 273.15) * units.K;
 }
 
 private node _intake => __engine_sim__intake {
@@ -505,6 +511,8 @@ private node _intake => __engine_sim__intake {
     input throttle_gamma [float];
     input runner_length [float];
     input velocity_decay [float];
+    input supply_pressure [float];
+    input supply_temperature [float];
     alias output __out [intake_channel];
 }
 
@@ -520,6 +528,8 @@ public node intake {
     input throttle_gamma: parameters.throttle_gamma;
     input runner_length: parameters.runner_length;
     input velocity_decay: parameters.velocity_decay;
+    input supply_pressure: parameters.supply_pressure;
+    input supply_temperature: parameters.supply_temperature;
     alias output __out [_intake]:
         _intake(
             plenum_volume: plenum_volume,
@@ -531,7 +541,9 @@ public node intake {
             idle_throttle_plate_position: idle_throttle_plate_position,
             throttle_gamma: throttle_gamma,
             runner_length: runner_length,
-            velocity_decay: velocity_decay
+            velocity_decay: velocity_decay,
+            supply_pressure: supply_pressure,
+            supply_temperature: supply_temperature
         );
 }
 
@@ -593,7 +605,35 @@ public node ignition_module => __engine_sim__ignition_module {
     input timing_curve [function];
     input rev_limit [float]: 7000.0 * units.rpm;
     input limiter_duration [float]: 0.5 * units.sec;
+    input firings_per_cycle [float]: 1;
+    input compression_ignition [bool]: false;
+    input max_fuel_per_injection [float]: 0.0;
+    input idle_speed [float]: 0.0;
+    input governed_speed [float]: 0.0;
+    input autoignition_temperature [float]: (210.0 + 273.15) * units.K;
     alias output __out [ignition_module_channel];
+}
+
+// Diesel fuel injection pump: injects at the timing curve's crank angle, the
+// charge lights by compression. The pedal meters fuel; an idle governor holds
+// idle_speed and a maximum-speed governor cuts fuel above governed_speed.
+public node diesel_injection_pump {
+    input timing_curve;
+    input max_fuel_per_injection;
+    input idle_speed: 700 * units.rpm;
+    input governed_speed: 2400 * units.rpm;
+    input firings_per_cycle: 1;
+    input autoignition_temperature: (210.0 + 273.15) * units.K;
+    alias output __out:
+        ignition_module(
+            timing_curve: timing_curve,
+            rev_limit: 100000 * units.rpm,
+            firings_per_cycle: firings_per_cycle,
+            compression_ignition: true,
+            max_fuel_per_injection: max_fuel_per_injection,
+            idle_speed: idle_speed,
+            governed_speed: governed_speed,
+            autoignition_temperature: autoignition_temperature);
 }
 
 public node ignition_wire => __engine_sim__ignition_wire {

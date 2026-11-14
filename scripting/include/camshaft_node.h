@@ -43,6 +43,7 @@ namespace es_script {
         virtual void registerInputs() {
             addInput("advance", &m_parameters.advance);
             addInput("base_radius", &m_parameters.baseRadius);
+            addInput("lobes_per_cycle", &m_parameters.lobesPerCycle);
             addInput("lobe_profile", &m_lobeProfile);
 
             ObjectReferenceNode<CamshaftNode>::registerInputs();

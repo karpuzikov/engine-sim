@@ -15,6 +15,9 @@ Intake::Intake() {
     m_totalFuelInjected = 0;
     m_molecularAfr = 0;
     m_runnerLength = 0;
+    m_supplyPressure = units::pressure(1.0, units::atm);
+    m_premixedFuel = true;
+    m_supplyTemperature = units::celcius(25.0);
 }
 
 Intake::~Intake() {
@@ -51,6 +54,8 @@ void Intake::initialize(Parameters &params) {
     m_crossSectionArea = params.CrossSectionArea;
     m_velocityDecay = params.VelocityDecay;
     m_runnerFlowRate = params.RunnerFlowRate;
+    m_supplyPressure = params.SupplyPressure;
+    m_supplyTemperature = params.SupplyTemperature;
 }
 
 void Intake::destroy() {
@@ -74,6 +79,13 @@ void Intake::process(double dt) {
     fuelMix.p_inert = p_idle_air * 0.75;
     fuelMix.p_o2 = p_idle_air * 0.25;
 
+    if (!m_premixedFuel) {
+        // Fuel is injected into the cylinders: the intake carries air only.
+        fuelAirMix.p_fuel = fuelMix.p_fuel = 0.0;
+        fuelAirMix.p_inert = fuelMix.p_inert = 0.75;
+        fuelAirMix.p_o2 = fuelMix.p_o2 = 0.25;
+    }
+
     const double throttle = getThrottlePlatePosition();
     const double flowAttenuation = std::cos(throttle * constants::pi / 2);
 
@@ -84,13 +96,13 @@ void Intake::process(double dt) {
     flowParams.direction_y = -1.0;
     flowParams.dt = dt;
 
-    m_atmosphere.reset(units::pressure(1.0, units::atm), units::celcius(25.0), fuelAirMix);
+    m_atmosphere.reset(m_supplyPressure, m_supplyTemperature, fuelAirMix);
     flowParams.system_0 = &m_atmosphere;
     flowParams.system_1 = &m_system;
     flowParams.k_flow = flowAttenuation * m_inputFlowK;
     m_flow = m_system.flow(flowParams);
 
-    m_atmosphere.reset(units::pressure(1.0, units::atm), units::celcius(25.0), fuelMix);
+    m_atmosphere.reset(m_supplyPressure, m_supplyTemperature, fuelMix);
     flowParams.system_0 = &m_atmosphere;
     flowParams.system_1 = &m_system;
     flowParams.k_flow = m_idleFlowK;

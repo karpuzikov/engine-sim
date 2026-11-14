@@ -1,0 +1,19 @@
+private import "engine_sim.mr"
+
+units units()
+
+// Diesel fuel. Engine Simulator burns every fuel with octane's oxygen ratio
+// (12.5 mol O2 per mol fuel), so a "mole" of this fuel is the amount of
+// diesel (about C12H23, 167 g/mol, 17.75 mol O2 per mol) that 12.5 mol of O2
+// burns: 167 * 12.5 / 17.75 = 117.6 g. Mass, oxygen demand and heat release
+// per kg of air then match diesel's.
+public node diesel_fuel {
+    alias output __out:
+        fuel(
+            name: "Diesel",
+            molecular_mass: 117.6 * units.g,
+            energy_density: 42.8 * units.kJ / units.g,
+            density: 0.832 * units.kg / units.L,
+            molecular_afr: 12.5
+        );
+}

@@ -4,6 +4,8 @@
 #include "../include/constants.h"
 #include "../include/units.h"
 
+#include <algorithm>
+
 #include <cmath>
 #include <assert.h>
 
@@ -29,6 +31,7 @@ void Camshaft::initialize(const Parameters &params) {
     m_lobeProfile = params.lobeProfile;
     m_advance = params.advance;
     m_baseRadius = params.baseRadius;
+    m_lobesPerCycle = static_cast<int>(params.lobesPerCycle);
 }
 
 void Camshaft::destroy() {
@@ -39,7 +42,12 @@ void Camshaft::destroy() {
 }
 
 double Camshaft::valveLift(int lobe) const {
-    return sampleLobe(getAngle() + m_lobeAngles[lobe]);
+    double lift = 0;
+    for (int i = 0; i < m_lobesPerCycle; ++i) {
+        const double repeat = i * 2 * constants::pi / m_lobesPerCycle;
+        lift = std::max(lift, sampleLobe(getAngle() + m_lobeAngles[lobe] + repeat));
+    }
+    return lift;
 }
 
 double Camshaft::sampleLobe(double theta) const {

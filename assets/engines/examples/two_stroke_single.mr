@@ -1,0 +1,139 @@
+import "engine_sim.mr"
+
+// Example: a 150 cc piston-ported two-stroke single (57.8 x 57 mm, like a scooter engine).
+// The piston opens and closes the exhaust and transfer ports; the cylinder fires every revolution.
+
+units units()
+constants constants()
+impulse_response_library ir_lib()
+
+private node wires {
+    output wire1: ignition_wire();
+}
+
+label cycle(2 * 360 * units.deg)
+
+public node two_stroke_single {
+    alias output __out: engine;
+
+    wires wires()
+
+    engine engine(
+        name: "Two-stroke single 150 cc (example)",
+        starter_torque: 15 * units.lb_ft,
+        starter_speed: 800 * units.rpm,
+        redline: 7000 * units.rpm,
+        fuel: fuel(),
+        simulation_frequency: 40000
+    )
+
+    label stroke(57 * units.mm)
+    label bore(57.8 * units.mm)
+    label rod_length(105 * units.mm)
+    label compression_height(25 * units.mm)
+    label compression_ratio(8.2)
+
+    crankshaft c0(
+        throw: stroke / 2,
+        flywheel_mass: 3 * units.kg,
+        mass: 2 * units.kg,
+        friction_torque: 0.5 * units.lb_ft,
+        moment_of_inertia: 0.02,
+        position_x: 0.0,
+        position_y: 0.0,
+        tdc: 90 * units.deg
+    )
+
+    rod_journal rj0(angle: 0 * units.deg)
+    c0.add_rod_journal(rj0)
+
+    piston_parameters piston_params(
+        mass: 150 * units.g,
+        compression_height: compression_height,
+        wrist_pin_position: 0.0,
+        displacement: 0.0
+    )
+
+    connecting_rod_parameters cr_params(
+        mass: 120 * units.g,
+        moment_of_inertia: rod_moment_of_inertia(mass: 120 * units.g, length: rod_length),
+        center_of_mass: 0.0,
+        length: rod_length
+    )
+
+    cylinder_bank_parameters bank_params(
+        bore: bore,
+        deck_height: stroke / 2 + rod_length + compression_height
+    )
+
+    // The crankcase pumps the charge into the transfer ports: a supply above atmospheric.
+    intake intake(
+        plenum_volume: 0.5 * units.L,
+        plenum_cross_section_area: 5.0 * units.cm2,
+        intake_flow_rate: k_carb(60.0),
+        runner_flow_rate: k_carb(60.0),
+        idle_flow_rate: k_carb(0.0),
+        idle_throttle_plate_position: 0.995,
+        supply_pressure: 1.3 * units.atm
+    )
+
+    exhaust_system_parameters es_params(
+        outlet_flow_rate: k_carb(60.0),
+        primary_tube_length: 20.0 * units.inch,
+        primary_flow_rate: k_carb(60.0),
+        velocity_decay: 1.0,
+        volume: 3.0 * units.L
+    )
+    exhaust_system exhaust0(es_params, audio_volume: 1.0, impulse_response: ir_lib.default_0)
+
+    cylinder_bank b0(bank_params, angle: 0)
+    b0.add_cylinder(piston: piston(piston_params, blowby: 0), connecting_rod: connecting_rod(cr_params), rod_journal: rj0,
+                    intake: intake, exhaust_system: exhaust0, ignition_wire: wires.wire1)
+    engine.add_cylinder_bank(b0)
+    engine.add_crankshaft(c0)
+
+    // Ports: exhaust opens 85 degrees before bottom dead center, transfers 60 degrees before.
+    camshaft_parameters port_params(advance: 0 * units.deg, base_radius: 0.5 * units.inch, lobes_per_cycle: 2)
+    camshaft transfer_ports(port_params, lobe_profile: piston_port_lobe(stroke: stroke, rod_length: rod_length, open_before_bdc: 60 * units.deg))
+    camshaft exhaust_port(port_params, lobe_profile: piston_port_lobe(stroke: stroke, rod_length: rod_length, open_before_bdc: 85 * units.deg))
+    transfer_ports.add_lobe(180 * units.deg)
+    exhaust_port.add_lobe(180 * units.deg)
+
+    b0.set_cylinder_head(
+        generic_small_engine_head(
+            chamber_volume: (constants.pi / 4 * bore * bore * stroke) / (compression_ratio - 1),
+            flow_attenuation: 0.5,
+            intake_camshaft: transfer_ports,
+            exhaust_camshaft: exhaust_port
+        )
+    )
+
+    function timing_curve(1000 * units.rpm)
+    timing_curve
+        .add_sample(0 * units.rpm, 15 * units.deg)
+        .add_sample(1000 * units.rpm, 15 * units.deg)
+        .add_sample(7000 * units.rpm, 22 * units.deg)
+
+    engine.add_ignition_module(
+        ignition_module(timing_curve: timing_curve, rev_limit: 7000 * units.rpm, firings_per_cycle: 2)
+            .connect_wire(wires.wire1, 0 * cycle)
+    )
+}
+
+private node two_stroke_single_vehicle {
+    alias output __out:
+        vehicle(mass: 200 * units.kg, drag_coefficient: 0.6, cross_sectional_area: (30 * units.inch) * (50 * units.inch),
+                diff_ratio: 1.0, tire_radius: 5 * units.inch, rolling_resistance: 0.015 * 200 * units.kg * 9.81);
+}
+
+private node two_stroke_single_transmission {
+    alias output __out:
+        transmission(max_clutch_torque: 30 * units.lb_ft)
+        .add_gear(11.0).add_gear(7.5).add_gear(5.5).add_gear(4.4);
+}
+
+public node main {
+    set_engine(two_stroke_single())
+    set_vehicle(two_stroke_single_vehicle())
+    set_transmission(two_stroke_single_transmission())
+}

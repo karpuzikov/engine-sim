@@ -31,6 +31,12 @@ namespace es_script {
             params.timingCurve = m_timingCurve->generate(context);
             params.cylinderCount = engine->getCylinderCount();
             params.limiterDuration = m_limiterDuration;
+            params.firingsPerCycle = m_firingsPerCycle;
+            params.compressionIgnition = m_compressionIgnition;
+            params.maxFuelPerInjection = m_maxFuelPerInjection;
+            params.idleSpeed = m_idleSpeed;
+            params.governedSpeed = m_governedSpeed;
+            params.autoignitionTemperature = m_autoignitionTemperature;
             engine->getIgnitionModule()->initialize(params);
 
             for (const Post &post : m_posts) {
@@ -56,6 +62,12 @@ namespace es_script {
             addInput("timing_curve", &m_timingCurve);
             addInput("rev_limit", &m_revLimit);
             addInput("limiter_duration", &m_limiterDuration);
+            addInput("firings_per_cycle", &m_firingsPerCycle);
+            addInput("compression_ignition", &m_compressionIgnition);
+            addInput("max_fuel_per_injection", &m_maxFuelPerInjection);
+            addInput("idle_speed", &m_idleSpeed);
+            addInput("governed_speed", &m_governedSpeed);
+            addInput("autoignition_temperature", &m_autoignitionTemperature);
 
             ObjectReferenceNode<IgnitionModuleNode>::registerInputs();
         }
@@ -70,6 +82,12 @@ namespace es_script {
         double m_revLimit = 0.0;
         FunctionNode *m_timingCurve = nullptr;
         double m_limiterDuration = 0.0;
+        double m_firingsPerCycle = 1;
+        bool m_compressionIgnition = false;
+        double m_maxFuelPerInjection = 0.0;
+        double m_idleSpeed = 0.0;
+        double m_governedSpeed = 0.0;
+        double m_autoignitionTemperature = 0.0;
         std::vector<Post> m_posts;
     };
 

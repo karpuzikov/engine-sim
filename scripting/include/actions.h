@@ -470,6 +470,59 @@ namespace es_script {
         FunctionNode *m_function = nullptr;
     };
 
+    // Two-stroke port: the "lift" is how much of the port the piston uncovers.
+    // The port starts to open open_before_bdc (crank angle) before bottom dead
+    // center and closes as far after it. Sampled in camshaft angle like
+    // harmonic_cam_lobe; use with a camshaft of lobes_per_cycle 2.
+    class GeneratePistonPortLobeNode : public Node {
+    public:
+        GeneratePistonPortLobeNode() { /* void */ }
+        virtual ~GeneratePistonPortLobeNode() { /* void */ }
+
+    protected:
+        virtual void registerInputs() {
+            addInput("stroke", &m_stroke);
+            addInput("rod_length", &m_rodLength);
+            addInput("open_before_bdc", &m_openBeforeBdc);
+            addInput("steps", &m_steps);
+            addInput("function", &m_function, InputTarget::Type::Object);
+
+            Node::registerInputs();
+        }
+
+        virtual void _evaluate() {
+            readAllInputs();
+
+            const double r = m_stroke / 2;
+            const double l = m_rodLength;
+            auto pistonDropFromTdc = [r, l](double crankAngleFromTdc) {
+                const double s = std::sin(crankAngleFromTdc);
+                return r + l - (r * std::cos(crankAngleFromTdc) + std::sqrt(l * l - r * r * s * s));
+            };
+
+            const double portTop = pistonDropFromTdc(constants::pi - m_openBeforeBdc);
+            const double extents = m_openBeforeBdc / 2;  // camshaft angle
+            const double step = extents / (m_steps - 1.0);
+            for (int i = 0; i < m_steps; ++i) {
+                const double x = i * step;
+                const double uncovered = std::fmax(0.0, pistonDropFromTdc(constants::pi - 2 * x) - portTop);
+                m_function->addSample(x, uncovered);
+                if (i > 0) m_function->addSample(-x, uncovered);
+            }
+            m_function->addSample(extents + step, 0.0);
+            m_function->addSample(-extents - step, 0.0);
+
+            m_function->setFilterRadius(step);
+        }
+
+    protected:
+        double m_stroke = 0.0;
+        double m_rodLength = 0.0;
+        double m_openBeforeBdc = 0.0;
+        int m_steps = 100;
+        FunctionNode *m_function = nullptr;
+    };
+
     class AddGearNode : public Node {
     public:
         AddGearNode() { /* void */ }

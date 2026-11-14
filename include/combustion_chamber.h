@@ -65,6 +65,7 @@ class CombustionChamber : public atg_scs::ForceGenerator {
         bool popLitLastFrame();
 
         void ignite();
+        void injectFuel(double fuelMass);
         void update(double dt);
         void flow(double dt);
 

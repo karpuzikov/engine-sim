@@ -43,6 +43,10 @@ void PistonEngineSimulator::loadSimulation(Engine *engine, Vehicle *vehicle, Tra
     m_vehicle = vehicle;
     m_transmission = transmission;
 
+    for (int i = 0; i < m_engine->getIntakeCount(); ++i) {
+        m_engine->getIntake(i)->setPremixedFuel(!m_engine->getIgnitionModule()->isCompressionIgnition());
+    }
+
     const int crankCount = m_engine->getCrankshaftCount();
     const int cylinderCount = m_engine->getCylinderCount();
     const int linkCount = cylinderCount * 2;
@@ -288,6 +292,11 @@ void PistonEngineSimulator::simulateStep_() {
     const int cylinderCount = m_engine->getCylinderCount();
     for (int i = 0; i < cylinderCount; ++i) {
         if (im->getIgnitionEvent(i)) {
+            if (im->isCompressionIgnition()) {
+                m_engine->getChamber(i)->injectFuel(
+                    im->calculateFuelPerInjection(m_engine->getSpeedControl()));
+            }
+
             m_engine->getChamber(i)->ignite();
         }
 

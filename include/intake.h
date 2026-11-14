@@ -4,6 +4,7 @@
 #include "part.h"
 
 #include "gas_system.h"
+#include "units.h"
 
 class Intake : public Part {
     public:
@@ -34,6 +35,11 @@ class Intake : public Part {
 
             // Velocity decay factor
             double VelocityDecay = 0.5;
+
+            // Air source upstream of the throttle: the atmosphere, or a
+            // blower, supercharger, turbocharger or two-stroke crankcase.
+            double SupplyPressure = units::pressure(1.0, units::atm);
+            double SupplyTemperature = units::celcius(25.0);
         };
 
     public:
@@ -50,6 +56,11 @@ class Intake : public Part {
         inline double getRunnerLength() const { return m_runnerLength; }
         inline double getPlenumCrossSectionArea() const { return m_crossSectionArea; }
         inline double getVelocityDecay() const { return m_velocityDecay; }
+        inline void setPremixedFuel(bool premixedFuel) { m_premixedFuel = premixedFuel; }
+        inline double getSupplyPressure() const { return m_supplyPressure; }
+        inline void setSupplyPressure(double pressure) { m_supplyPressure = pressure; }
+        inline double getSupplyTemperature() const { return m_supplyTemperature; }
+        inline void setSupplyTemperature(double temperature) { m_supplyTemperature = temperature; }
 
         GasSystem m_system;
         double m_throttle;
@@ -67,6 +78,9 @@ class Intake : public Part {
         double m_idleThrottlePlatePosition;
         double m_runnerLength;
         double m_velocityDecay;
+        double m_supplyPressure;
+        bool m_premixedFuel;
+        double m_supplyTemperature;
 
         GasSystem m_atmosphere;
 };
