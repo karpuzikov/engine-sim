@@ -10,6 +10,195 @@ To get the newest releases of the game, [click here](https://github.com/Engine-S
 
 This is a real-time internal combustion engine simulation **designed specifically to produce engine audio and simulate engine response characteristics.** It is NOT a scientific tool and cannot be expected to provide accurate figures for the purposes of engineering or engine tuning.
 
+<!-- motortown:start -->
+## Motor Town engines
+
+Engine scripts for every engine of the game [Motor Town](https://store.steampowered.com/app/1369670/Motor_Town_Behind_The_Wheel/), built from the real engine of each vehicle the game's vehicles are based on.
+
+- Scripts: `assets/engines/motortown/<engine id>.mr`. To run one, change the third line of `assets/main.mr` to `import "engines/motortown/<engine id>.mr"`.
+- Data with a source link per value: `tools/motortown/motortown_engines.json`.
+- Scripts and this section are generated: `python tools/motortown/generate_engines.py`.
+
+Every value in a script carries a comment: **SOURCED** (cited source), **ESTIMATE** (unsourced estimate) or **PLACEHOLDER** (nothing found, generic default below). Placeholders exist so every engine runs; replace them as data is found.
+
+Diesels use this fork's compression ignition (`diesel_injection_pump`, `diesel_fuel`); the Detroit 6V92TA and the Vespa use its two-stroke support (`firings_per_cycle`, `lobes_per_cycle`, `piston_port_lobe`, intake `supply_pressure`).
+
+Status (headless test, 2026-11-13): 67 of 68 scripts start, idle and rev. The Honda CB250 twin does not start yet. Idle speeds: diesels 680-770 rpm (governor), petrol engines 900-1400 rpm and small engines up to 2000 rpm (placeholder idle air); the Vespa idles near 3700 rpm (placeholder crankcase pressure).
+
+### Placeholders
+
+Crank, piston and rod masses, inertia, intake and exhaust flow rates and volumes have no sources for any engine: they are scaled from upstream's Audi 2.2 i5 example by displacement (or bore for pistons and rods). Vehicle and gearbox are generic. Timing curve is upstream's i5 curve stretched to the redline. Fixed placeholders:
+
+| Placeholder | Value |
+|---|---|
+| compression_ratio_petrol | 9.0 |
+| compression_ratio_diesel | 17.0 |
+| redline_petrol_rpm | 6000 |
+| redline_diesel_rpm | 2400 |
+| rod_length_to_stroke_ratio | 1.75 |
+| rod_length_to_stroke_ratio_flat_engines | 2.0 |
+| compression_height_to_bore_ratio | 0.4 |
+| cam_duration_at_50_thou_deg_petrol | 210 |
+| cam_duration_at_50_thou_deg_diesel | 200 |
+| cam_lift_thou_petrol | 400 |
+| cam_lift_thou_diesel | 350 |
+| lobe_separation_deg | 112 |
+| exhaust_primary_length_inch | 10.0 |
+| idle_air_k_carb_per_litre | 0.7 |
+| idle_air_k_carb_extra | 1.5 |
+| starter_speed_rpm | 400 |
+| simulation_frequency | 20000 |
+| diesel_idle_speed_rpm | 650 |
+| diesel_injection_timing_deg_btdc | 4 at idle to 12 at the redline |
+| diesel_fuel_conversion_efficiency | 0.4 |
+| two_stroke_crankcase_scavenging_pressure_atm | 1.3 |
+| two_stroke_blower_pressure_atm | 1.5 |
+| two_stroke_exhaust_port_open_deg_before_bdc | 85 |
+| two_stroke_transfer_port_open_deg_before_bdc | 60 |
+| uniflow_intake_port_open_deg_before_bdc | 48 |
+| uniflow_exhaust_valve_center_deg_before_bdc | 15 |
+| uniflow_exhaust_duration_at_50_thou_deg | 140 |
+| vehicle_mass_kg_petrol | 1500 |
+| vehicle_mass_kg_diesel | 12000 |
+
+### Missing information
+
+Every engine-sim value without a source. The generated scripts use an unsourced estimate or a generic placeholder for these.
+Exhaust (header and pipe lengths, muffler volumes) is missing for every engine and is not listed per row.
+
+| Engine | Used by | Missing (no source) |
+|---|---|---|
+| Ford flathead V8 221 (1932 V8-18) | 1932 Ford 5-Window Coupe | power rpm, torque, torque rpm, redline, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Willys L134 Go Devil I4 | 1945 Willys MB 'Jeep' | redline, cam duration, cam lift, intake valve, exhaust valve |
+| Ford flathead V8 239 (V8-8RT, 1948 F-1) | 1948 Ford F-1 | power rpm, torque rpm, redline, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Volkswagen Type 1 1131 cc flat-four | 1950 Volkswagen Transporter | torque, redline, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Chevrolet 283 small-block V8 (2-bbl) | 1964 Chevrolet Impala, 1967 Chevrolet C-10 | redline, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| BMC A-series 1275 cc (Cooper S) | 1965 Austin Mini Cooper | cam duration, cam lift, intake valve, exhaust valve |
+| Chevrolet 350 small-block V8 (L48, 1969) | 1969 Chevrolet Camaro SS | redline, cam duration, cam lift, intake valve, exhaust valve |
+| Chevrolet 307 small-block V8 | 1969 Chevrolet Nova | rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Nissan L24 I6 | 1969 Nissan Fairlady Z | power, redline, cam duration, cam lift |
+| Continental LDT-465 multifuel I6 (M35A2) | 1970 GMC M35 | rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Chevrolet 350 small-block V8 (truck, 1971) | 1971 Chevrolet P30 Step Van | cam duration, cam lift, intake valve, exhaust valve |
+| Volkswagen Type 4 1679 cc flat-four | 1972 Volkswagen Transporter | power rpm, torque, torque rpm, redline, rod length, cam duration, cam lift |
+| Volkswagen Type 1 1584 cc flat-four | 1974 Volkswagen Type 181 | redline, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Chrysler 318 LA V8 | 1975 Dodge Coronet, 1981 Dodge Diplomat, 1986 Dodge Ram Van | power, torque, torque rpm, redline, cam duration, cam lift, intake valve, exhaust valve |
+| Chrysler 360 LA V8 | 1979 Dodge Ram Van | torque, redline, cam duration, cam lift, intake valve, exhaust valve |
+| Chevrolet 305 small-block V8 | 1980 GMC Vandura | rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Detroit Diesel 6V92TA two-stroke V6 | 1980 MCI MC-9 | rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Citroën 602 cc flat-twin (2CV6) | 1981 Citroën 2CV | redline, firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Ford 302 (5.0) small-block V8 | 1982 Ford F-150 XL, 1983 Ford LTD Country Squire | bank angle, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| VAZ-2106 1.6 L I4 | 1982 Lada 2107 | redline, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Nissan MA10S 987 cc I4 | 1983 Nissan Micra K10 | firing order, rod length, cam duration, cam lift |
+| Mercedes-Benz OM 422 V8 diesel | 1983 Steinwinter Supercargo 2040 | bank angle, torque rpm, redline, firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Porsche 3.2 L flat-six (930/20, 911 Carrera) | 1984 Porsche 911 | redline, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Cummins NTC-350 Big Cam I6 | 1985 Freightliner FLA | torque, torque rpm, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Subaru EK23 544 cc I2 (four-stroke) | 1985 Subaru Sambar | firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Lamborghini L503 5.2 V12 (LM002) | 1986 Lamborghini LM002 | rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Buick 3.8 SFI turbo V6 (LC2, GNX) | 1987 Buick GNX | redline, rod length, intake valve, exhaust valve |
+| Oldsmobile 307 V8 (LV2) | 1987 Cadillac Fleetwood | redline, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Mack E6-350 I6 | 1987 Mack R-Series | compression ratio, redline, firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Scania DSC11 I6 | 1987 Scania 113H | power rpm, redline, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Navistar DT466 I6 | 1989 International 3800 | redline, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Mazda B6ZE(RS) 1.6 I4 | 1989 Mazda MX-5 | firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Nissan RB26DETT I6 | 1989 Nissan Skyline GT-R | cam lift, intake valve, exhaust valve |
+| Toyota 22R-E 2.4 I4 | 1990 Toyota Pickup | cam duration, cam lift, intake valve, exhaust valve |
+| BMW S14B23 2.3 I4 (E30 M3) | 1991 BMW M3 | redline, firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Lancia 2.0 16v turbo I4 (Delta HF Integrale Evo) | 1992 Lancia Delta HF Integrale Evo | redline, firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Toyota 2JZ-GTE 3.0 I6 | 1993 Toyota Supra | cam duration, cam lift, intake valve, exhaust valve |
+| Ford 4.6 Modular 2V SOHC V8 | 2003 Ford Crown Victoria, 2003 Lincoln Town Car Stretched Limousine | cam duration, cam lift, intake valve, exhaust valve |
+| Iveco Cursor 8 I6 | 2005 Irisbus Citelis | power rpm, torque, torque rpm, firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| GM 5.3 Vortec V8 (LY5/LMG, 2007) | 2007 Chevrolet Tahoe | bank angle, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Ford 5.4 Triton 2V SOHC V8 | 2008 Ford E-Series | redline, cam duration, cam lift, intake valve, exhaust valve |
+| Ford 2.5 Duratec RS turbo I5 (Volvo B5254) | 2009 Ford Focus RS | rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Renault DXi 13 480 I6 | 2009 Renault Magnum 480 | compression ratio, power rpm, torque rpm, redline, firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| MAN D0836 LOH I6 | 2009 TEMSA Opalin | rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Lamborghini L539 6.5 V12 | 2011 Lamborghini Aventador LP 700-4 | rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Chrysler 5.7 HEMI V8 | 2012 Dodge Charger | rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Mazda Skyactiv-G 2.5 I4 | 2012 Mazda CX-5 | firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Ford 1.6 Ti-VCT Sigma I4 | 2013 Ford Fiesta | firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Mercedes-Benz OM 934 5.1 I4 | 2014 Mercedes Unimog U5023 | redline, firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Volvo D13 I6 | 2014 Volvo VNL | rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Yamaha YZF-R1 998 cc crossplane I4 (2015) | 2015 Yamaha YZF R1 | redline, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| BMW N55B30T0 3.0 turbo I6 (M2) | 2016 BMW M2 | firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Ford 5.4 Triton 3V SOHC V8 | Ford F350-F550 Dually | cam duration, cam lift, intake valve, exhaust valve |
+| Ford Kent 1.6 crossflow I4 (Formula Ford) | Formula 1600 | power rpm, torque, torque rpm, rod length, cam duration, intake valve, exhaust valve |
+| Cummins ISX15 I6 | Peterbilt 389 | compression ratio, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Piaggio Vespa PX150 two-stroke single | Piaggio Vespa | rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Honda GX160 single | Race Car Kart | redline, firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Scania DC9 9.3 L I5 | Scania P-Series | redline, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Scania DC13 12.7 L I6 | Scania P-Series, Scania PRT 380 | redline, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Volvo D9B 9.4 L I6 | Volvo FM | firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Cummins NHRBS (Beck DH1040) | 1955 Beck 'Semi' Deck & Half Cruiser | compression ratio, power, torque, torque rpm, redline, firing order, cam duration, cam lift, intake valve, exhaust valve |
+| Caterpillar D343T (769) | 1966 Caterpillar 769 | compression ratio, power, power rpm, torque, torque rpm, redline, firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Fiat/Iveco 8060.05 (Zeta) 5.9 L | 1977 Iveco Zeta | compression ratio, power rpm, torque, torque rpm, redline, firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Volvo Penta TAD881-VE (Konecranes SMV 25-1200 C) | 2019 Konecranes SMV 25-1200 C | redline, firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Daewoo/GM F8C 0.8 I3 (Labo) | 2014 Daewoo Labo | redline, firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Honda CB250 K0-K5 parallel twin | Honda CB250 | redline, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| Ford Dorset 363 I6 diesel (F-600, tuned to game 190 hp) | 1967 Ford F-600 | compression ratio, power rpm, torque, torque rpm, redline, firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+| FPT/Iveco F1C 3.0 I4 diesel (Gulliver stand-in, tuned to game 140 hp) | 2009 Tecnobus Gulliver | compression ratio, power rpm, torque, torque rpm, redline, firing order, rod length, cam duration, cam lift, intake valve, exhaust valve |
+
+### Game vs reality
+
+Where the game's engine (name, power, fuel) does not match the real vehicle's engine used here.
+
+| Game vehicle | Real vehicle | Game engine | Real engine | Mismatch |
+|---|---|---|---|---|
+| Air City | 2005 Irisbus Citelis | Bus 230HP (Diesel) | Iveco Cursor 8 I6 | power 230 hp in game vs 290 hp real |
+| Atlas 4x2 Semi | 1987 Scania 113H | Heavy-Duty 260HP (Diesel) | Scania DSC11 I6 | power 260 hp in game vs 360 hp real |
+| Bongo | 1972 Volkswagen Transporter | I4 90HP (Gasoline) | Volkswagen Type 4 1679 cc flat-four | power 90 hp in game vs 66 hp real; layout I4 in game vs H4 real |
+| Bora | 1985 Subaru Sambar | I4 90HP (Gasoline) | Subaru EK23 544 cc I2 (four-stroke) | power 90 hp in game vs 34 hp real; layout I4 in game vs I2 real |
+| Boxy | 1971 Chevrolet P30 Step Van | V8 180HP (Gasoline) | Chevrolet 350 small-block V8 (truck, 1971) | power 180 hp in game vs 250 hp real |
+| Brutus Ambulance | 2014 Mercedes Unimog U5023 | Medium-Duty 190HP (Diesel) | Mercedes-Benz OM 934 5.1 I4 | power 190 hp in game vs 228 hp real |
+| Campy | 1979 Dodge Ram Van | Medium-Duty 190HP (Diesel) | Chrysler 360 LA V8 | fuel Diesel in game vs petrol real |
+| Cheetah Mk1 | 1980 MCI MC-9 | Bus 400HP (Diesel) | Detroit Diesel 6V92TA two-stroke V6 | power 400 hp in game vs 277 hp real |
+| Compacty | Scania P-Series | Medium-Duty 190HP (Diesel) | Scania DC9 9.3 L I5 | power 190 hp in game vs 280 hp real |
+| Cora | 2016 BMW M2 | V8 240HP (Gasoline) | BMW N55B30T0 3.0 turbo I6 (M2) | power 240 hp in game vs 365 hp real; layout V8 in game vs I6 real |
+| Dabo | 2014 Daewoo Labo | I4 50HP (Gasoline) | Daewoo/GM F8C 0.8 I3 (Labo) | power 50 hp in game vs 38 hp real; layout I4 in game vs I3 real |
+| Dory | 1948 Ford F-1 | V8 140HP (Gasoline) | Ford flathead V8 239 (V8-8RT, 1948 F-1) | power 140 hp in game vs 100 hp real |
+| Duke | 1987 Buick GNX | V8 180HP (Gasoline) | Buick 3.8 SFI turbo V6 (LC2, GNX) | power 180 hp in game vs 276 hp real; layout V8 in game vs V6 real |
+| Elisa | 2003 Ford Crown Victoria | V8 180HP (Gasoline) | Ford 4.6 Modular 2V SOHC V8 | power 180 hp in game vs 224 hp real |
+| Enfo GT | 2009 Ford Focus RS | V8 320HP (Gasoline) | Ford 2.5 Duratec RS turbo I5 (Volvo B5254) | layout V8 in game vs I5 real |
+| Essam | 1969 Nissan Fairlady Z | I4 150HP (Gasoline) | Nissan L24 I6 | layout I4 in game vs I6 real |
+| Formula SCM | Formula 1600 | I4 150HP (Gasoline) | Ford Kent 1.6 crossflow I4 (Formula Ford) | power 150 hp in game vs 104 hp real |
+| Fortem | 1984 Porsche 911 | V8 240HP (Gasoline) | Porsche 3.2 L flat-six (930/20, 911 Carrera) | layout V8 in game vs H6 real |
+| Fox | 1945 Willys MB 'Jeep' | I4 90HP (Gasoline) | Willys L134 Go Devil I4 | power 90 hp in game vs 60 hp real |
+| Gunthoo Police | Honda CB250 | Bike 50HP (Gasoline) | Honda CB250 K0-K5 parallel twin | power 50 hp in game vs 30 hp real |
+| Jemusi Dump | 1970 GMC M35 | Medium-Duty 190HP (Diesel) | Continental LDT-465 multifuel I6 (M35A2) | power 190 hp in game vs 130 hp real |
+| Kira Box | 1977 Iveco Zeta | Medium-Duty 190HP (Diesel) | Fiat/Iveco 8060.05 (Zeta) 5.9 L | power 190 hp in game vs 138 hp real |
+| Koma | 1965 Austin Mini Cooper | I4 90HP (Gasoline) | BMC A-series 1275 cc (Cooper S) | power 90 hp in game vs 76 hp real |
+| Kuda Container 6x2 | 2009 Renault Magnum 480 | Heavy-Duty 350HP (Diesel) | Renault DXi 13 480 I6 | power 350 hp in game vs 480 hp real |
+| Liliput | 2009 Tecnobus Gulliver | Bus 140HP (Diesel) | FPT/Iveco F1C 3.0 I4 diesel (Gulliver stand-in, tuned to game 140 hp) | FPT/Iveco F1C 3.0 I4 diesel (stand-in), tuned to game 140 hp |
+| Lobo | 1983 Steinwinter Supercargo 2040 | Heavy-Duty 350HP (Diesel) | Mercedes-Benz OM 422 V8 diesel | power 350 hp in game vs 275 hp real |
+| Longhorn Rollback | 2014 Volvo VNL | Heavy-Duty 350HP (Diesel) | Volvo D13 I6 | power 350 hp in game vs 460 hp real |
+| Magis | 1993 Toyota Supra | V8 240HP (Gasoline) | Toyota 2JZ-GTE 3.0 I6 | layout V8 in game vs I6 real |
+| Micky | 1983 Nissan Micra K10 | I4 90HP (Gasoline) | Nissan MA10S 987 cc I4 | power 90 hp in game vs 51 hp real |
+| Mitage | 2012 Mazda CX-5 | V8 180HP (Gasoline) | Mazda Skyactiv-G 2.5 I4 | layout V8 in game vs I4 real |
+| Monarch | 1987 Cadillac Fleetwood | V8 180HP (Gasoline) | Oldsmobile 307 V8 (LV2) | power 180 hp in game vs 140 hp real |
+| Neo | 1992 Lancia Delta HF Integrale Evo | I4 150HP (Gasoline) | Lancia 2.0 16v turbo I4 (Delta HF Integrale Evo) | power 150 hp in game vs 210 hp real |
+| Nuke | 1981 Dodge Diplomat | V8 180HP (Gasoline) | Chrysler 318 LA V8 | power 180 hp in game vs 150 hp real |
+| Panther | 1989 Mazda MX-5 | I4 150HP (Gasoline) | Mazda B6ZE(RS) 1.6 I4 | power 150 hp in game vs 116 hp real |
+| Police | 2012 Dodge Charger | V8 240HP (Gasoline) | Chrysler 5.7 HEMI V8 | power 240 hp in game vs 370 hp real |
+| Police Interceptor 1 | 1975 Dodge Coronet | V8 180HP (Gasoline) | Chrysler 318 LA V8 | power 180 hp in game vs 150 hp real |
+| Pulio | 1967 Ford F-600 | Medium-Duty 190HP (Diesel) | Ford Dorset 363 I6 diesel (F-600, tuned to game 190 hp) | Ford Dorset 363 I6 diesel, tuned to game 190 hp |
+| Ranchy | 1967 Chevrolet C-10 | V8 140HP (Gasoline) | Chevrolet 283 small-block V8 (2-bbl) | power 140 hp in game vs 195 hp real |
+| Raton | 2011 Lamborghini Aventador LP 700-4 | V12 400HP (Gasoline) | Lamborghini L539 6.5 V12 | power 400 hp in game vs 690 hp real |
+| Raven | 1932 Ford 5-Window Coupe | V8 320HP (Gasoline) | Ford flathead V8 221 (1932 V8-18) | power 320 hp in game vs 65 hp real |
+| Savannah | 1974 Volkswagen Type 181 | I4 90HP (Gasoline) | Volkswagen Type 1 1584 cc flat-four | power 90 hp in game vs 46 hp real; layout I4 in game vs H4 real |
+| SCM Kart One | Race Car Kart | Kart 10HP (Gasoline) | Honda GX160 single | power 10 hp in game vs 5 hp real |
+| SRT | Scania PRT 380 | Heavy-Duty 260HP (Diesel) | Scania DC13 12.7 L I6 | power 260 hp in game vs 370 hp real |
+| Stagon | 1983 Ford LTD Country Squire | V8 180HP (Gasoline) | Ford 302 (5.0) small-block V8 | power 180 hp in game vs 135 hp real |
+| Stella | 2013 Ford Fiesta | V8 140HP (Gasoline) | Ford 1.6 Ti-VCT Sigma I4 | power 140 hp in game vs 120 hp real; layout V8 in game vs I4 real |
+| Stinger | 1969 Chevrolet Camaro SS | V8 140HP (Gasoline) | Chevrolet 350 small-block V8 (L48, 1969) | power 140 hp in game vs 300 hp real |
+| Tavan Ambulance | 1980 GMC Vandura | V8 240HP (Gasoline) | Chevrolet 305 small-block V8 | power 240 hp in game vs 140 hp real |
+| Townie | 1950 Volkswagen Transporter | V8 140HP (Gasoline) | Volkswagen Type 1 1131 cc flat-four | power 140 hp in game vs 24 hp real; layout V8 in game vs H4 real |
+| Trophy Taxi | 1982 Lada 2107 | I4 90HP (Gasoline) | VAZ-2106 1.6 L I4 | power 90 hp in game vs 75 hp real |
+| Tuscan | 1969 Chevrolet Nova | V8 140HP (Gasoline) | Chevrolet 307 small-block V8 | power 140 hp in game vs 200 hp real |
+| Vista | 1989 Nissan Skyline GT-R | V8 240HP (Gasoline) | Nissan RB26DETT I6 | layout V8 in game vs I6 real |
+| Voltex | 1990 Toyota Pickup | V8 140HP (Gasoline) | Toyota 22R-E 2.4 I4 | power 140 hp in game vs 114 hp real; layout V8 in game vs I4 real |
+| Zero | 2015 Yamaha YZF R1 | Bike i4 100HP (Gasoline) | Yamaha YZF-R1 998 cc crossplane I4 (2015) | power 100 hp in game vs 197 hp real |
+| Zino | 1991 BMW M3 | V8 140HP (Gasoline) | BMW S14B23 2.3 I4 (E30 M3) | power 140 hp in game vs 195 hp real; layout V8 in game vs I4 real |
+<!-- motortown:end -->
+
 ## How do I install it?
 
 This is a code repository and might not look like other software that you're used to downloading and installing (if you're not familiar with programming). To download a ready-to-use version of the application, navigate to the [releases page](https://github.com/ange-yaghi/engine-sim/releases), find the most recent release (ex. `v0.1.5a`), click "Assets" and download the .zip file with a name that starts with `engine-sim-build`. Unzip this file, then run `bin/engine-sim-app.exe`. The simulator should then start normally.

@@ -1,0 +1,6593 @@
+{
+ "engines": [
+  {
+   "id": "ford_flathead_221",
+   "name": "Ford flathead V8 221 (1932 V8-18)",
+   "layout": "V8",
+   "bank": 90,
+   "cyl": 8,
+   "bore": 77.8,
+   "stroke": 95.25,
+   "cc": 3621,
+   "cr": 5.5,
+   "valvetrain": "side-valve (L-head), 2v",
+   "induction": "1x 1-bbl carburettor",
+   "fuel": "petrol",
+   "hp": 65,
+   "hp_rpm": 3400,
+   "nm": 176,
+   "nm_rpm": 1300,
+   "redline": 4000,
+   "fo": "1-5-4-8-6-3-7-2",
+   "rod": null,
+   "src": "Wikipedia: Ford flathead V8 engine",
+   "sources": {
+    "bore": {
+     "value": 77.8,
+     "url": "https://www.jalopyjournal.com/forum/posts/13774764/",
+     "note": "3 1/16 in"
+    },
+    "stroke": {
+     "value": 95.25,
+     "url": "https://www.jalopyjournal.com/forum/posts/13774764/",
+     "note": "3 3/4 in"
+    },
+    "cc": {
+     "value": 3621,
+     "url": "https://en.wikipedia.org/wiki/Ford_flathead_V8_engine"
+    },
+    "cr": {
+     "value": 5.5,
+     "url": "https://en.wikipedia.org/wiki/Ford_flathead_V8_engine"
+    },
+    "hp": {
+     "value": 65,
+     "url": "https://en.wikipedia.org/wiki/Ford_flathead_V8_engine"
+    },
+    "fo": {
+     "value": "1-5-4-8-6-3-7-2",
+     "url": "https://www.restore-an-old-car.com/ford-flathead-v8-identification-and-specs.html"
+    },
+    "bank": {
+     "value": 90,
+     "url": "https://hotrod.gregwapling.com/car-spotters-guide/ford/v860spec.html",
+     "note": "Ford flathead V8 spec: 90° V block, 90° crank"
+    }
+   }
+  },
+  {
+   "id": "willys_l134",
+   "name": "Willys L134 Go Devil I4",
+   "layout": "I4",
+   "cyl": 4,
+   "bore": 79.4,
+   "stroke": 111.1,
+   "cc": 2199,
+   "cr": 6.48,
+   "valvetrain": "L-head, 2v",
+   "induction": "1-bbl carburettor",
+   "fuel": "petrol",
+   "hp": 60,
+   "hp_rpm": 4000,
+   "nm": 142,
+   "nm_rpm": 2000,
+   "redline": 4400,
+   "fo": "1-3-4-2",
+   "src": "Wikipedia: Willys Go Devil engine",
+   "sources": {
+    "stroke": {
+     "value": 111.1,
+     "url": "https://en.wikipedia.org/wiki/Willys_Go_Devil_engine"
+    },
+    "cc": {
+     "value": 2199,
+     "url": "https://en.wikipedia.org/wiki/Willys_Go_Devil_engine"
+    },
+    "cr": {
+     "value": 6.48,
+     "url": "https://en.wikipedia.org/wiki/Willys_Go_Devil_engine",
+     "note": "kaiserwillys lists 7.0 (later)"
+    },
+    "hp": {
+     "value": 60,
+     "url": "https://en.wikipedia.org/wiki/Willys_Go_Devil_engine"
+    },
+    "hp_rpm": {
+     "value": 4000,
+     "url": "https://en.wikipedia.org/wiki/Willys_Go_Devil_engine"
+    },
+    "nm": {
+     "value": 142,
+     "url": "https://en.wikipedia.org/wiki/Willys_Go_Devil_engine",
+     "note": "105 lb-ft"
+    },
+    "nm_rpm": {
+     "value": 2000,
+     "url": "https://en.wikipedia.org/wiki/Willys_Go_Devil_engine"
+    },
+    "bore": {
+     "value": 79.4,
+     "url": "https://en.wikipedia.org/wiki/Willys_Go_Devil_engine"
+    },
+    "fo": {
+     "value": "1-3-4-2",
+     "url": "https://www.42fordgpw.com/engine-go-devil-l-134/",
+     "note": "TM 9-1803A"
+    },
+    "rod": {
+     "value": 233.3,
+     "url": "https://www.kaiserwillys.com/?p=119036",
+     "note": "9.187 in c-c"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "ford_flathead_239",
+   "name": "Ford flathead V8 239 (V8-8RT, 1948 F-1)",
+   "layout": "V8",
+   "bank": 90,
+   "cyl": 8,
+   "bore": 80.96,
+   "stroke": 95.25,
+   "cc": 3917,
+   "cr": 6.8,
+   "valvetrain": "side-valve (L-head), 2v",
+   "induction": "2-bbl carburettor",
+   "fuel": "petrol",
+   "hp": 100,
+   "hp_rpm": 3800,
+   "nm": 244,
+   "nm_rpm": 2000,
+   "redline": 4000,
+   "fo": "1-5-4-8-6-3-7-2",
+   "src": "Wikipedia: Ford flathead V8 engine",
+   "sources": {
+    "bore": {
+     "value": 80.96,
+     "url": "https://www.jalopyjournal.com/forum/posts/13774764/",
+     "note": "3 3/16 in"
+    },
+    "stroke": {
+     "value": 95.25,
+     "url": "https://www.jalopyjournal.com/forum/posts/13774764/",
+     "note": "3 3/4 in"
+    },
+    "cc": {
+     "value": 3917,
+     "url": "https://en.wikipedia.org/wiki/Ford_flathead_V8_engine"
+    },
+    "cr": {
+     "value": 6.8,
+     "url": "https://en.wikipedia.org/wiki/Ford_flathead_V8_engine"
+    },
+    "hp": {
+     "value": 100,
+     "url": "https://en.wikipedia.org/wiki/Ford_flathead_V8_engine"
+    },
+    "nm": {
+     "value": 244,
+     "url": "https://en.wikipedia.org/wiki/Ford_flathead_V8_engine"
+    },
+    "fo": {
+     "value": "1-5-4-8-6-3-7-2",
+     "url": "https://www.restore-an-old-car.com/ford-flathead-v8-identification-and-specs.html"
+    },
+    "bank": {
+     "value": 90,
+     "url": "https://hotrod.gregwapling.com/car-spotters-guide/ford/v860spec.html",
+     "note": "Ford flathead V8 spec: 90° V block"
+    }
+   }
+  },
+  {
+   "id": "vw_type1_1131",
+   "name": "Volkswagen Type 1 1131 cc flat-four",
+   "layout": "H4",
+   "bank": 180,
+   "cyl": 4,
+   "bore": 75.0,
+   "stroke": 64.0,
+   "cc": 1131,
+   "cr": 5.8,
+   "valvetrain": "OHV pushrod, 2v",
+   "induction": "1x Solex 26 carburettor",
+   "fuel": "petrol",
+   "hp": 25,
+   "hp_rpm": 3300,
+   "nm": 67,
+   "nm_rpm": 2000,
+   "redline": 3600,
+   "fo": "1-4-3-2",
+   "cooling": "air",
+   "src": "Wikipedia: Volkswagen air-cooled engine",
+   "sources": {
+    "bore": {
+     "value": 75,
+     "url": "https://enginehistory.org/Piston/HOAE/VW.html"
+    },
+    "stroke": {
+     "value": 64,
+     "url": "https://enginehistory.org/Piston/HOAE/VW.html"
+    },
+    "cc": {
+     "value": 1131,
+     "url": "https://en.wikipedia.org/wiki/Volkswagen_air-cooled_engine"
+    },
+    "cr": {
+     "value": 5.8,
+     "url": "https://wiki.riteme.site/wiki/1/2_VW",
+     "note": "Wikipedia mirror"
+    },
+    "hp_rpm": {
+     "value": 3300,
+     "url": "https://wiki.riteme.site/wiki/1/2_VW"
+    },
+    "nm_rpm": {
+     "value": 2000,
+     "url": "https://en.wikipedia.org/wiki/Volkswagen_air-cooled_engine"
+    },
+    "hp": {
+     "value": 24,
+     "url": "https://wiki.riteme.site/wiki/1/2_VW",
+     "note": "24 bhp @3300 (Wikipedia); shop manual says 25 BHP"
+    },
+    "fo": {
+     "value": "1-4-3-2",
+     "url": "https://motor-car.net/vw-engines/item/20040-volkswagen-type-122",
+     "note": "same engine family (1192)"
+    }
+   }
+  },
+  {
+   "id": "chevy_283",
+   "name": "Chevrolet 283 small-block V8 (2-bbl)",
+   "layout": "V8",
+   "bank": 90,
+   "cyl": 8,
+   "bore": 98.4,
+   "stroke": 76.2,
+   "cc": 4638,
+   "cr": 8.5,
+   "valvetrain": "OHV pushrod, 2v",
+   "induction": "2-bbl carburettor",
+   "fuel": "petrol",
+   "hp": 195,
+   "hp_rpm": 4800,
+   "nm": 387,
+   "nm_rpm": 2400,
+   "redline": 5500,
+   "fo": "1-8-4-3-6-5-7-2",
+   "rod": 145.0,
+   "src": "Wikipedia: Chevrolet small-block engine (first and second generation)",
+   "sources": {
+    "bore": {
+     "value": 98.4,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "stroke": {
+     "value": 76.2,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "cc": {
+     "value": 4638,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "cr": {
+     "value": 8.5,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "hp": {
+     "value": 195,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "hp_rpm": {
+     "value": 4800,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "nm": {
+     "value": 387,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "nm_rpm": {
+     "value": 2400,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "fo": {
+     "value": "1-8-4-3-6-5-7-2",
+     "url": "https://www.aa1car.com/library/chevy_firing_orders.htm"
+    },
+    "bank": {
+     "value": 90,
+     "url": "https://www.jegs.com/tech-articles/?p=1007",
+     "note": "SBC is a 90-degree V8"
+    }
+   }
+  },
+  {
+   "id": "bmc_a_1275s",
+   "name": "BMC A-series 1275 cc (Cooper S)",
+   "layout": "I4",
+   "cyl": 4,
+   "bore": 70.6,
+   "stroke": 81.33,
+   "cc": 1275,
+   "cr": 9.75,
+   "valvetrain": "OHV pushrod, 2v",
+   "induction": "2x SU HS2 carburettors",
+   "fuel": "petrol",
+   "hp": 76,
+   "hp_rpm": 5800,
+   "nm": 108,
+   "nm_rpm": 3000,
+   "redline": 6500,
+   "fo": "1-3-4-2",
+   "src": "Wikipedia: BMC A-series engine",
+   "sources": {
+    "bore": {
+     "value": 70.6,
+     "url": "https://en.wikipedia.org/wiki/BMC_A-series_engine"
+    },
+    "stroke": {
+     "value": 81.33,
+     "url": "https://en.wikipedia.org/wiki/BMC_A-series_engine"
+    },
+    "cc": {
+     "value": 1275,
+     "url": "https://en.wikipedia.org/wiki/BMC_A-series_engine"
+    },
+    "cr": {
+     "value": 9.75,
+     "url": "https://classicmotorsports.com/project-cars/1967-mini-cooper-s/project-mini-cooper-s-magazine-series-part-4-some-"
+    },
+    "hp": {
+     "value": 76,
+     "url": "https://en.wikipedia.org/wiki/BMC_A-series_engine"
+    },
+    "hp_rpm": {
+     "value": 5800,
+     "url": "https://en.wikipedia.org/wiki/BMC_A-series_engine"
+    },
+    "nm": {
+     "value": 108,
+     "url": "https://en.wikipedia.org/wiki/BMC_A-series_engine"
+    },
+    "nm_rpm": {
+     "value": 3000,
+     "url": "https://en.wikipedia.org/wiki/BMC_A-series_engine"
+    },
+    "redline": {
+     "value": 6500,
+     "url": "https://en.wikipedia.org/wiki/BMC_A-series_engine"
+    },
+    "fo": {
+     "value": "1-3-4-2",
+     "url": "https://www.minimania.com/Cooper_Engine_Tuning_Data_599"
+    },
+    "rod": {
+     "value": 146.05,
+     "url": "https://new.MiniMania.com/pdfile/Mini%20Mania%20Catalog.Engine%20Parts%20&%20Sumpguards.33.pdf",
+     "note": "1071/1275 S rod 5.75 in centres"
+    },
+    "ign_timing": {
+     "value": "2 BTDC static",
+     "url": "https://www.minimania.com/Cooper_Engine_Tuning_Data_599"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "chevy_350_l48",
+   "name": "Chevrolet 350 small-block V8 (L48, 1969)",
+   "layout": "V8",
+   "bank": 90,
+   "cyl": 8,
+   "bore": 101.6,
+   "stroke": 88.4,
+   "cc": 5733,
+   "cr": 10.25,
+   "valvetrain": "OHV pushrod, 2v, hydraulic cam",
+   "induction": "4-bbl Quadrajet",
+   "fuel": "petrol",
+   "hp": 300,
+   "hp_rpm": 4800,
+   "nm": 515,
+   "nm_rpm": 3200,
+   "redline": 5600,
+   "fo": "1-8-4-3-6-5-7-2",
+   "rod": 145.0,
+   "src": "Wikipedia: Chevrolet small-block engine (first and second generation)",
+   "sources": {
+    "bore": {
+     "value": 101.6,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "stroke": {
+     "value": 88.4,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "cc": {
+     "value": 5733,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "cr": {
+     "value": 10.25,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "hp": {
+     "value": 300,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "hp_rpm": {
+     "value": 4800,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "nm": {
+     "value": 515,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "nm_rpm": {
+     "value": 3200,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "fo": {
+     "value": "1-8-4-3-6-5-7-2",
+     "url": "https://www.aa1car.com/library/chevy_firing_orders.htm"
+    },
+    "rod": {
+     "value": 144.78,
+     "url": "https://www.speedwaymotors.com/SB-350-Chevy-Rotating-Assem-One-Piece-Flat-Top-2-Valve-5-7-Rod,31491.html",
+     "note": "5.700 in"
+    },
+    "bank": {
+     "value": 90,
+     "url": "https://www.jegs.com/tech-articles/?p=1007"
+    }
+   }
+  },
+  {
+   "id": "chevy_307",
+   "name": "Chevrolet 307 small-block V8",
+   "layout": "V8",
+   "bank": 90,
+   "cyl": 8,
+   "bore": 98.4,
+   "stroke": 82.6,
+   "cc": 5025,
+   "cr": 9.0,
+   "valvetrain": "OHV pushrod, 2v",
+   "induction": "2-bbl carburettor",
+   "fuel": "petrol",
+   "hp": 200,
+   "hp_rpm": 4600,
+   "nm": 407,
+   "nm_rpm": 2400,
+   "redline": 5200,
+   "fo": "1-8-4-3-6-5-7-2",
+   "src": "Wikipedia: Chevrolet small-block engine (first and second generation)",
+   "sources": {
+    "bore": {
+     "value": 98.4,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "stroke": {
+     "value": 82.6,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "cc": {
+     "value": 5025,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "cr": {
+     "value": 9.0,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "hp": {
+     "value": 200,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "hp_rpm": {
+     "value": 4600,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "nm": {
+     "value": 407,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "nm_rpm": {
+     "value": 2400,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "redline": {
+     "value": 5200,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "fo": {
+     "value": "1-8-4-3-6-5-7-2",
+     "url": "https://www.aa1car.com/library/chevy_firing_orders.htm"
+    },
+    "bank": {
+     "value": 90,
+     "url": "https://www.jegs.com/tech-articles/?p=1007"
+    }
+   }
+  },
+  {
+   "id": "nissan_l24",
+   "name": "Nissan L24 I6",
+   "layout": "I6",
+   "cyl": 6,
+   "bore": 83.0,
+   "stroke": 73.7,
+   "cc": 2393,
+   "cr": 8.8,
+   "valvetrain": "SOHC, 2v",
+   "induction": "2x Hitachi SU carburettors",
+   "fuel": "petrol",
+   "hp": 151,
+   "hp_rpm": 5600,
+   "nm": 198,
+   "nm_rpm": 4400,
+   "redline": 6500,
+   "fo": "1-5-3-6-2-4",
+   "src": "Wikipedia: Nissan L engine",
+   "sources": {
+    "bore": {
+     "value": 83.0,
+     "url": "https://en.wikipedia.org/wiki/Nissan_L_engine"
+    },
+    "stroke": {
+     "value": 73.7,
+     "url": "https://en.wikipedia.org/wiki/Nissan_L_engine"
+    },
+    "cc": {
+     "value": 2393,
+     "url": "https://en.wikipedia.org/wiki/Nissan_L_engine"
+    },
+    "cr": {
+     "value": 9.0,
+     "url": "https://engine-specs.net/?p=3756",
+     "note": "twin-carb L24 (single carb 8.5)"
+    },
+    "hp_rpm": {
+     "value": 5600,
+     "url": "https://en.wikipedia.org/wiki/Nissan_L_engine"
+    },
+    "nm_rpm": {
+     "value": 4400,
+     "url": "https://engine-specs.net/?p=3756"
+    },
+    "rod": {
+     "value": 133.0,
+     "url": "https://engine-specs.net/?p=3756"
+    },
+    "fo": {
+     "value": "1-5-3-6-2-4",
+     "url": "https://engine-specs.net/?p=3756"
+    },
+    "nm": {
+     "value": 197,
+     "url": "https://engine-specs.net/?p=3756",
+     "note": "twin carb"
+    },
+    "valve_in": {
+     "value": 42,
+     "url": "https://autohistorypreservationsociety.org/?p=15098"
+    },
+    "valve_ex": {
+     "value": 33,
+     "url": "https://autohistorypreservationsociety.org/?p=15098"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "continental_ldt465",
+   "name": "Continental LDT-465 multifuel I6 (M35A2)",
+   "layout": "I6",
+   "cyl": 6,
+   "bore": 115.9,
+   "stroke": 133.4,
+   "cc": 7833,
+   "cr": 22.0,
+   "valvetrain": "OHV, 2v",
+   "induction": "turbocharged, multifuel injection (Hercules/Continental 'hypercycle')",
+   "fuel": "diesel/multifuel",
+   "hp": 134,
+   "hp_rpm": 2600,
+   "nm": 446,
+   "nm_rpm": 1800,
+   "redline": 2600,
+   "fo": "1-5-3-6-2-4",
+   "src": "own compilation, unverified",
+   "sources": {
+    "stroke": {
+     "value": 123.7,
+     "url": "https://maintenanceprocedures.tpub.com/TM-9-2815-210-34-2-1/TM-9-2815-210-34-2-10026.htm",
+     "note": "4.87 in (TM 9-2815-210-34-2-1)"
+    },
+    "cr": {
+     "value": 22,
+     "url": "https://maintenanceprocedures.tpub.com/TM-9-2815-210-34-2-1/TM-9-2815-210-34-2-10026.htm"
+    },
+    "bore": {
+     "value": 115.8,
+     "url": "https://maintenanceprocedures.tpub.com/TM-9-2815-210-34-2-1/TM-9-2815-210-34-2-10025.htm",
+     "note": "4.56 in"
+    },
+    "cc": {
+     "value": 7833,
+     "url": "https://maintenanceprocedures.tpub.com/TM-9-2815-210-34-2-1/TM-9-2815-210-34-2-10025.htm",
+     "note": "478 cu in"
+    },
+    "fo": {
+     "value": "1-5-3-6-2-4",
+     "url": "https://maintenanceprocedures.tpub.com/TM-9-2815-210-34-2-1/TM-9-2815-210-34-2-10025.htm"
+    },
+    "hp": {
+     "value": 130,
+     "url": "https://maintenanceprocedures.tpub.com/TM-9-2815-210-34-2-1/TM-9-2815-210-34-2-10025.htm",
+     "note": "LDT-465-1C gross min; column reading of TM table"
+    },
+    "hp_rpm": {
+     "value": 2600,
+     "url": "https://maintenanceprocedures.tpub.com/TM-9-2815-210-34-2-1/TM-9-2815-210-34-2-10025.htm"
+    },
+    "nm": {
+     "value": 414,
+     "url": "https://maintenanceprocedures.tpub.com/TM-9-2815-210-34-2-1/TM-9-2815-210-34-2-10025.htm",
+     "note": "305 lb-ft"
+    },
+    "nm_rpm": {
+     "value": 1500,
+     "url": "https://maintenanceprocedures.tpub.com/TM-9-2815-210-34-2-1/TM-9-2815-210-34-2-10025.htm"
+    },
+    "redline": {
+     "value": 2650,
+     "url": "https://maintenanceprocedures.tpub.com/TM-9-2815-210-34-2-1/TM-9-2815-210-34-2-10025.htm",
+     "note": "governed full load 2600-2650; no load 2850-2900"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "chevy_350_truck",
+   "name": "Chevrolet 350 small-block V8 (truck, 1971)",
+   "layout": "V8",
+   "bank": 90,
+   "cyl": 8,
+   "bore": 101.6,
+   "stroke": 88.4,
+   "cc": 5733,
+   "cr": 8.5,
+   "valvetrain": "OHV pushrod, 2v",
+   "induction": "4-bbl carburettor",
+   "fuel": "petrol",
+   "hp": 250,
+   "hp_rpm": 4600,
+   "nm": 475,
+   "nm_rpm": 2800,
+   "redline": 5000,
+   "fo": "1-8-4-3-6-5-7-2",
+   "rod": 145.0,
+   "src": "Wikipedia: Chevrolet small-block engine (first and second generation)",
+   "sources": {
+    "bore": {
+     "value": 101.6,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "stroke": {
+     "value": 88.4,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "cc": {
+     "value": 5733,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "cr": {
+     "value": 8.5,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "hp": {
+     "value": 250,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "hp_rpm": {
+     "value": 4600,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "nm": {
+     "value": 475,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "nm_rpm": {
+     "value": 2800,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "redline": {
+     "value": 5000,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "fo": {
+     "value": "1-8-4-3-6-5-7-2",
+     "url": "https://www.aa1car.com/library/chevy_firing_orders.htm"
+    },
+    "rod": {
+     "value": 144.78,
+     "url": "https://www.speedwaymotors.com/SB-350-Chevy-Rotating-Assem-One-Piece-Flat-Top-2-Valve-5-7-Rod,31491.html",
+     "note": "5.700 in"
+    },
+    "bank": {
+     "value": 90,
+     "url": "https://www.jegs.com/tech-articles/?p=1007"
+    }
+   }
+  },
+  {
+   "id": "vw_type4_1679",
+   "name": "Volkswagen Type 4 1679 cc flat-four",
+   "layout": "H4",
+   "bank": 180,
+   "cyl": 4,
+   "bore": 90.0,
+   "stroke": 66.0,
+   "cc": 1679,
+   "cr": 7.3,
+   "valvetrain": "OHV pushrod, 2v",
+   "induction": "2x Solex 34 carburettors",
+   "fuel": "petrol",
+   "hp": 66,
+   "hp_rpm": 4800,
+   "nm": 116,
+   "nm_rpm": 3200,
+   "redline": 5200,
+   "fo": "1-4-3-2",
+   "cooling": "air",
+   "src": "Wikipedia: Volkswagen air-cooled engine",
+   "sources": {
+    "bore": {
+     "value": 90,
+     "url": "https://www.heritagepartscentre.com/us/021198075b-barrel-piston-kit-type4-1-7-flat-top-90x66-ca-cb-code.html"
+    },
+    "stroke": {
+     "value": 66,
+     "url": "https://www.heritagepartscentre.com/us/021198075b-barrel-piston-kit-type4-1-7-flat-top-90x66-ca-cb-code.html"
+    },
+    "cc": {
+     "value": 1679,
+     "url": "https://en.wikipedia.org/wiki/Volkswagen_air-cooled_engine"
+    },
+    "cr": {
+     "value": 7.3,
+     "url": "https://docs.lnengineering.com/article/258-vw-type-4-cylinder-heads-and-crankcases",
+     "note": "CB/CD bus"
+    },
+    "hp": {
+     "value": 66,
+     "url": "https://www.paruzzi.com/uploads/en/general/vw-bay-window-vin-engine-numbers.pdf",
+     "note": "CA/CB 49 kW"
+    },
+    "fo": {
+     "value": "1-4-3-2",
+     "url": "https://motor-car.net/vw-engines/item/13796-vw-type-4-engine"
+    },
+    "valve_in": {
+     "value": 39.3,
+     "url": "https://docs.lnengineering.com/article/258-vw-type-4-cylinder-heads-and-crankcases"
+    },
+    "valve_ex": {
+     "value": 33,
+     "url": "https://docs.lnengineering.com/article/258-vw-type-4-cylinder-heads-and-crankcases"
+    }
+   }
+  },
+  {
+   "id": "vw_type1_1584",
+   "name": "Volkswagen Type 1 1584 cc flat-four",
+   "layout": "H4",
+   "bank": 180,
+   "cyl": 4,
+   "bore": 85.5,
+   "stroke": 69.0,
+   "cc": 1584,
+   "cr": 7.3,
+   "valvetrain": "OHV pushrod, 2v",
+   "induction": "1x Solex 34 carburettor",
+   "fuel": "petrol",
+   "hp": 48,
+   "hp_rpm": 4000,
+   "nm": 98,
+   "nm_rpm": 2800,
+   "redline": 4600,
+   "fo": "1-4-3-2",
+   "cooling": "air",
+   "src": "Wikipedia: Volkswagen air-cooled engine",
+   "sources": {
+    "bore": {
+     "value": 85.5,
+     "url": "https://www.auto-data.net/en/volkswagen-181-1.6-46hp-8386"
+    },
+    "stroke": {
+     "value": 69,
+     "url": "https://www.auto-data.net/en/volkswagen-181-1.6-46hp-8386"
+    },
+    "cc": {
+     "value": 1584,
+     "url": "https://en.wikipedia.org/wiki/Volkswagen_air-cooled_engine"
+    },
+    "cr": {
+     "value": 7.3,
+     "url": "https://www.auto-data.net/en/volkswagen-181-1.6-46hp-8386"
+    },
+    "hp": {
+     "value": 46,
+     "url": "https://www.auto-data.net/en/volkswagen-181-1.6-46hp-8386"
+    },
+    "hp_rpm": {
+     "value": 4000,
+     "url": "https://www.auto-data.net/en/volkswagen-181-1.6-46hp-8386"
+    },
+    "nm": {
+     "value": 96,
+     "url": "https://www.auto-data.net/en/volkswagen-181-1.6-46hp-8386"
+    },
+    "nm_rpm": {
+     "value": 2800,
+     "url": "https://www.auto-data.net/en/volkswagen-181-1.6-46hp-8386"
+    },
+    "fo": {
+     "value": "1-4-3-2",
+     "url": "https://motor-car.net/vw-engines/item/20040-volkswagen-type-122",
+     "note": "same engine family"
+    }
+   }
+  },
+  {
+   "id": "chrysler_318_la",
+   "name": "Chrysler 318 LA V8",
+   "layout": "V8",
+   "bank": 90,
+   "cyl": 8,
+   "bore": 99.3,
+   "stroke": 84.1,
+   "cc": 5211,
+   "cr": 8.5,
+   "valvetrain": "OHV pushrod, 2v",
+   "induction": "2-bbl carburettor",
+   "fuel": "petrol",
+   "hp": 150,
+   "hp_rpm": 4000,
+   "nm": 346,
+   "nm_rpm": 1600,
+   "redline": 4800,
+   "fo": "1-8-4-3-6-5-7-2",
+   "src": "Wikipedia: Chrysler LA engine",
+   "sources": {
+    "bore": {
+     "value": 99.2,
+     "url": "https://en.wikipedia.org/wiki/Chrysler_LA_engine",
+     "note": "3.906 in"
+    },
+    "stroke": {
+     "value": 84.1,
+     "url": "https://en.wikipedia.org/wiki/Chrysler_LA_engine",
+     "note": "3.312 in"
+    },
+    "cc": {
+     "value": 5211,
+     "url": "https://en.wikipedia.org/wiki/Chrysler_LA_engine"
+    },
+    "cr": {
+     "value": 8.5,
+     "url": "https://en.wikipedia.org/wiki/Chrysler_LA_engine"
+    },
+    "hp_rpm": {
+     "value": 4000,
+     "url": "https://en.wikipedia.org/wiki/Chrysler_LA_engine"
+    },
+    "fo": {
+     "value": "1-8-4-3-6-5-7-2",
+     "url": "https://www.jegs.com/tech-articles/engine-firing-order-explained/"
+    },
+    "rod": {
+     "value": 155.5,
+     "url": "https://www.forabodiesonly.com/mopar/threads/connecting-rod-help.329510/post-1974708698",
+     "note": "6.123 in all 318/360"
+    },
+    "bank": {
+     "value": 90,
+     "url": "https://en.wikipedia.org/wiki/Chrysler_LA_engine",
+     "note": "\"V-shaped, 90-degree design\""
+    }
+   }
+  },
+  {
+   "id": "chrysler_360_la",
+   "name": "Chrysler 360 LA V8",
+   "layout": "V8",
+   "bank": 90,
+   "cyl": 8,
+   "bore": 101.6,
+   "stroke": 90.9,
+   "cc": 5898,
+   "cr": 8.4,
+   "valvetrain": "OHV pushrod, 2v",
+   "induction": "4-bbl carburettor",
+   "fuel": "petrol",
+   "hp": 180,
+   "hp_rpm": 4000,
+   "nm": 393,
+   "nm_rpm": 2000,
+   "redline": 4800,
+   "fo": "1-8-4-3-6-5-7-2",
+   "src": "Wikipedia: Chrysler LA engine",
+   "sources": {
+    "bore": {
+     "value": 101.6,
+     "url": "https://valiant.org/valiant/V8.html",
+     "note": "4.00 in"
+    },
+    "stroke": {
+     "value": 90.9,
+     "url": "https://valiant.org/valiant/V8.html",
+     "note": "3.58 in"
+    },
+    "cc": {
+     "value": 5898,
+     "url": "https://en.wikipedia.org/wiki/Chrysler_LA_engine"
+    },
+    "cr": {
+     "value": 8.4,
+     "url": "https://en.wikipedia.org/wiki/Chrysler_LA_engine"
+    },
+    "hp": {
+     "value": 180,
+     "url": "https://en.wikipedia.org/wiki/Chrysler_LA_engine"
+    },
+    "hp_rpm": {
+     "value": 4000,
+     "url": "https://en.wikipedia.org/wiki/Chrysler_LA_engine"
+    },
+    "nm_rpm": {
+     "value": 2000,
+     "url": "https://en.wikipedia.org/wiki/Chrysler_LA_engine"
+    },
+    "fo": {
+     "value": "1-8-4-3-6-5-7-2",
+     "url": "https://www.jegs.com/tech-articles/engine-firing-order-explained/"
+    },
+    "rod": {
+     "value": 155.5,
+     "url": "https://www.forabodiesonly.com/mopar/threads/connecting-rod-help.329510/post-1974708698",
+     "note": "6.123 in"
+    },
+    "bank": {
+     "value": 90,
+     "url": "https://en.wikipedia.org/wiki/Chrysler_LA_engine"
+    }
+   }
+  },
+  {
+   "id": "chevy_305",
+   "name": "Chevrolet 305 small-block V8",
+   "layout": "V8",
+   "bank": 90,
+   "cyl": 8,
+   "bore": 94.9,
+   "stroke": 88.4,
+   "cc": 5001,
+   "cr": 8.5,
+   "valvetrain": "OHV pushrod, 2v",
+   "induction": "2-bbl carburettor",
+   "fuel": "petrol",
+   "hp": 140,
+   "hp_rpm": 3800,
+   "nm": 325,
+   "nm_rpm": 2400,
+   "redline": 4800,
+   "fo": "1-8-4-3-6-5-7-2",
+   "rod": 145.0,
+   "src": "Wikipedia: Chevrolet small-block engine (first and second generation)",
+   "sources": {
+    "bore": {
+     "value": 94.9,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "stroke": {
+     "value": 88.4,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "cc": {
+     "value": 5001,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "cr": {
+     "value": 8.5,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "hp": {
+     "value": 140,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "hp_rpm": {
+     "value": 3800,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "nm": {
+     "value": 325,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "nm_rpm": {
+     "value": 2400,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "redline": {
+     "value": 4800,
+     "url": "https://en.wikipedia.org/wiki/Chevrolet_small-block_engine_(first_and_second_generation)"
+    },
+    "fo": {
+     "value": "1-8-4-3-6-5-7-2",
+     "url": "https://www.aa1car.com/library/chevy_firing_orders.htm"
+    },
+    "bank": {
+     "value": 90,
+     "url": "https://www.jegs.com/tech-articles/?p=1007"
+    }
+   }
+  },
+  {
+   "id": "detroit_6v92ta",
+   "name": "Detroit Diesel 6V92TA two-stroke V6",
+   "layout": "V6",
+   "bank": 60,
+   "cyl": 6,
+   "cycle": 2,
+   "bore": 123.0,
+   "stroke": 127.0,
+   "cc": 9050,
+   "cr": 17.0,
+   "valvetrain": "uniflow scavenged, 4 exhaust valves/cyl, intake ports",
+   "induction": "turbocharged + Roots blower, unit injectors",
+   "fuel": "diesel",
+   "hp": 277,
+   "hp_rpm": 2100,
+   "nm": 1085,
+   "nm_rpm": 1300,
+   "redline": 2100,
+   "fo": "1L-3R-3L-2R-2L-1R",
+   "src": "Wikipedia: Detroit Diesel Series 92",
+   "sources": {
+    "bore": {
+     "value": 123,
+     "url": "https://en.wikipedia.org/wiki/Detroit_Diesel_Series_92"
+    },
+    "stroke": {
+     "value": 127,
+     "url": "https://en.wikipedia.org/wiki/Detroit_Diesel_Series_92"
+    },
+    "cc": {
+     "value": 9050,
+     "url": "https://en.wikipedia.org/wiki/Detroit_Diesel_Series_92"
+    },
+    "cr": {
+     "value": 17,
+     "url": "https://en.wikipedia.org/wiki/Detroit_Diesel_Series_92",
+     "note": "turbo"
+    },
+    "hp_rpm": {
+     "value": 2100,
+     "url": "https://en.wikipedia.org/wiki/Detroit_Diesel_Series_92"
+    },
+    "nm_rpm": {
+     "value": 1200,
+     "url": "https://en.wikipedia.org/wiki/Detroit_Diesel_Series_92"
+    },
+    "redline": {
+     "value": 2100,
+     "url": "https://en.wikipedia.org/wiki/Detroit_Diesel_Series_92",
+     "note": "max engine speed 1950-2100 typ."
+    },
+    "hp": {
+     "value": 277,
+     "url": "https://www.busesandmore.com/?p=1166",
+     "note": "MC-9: 6V-92TA 277 hp @2100 (also 8V-71 280 hp option)"
+    },
+    "nm": {
+     "value": 1106,
+     "url": "https://en.wikipedia.org/wiki/Detroit_Diesel_Series_92",
+     "note": "277 hp rating: 816 lb-ft @1200"
+    },
+    "fo": {
+     "value": "1-4-5-2-3-6",
+     "url": "https://static.dieselpro.com/detroit-diesel-6v92.html",
+     "note": "replaces my 1L-3R-3L-2R-2L-1R"
+    },
+    "bank": {
+     "value": "unknown",
+     "url": "-",
+     "note": "Series 92 bank angle not found in sources fetched"
+    }
+   }
+  },
+  {
+   "id": "citroen_602",
+   "name": "Citroën 602 cc flat-twin (2CV6)",
+   "layout": "H2",
+   "bank": 180,
+   "cyl": 2,
+   "bore": 74.0,
+   "stroke": 70.0,
+   "cc": 602,
+   "cr": 8.5,
+   "valvetrain": "OHV pushrod, 2v",
+   "induction": "1x twin-choke Solex carburettor",
+   "fuel": "petrol",
+   "hp": 29,
+   "hp_rpm": 5750,
+   "nm": 40,
+   "nm_rpm": 3500,
+   "redline": 6000,
+   "fo": "1-2 (both pistons move together; fires every 360°: wasted spark)",
+   "cooling": "air",
+   "src": "Wikipedia: Citroën 2CV",
+   "sources": {
+    "bore": {
+     "value": 74,
+     "url": "https://www.thecarspec.net/car-detail/citroen-2-cv-06-29-hp"
+    },
+    "stroke": {
+     "value": 70,
+     "url": "https://www.thecarspec.net/car-detail/citroen-2-cv-06-29-hp"
+    },
+    "cc": {
+     "value": 602,
+     "url": "https://en.wikipedia.org/wiki/Citroën_2CV"
+    },
+    "hp": {
+     "value": 29,
+     "url": "https://www.thecarspec.net/car-detail/citroen-2-cv-06-29-hp"
+    },
+    "hp_rpm": {
+     "value": 5750,
+     "url": "https://www.thecarspec.net/car-detail/citroen-2-cv-06-29-hp"
+    },
+    "nm_rpm": {
+     "value": 3500,
+     "url": "https://www.thecarspec.net/car-detail/citroen-2-cv-06-29-hp"
+    },
+    "cr": {
+     "value": 8.5,
+     "url": "https://www.thecarspec.net/car-detail/citroen-2-cv-06-29-hp"
+    },
+    "nm": {
+     "value": 39,
+     "url": "https://www.thecarspec.net/car-detail/citroen-2-cv-06-29-hp"
+    }
+   }
+  },
+  {
+   "id": "ford_302",
+   "name": "Ford 302 (5.0) small-block V8",
+   "layout": "V8",
+   "bank": 90,
+   "cyl": 8,
+   "bore": 101.6,
+   "stroke": 76.2,
+   "cc": 4942,
+   "cr": 8.4,
+   "valvetrain": "OHV pushrod, 2v",
+   "induction": "2-bbl carburettor (1982)",
+   "fuel": "petrol",
+   "hp": 133,
+   "hp_rpm": 3400,
+   "nm": 312,
+   "nm_rpm": 2000,
+   "redline": 5000,
+   "fo": "1-5-4-2-6-3-7-8",
+   "src": "Wikipedia: Ford Windsor engine",
+   "sources": {
+    "bore": {
+     "value": 101.6,
+     "url": "https://f150hub.com/specs/302.html",
+     "note": "4.00 in"
+    },
+    "stroke": {
+     "value": 76.2,
+     "url": "https://f150hub.com/specs/302.html",
+     "note": "3.00 in"
+    },
+    "cc": {
+     "value": 4942,
+     "url": "https://en.wikipedia.org/wiki/Ford_Windsor_engine"
+    },
+    "hp_rpm": {
+     "value": 3400,
+     "url": "https://www.ford-trucks.com/forums/424052-79-vs-81-302-a.html"
+    },
+    "nm_rpm": {
+     "value": 2000,
+     "url": "https://www.ford-trucks.com/forums/424052-79-vs-81-302-a.html"
+    },
+    "redline": {
+     "value": 5000,
+     "url": "https://en.wikipedia.org/wiki/Ford_Windsor_engine"
+    },
+    "fo": {
+     "value": "1-5-4-2-6-3-7-8",
+     "url": "https://lmr.com/products/302-firing-order",
+     "note": "non-HO"
+    },
+    "cr": {
+     "value": 8.4,
+     "url": "https://www.ford-trucks.com/forums/424052-79-vs-81-302-a.html",
+     "note": "1979 302 2V"
+    },
+    "hp": {
+     "value": 135,
+     "url": "https://www.ford-trucks.com/forums/424052-79-vs-81-302-a.html",
+     "note": "auto-data lists 133 hp"
+    },
+    "nm": {
+     "value": 329,
+     "url": "https://www.ford-trucks.com/forums/424052-79-vs-81-302-a.html",
+     "note": "243 lb-ft"
+    }
+   }
+  },
+  {
+   "id": "vaz_2106",
+   "name": "VAZ-2106 1.6 L I4",
+   "layout": "I4",
+   "cyl": 4,
+   "bore": 79.0,
+   "stroke": 80.0,
+   "cc": 1569,
+   "cr": 8.5,
+   "valvetrain": "SOHC chain, 2v",
+   "induction": "2-choke carburettor",
+   "fuel": "petrol",
+   "hp": 80,
+   "hp_rpm": 5400,
+   "nm": 121,
+   "nm_rpm": 3000,
+   "redline": 6000,
+   "fo": "1-3-4-2",
+   "src": "own compilation, unverified",
+   "sources": {
+    "bore": {
+     "value": 79,
+     "url": "https://www.vazbook.ru/en/06/21061/main/tech/tehnicheskie-harakteristiki-avtomobiley"
+    },
+    "stroke": {
+     "value": 80,
+     "url": "https://www.vazbook.ru/en/06/21061/main/tech/tehnicheskie-harakteristiki-avtomobiley"
+    },
+    "cr": {
+     "value": 8.5,
+     "url": "https://www.vazbook.ru/en/06/21061/main/tech/tehnicheskie-harakteristiki-avtomobiley"
+    },
+    "fo": {
+     "value": "1-3-4-2",
+     "url": "https://www.vazbook.ru/en/06/21061/main/tech/tehnicheskie-harakteristiki-avtomobiley"
+    },
+    "cc": {
+     "value": 1569,
+     "url": "https://www.auto-data.net/en/compare&carId1=13225&carId2=&carId3="
+    },
+    "hp": {
+     "value": 75,
+     "url": "https://www.auto-data.net/en/compare&carId1=13225&carId2=&carId3="
+    },
+    "hp_rpm": {
+     "value": 5400,
+     "url": "https://www.auto-data.net/en/compare&carId1=13225&carId2=&carId3="
+    },
+    "nm": {
+     "value": 116,
+     "url": "https://www.auto-data.net/en/compare&carId1=13225&carId2=&carId3="
+    },
+    "nm_rpm": {
+     "value": 3000,
+     "url": "https://www.auto-data.net/en/compare&carId1=13225&carId2=&carId3="
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "nissan_ma10s",
+   "name": "Nissan MA10S 987 cc I4",
+   "layout": "I4",
+   "cyl": 4,
+   "bore": 68.0,
+   "stroke": 68.0,
+   "cc": 987,
+   "cr": 9.5,
+   "valvetrain": "SOHC, 2v",
+   "induction": "carburettor",
+   "fuel": "petrol",
+   "hp": 55,
+   "hp_rpm": 6000,
+   "nm": 76,
+   "nm_rpm": 3600,
+   "redline": 6500,
+   "fo": "1-3-4-2",
+   "src": "Wikipedia: Nissan MA engine",
+   "sources": {
+    "bore": {
+     "value": 68,
+     "url": "https://en.wikipedia.org/wiki/Nissan_MA_engine"
+    },
+    "stroke": {
+     "value": 68,
+     "url": "https://en.wikipedia.org/wiki/Nissan_MA_engine"
+    },
+    "cc": {
+     "value": 987,
+     "url": "https://en.wikipedia.org/wiki/Nissan_MA_engine"
+    },
+    "cr": {
+     "value": 9.5,
+     "url": "https://en.wikipedia.org/wiki/Nissan_MA_engine"
+    },
+    "hp_rpm": {
+     "value": 6000,
+     "url": "https://en.wikipedia.org/wiki/Nissan_MA_engine"
+    },
+    "nm_rpm": {
+     "value": 3600,
+     "url": "https://en.wikipedia.org/wiki/Nissan_MA_engine"
+    },
+    "redline": {
+     "value": 6500,
+     "url": "https://en.wikipedia.org/wiki/Nissan_MA_engine"
+    },
+    "hp": {
+     "value": 51,
+     "url": "https://en.wikipedia.org/wiki/Nissan_MA_engine",
+     "note": "52 PS net"
+    },
+    "nm": {
+     "value": 75,
+     "url": "https://en.wikipedia.org/wiki/Nissan_MA_engine"
+    },
+    "valve_in": {
+     "value": 35,
+     "url": "https://www.motor-car.net/nissan-engines/item/20086-nissan-ma10s"
+    },
+    "valve_ex": {
+     "value": 30,
+     "url": "https://www.motor-car.net/nissan-engines/item/20086-nissan-ma10s"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "mb_om422",
+   "name": "Mercedes-Benz OM 422 V8 diesel",
+   "layout": "V8",
+   "bank": 90,
+   "cyl": 8,
+   "bore": 128.0,
+   "stroke": 142.0,
+   "cc": 14618,
+   "cr": 17.0,
+   "valvetrain": "OHV, 2v",
+   "induction": "naturally aspirated / turbo (OM 422 A)",
+   "fuel": "diesel",
+   "hp": 280,
+   "hp_rpm": 2300,
+   "nm": 990,
+   "nm_rpm": 1500,
+   "redline": 2500,
+   "fo": null,
+   "src": "own compilation, unverified",
+   "sources": {
+    "bore": {
+     "value": 128,
+     "url": "https://barringtondieselclub.co.za/mercedes/422-423-424.html"
+    },
+    "stroke": {
+     "value": 142,
+     "url": "https://barringtondieselclub.co.za/mercedes/422-423-424.html"
+    },
+    "cc": {
+     "value": 14618,
+     "url": "https://mymotorlist.com/engines/mercedes/om422/"
+    },
+    "cr": {
+     "value": 16.9,
+     "url": "https://barringtondieselclub.co.za/mercedes/422-423-424.html",
+     "note": "NA"
+    },
+    "hp": {
+     "value": 275,
+     "url": "https://barringtondieselclub.co.za/mercedes/422-423-424.html",
+     "note": "OM422 NA; The Drive says Supercargo had 276 hp"
+    },
+    "hp_rpm": {
+     "value": 2300,
+     "url": "https://barringtondieselclub.co.za/mercedes/422-423-424.html"
+    },
+    "nm": {
+     "value": 1200,
+     "url": "https://mymotorlist.com/engines/mercedes/om422/",
+     "note": "low-confidence aggregator"
+    }
+   }
+  },
+  {
+   "id": "porsche_930_20",
+   "name": "Porsche 3.2 L flat-six (930/20, 911 Carrera)",
+   "layout": "H6",
+   "bank": 180,
+   "cyl": 6,
+   "bore": 95.0,
+   "stroke": 74.4,
+   "cc": 3164,
+   "cr": 10.3,
+   "valvetrain": "SOHC per bank, 2v",
+   "induction": "Bosch Motronic fuel injection",
+   "fuel": "petrol",
+   "hp": 231,
+   "hp_rpm": 5900,
+   "nm": 284,
+   "nm_rpm": 4800,
+   "redline": 6200,
+   "fo": "1-6-2-4-3-5",
+   "cooling": "air",
+   "src": "Wikipedia: Porsche 911 (classic)",
+   "sources": {
+    "bore": {
+     "value": 95,
+     "url": "https://www.auto-data.net/en/porsche-911-coupe-g-3.2-carrera-231hp-6652"
+    },
+    "stroke": {
+     "value": 74.4,
+     "url": "https://www.auto-data.net/en/porsche-911-coupe-g-3.2-carrera-231hp-6652"
+    },
+    "cc": {
+     "value": 3164,
+     "url": "https://www.auto-data.net/en/porsche-911-coupe-g-3.2-carrera-231hp-6652"
+    },
+    "cr": {
+     "value": 10.3,
+     "url": "https://www.auto-data.net/en/porsche-911-coupe-g-3.2-carrera-231hp-6652"
+    },
+    "hp": {
+     "value": 231,
+     "url": "https://www.auto-data.net/en/porsche-911-coupe-g-3.2-carrera-231hp-6652",
+     "note": "PS"
+    },
+    "hp_rpm": {
+     "value": 5900,
+     "url": "https://www.auto-data.net/en/porsche-911-coupe-g-3.2-carrera-231hp-6652"
+    },
+    "nm": {
+     "value": 284,
+     "url": "https://www.auto-data.net/en/porsche-911-coupe-g-3.2-carrera-231hp-6652"
+    },
+    "nm_rpm": {
+     "value": 4800,
+     "url": "https://www.auto-data.net/en/porsche-911-coupe-g-3.2-carrera-231hp-6652"
+    },
+    "fo": {
+     "value": "1-6-2-4-3-5",
+     "url": "https://gtsparkplugs.com/porsche-911-firing-order",
+     "note": "all 911 flat-sixes"
+    },
+    "bank": {
+     "value": 180,
+     "url": "https://gtsparkplugs.com/porsche-911-firing-order",
+     "note": "flat-six (boxer)"
+    }
+   }
+  },
+  {
+   "id": "cummins_ntc350",
+   "name": "Cummins NTC-350 Big Cam I6",
+   "layout": "I6",
+   "cyl": 6,
+   "bore": 139.7,
+   "stroke": 152.4,
+   "cc": 14000,
+   "cr": 15.0,
+   "valvetrain": "OHV, 4v",
+   "induction": "turbocharged, PT injection",
+   "fuel": "diesel",
+   "hp": 350,
+   "hp_rpm": 2100,
+   "nm": 1458,
+   "nm_rpm": 1300,
+   "redline": 2100,
+   "fo": "1-5-3-6-2-4",
+   "src": "own compilation, unverified",
+   "sources": {
+    "bore": {
+     "value": 139.7,
+     "url": "https://www.scribd.com/document/698971539/pdfcoffee-com-cummins-n855-engine-specs-pdf-free",
+     "note": "5.5 in (N855 Big Cam)"
+    },
+    "stroke": {
+     "value": 152.4,
+     "url": "https://www.scribd.com/document/698971539/pdfcoffee-com-cummins-n855-engine-specs-pdf-free",
+     "note": "6.0 in"
+    },
+    "cc": {
+     "value": 14000,
+     "url": "https://www.scribd.com/document/698971539/pdfcoffee-com-cummins-n855-engine-specs-pdf-free",
+     "note": "855 cu in"
+    },
+    "cr": {
+     "value": 14.0,
+     "url": "https://www.scribd.com/document/698971539/pdfcoffee-com-cummins-n855-engine-specs-pdf-free",
+     "note": "NTC400 Big Cam sheet; same block"
+    },
+    "fo": {
+     "value": "1-5-3-6-2-4",
+     "url": "https://automotiveenginemechanics.tpub.com/TM-9-2815-225-34P/css/TM-9-2815-225-34P_20.htm",
+     "note": "NTC-400 Big Cam (TM 9-2815-225)"
+    },
+    "redline": {
+     "value": 2100,
+     "url": "https://automotiveenginemechanics.tpub.com/TM-9-2815-225-34P/css/TM-9-2815-225-34P_20.htm",
+     "note": "governed full load 2100; no-load 2460"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    },
+    "hp": {
+     "value": 350,
+     "url": "https://surplusrecord.com/listing/350-hp-cummins-ntc350-diesel-engine-2100-rpm-6-cyl-turbocharged-w-radiator-1070638/"
+    },
+    "hp_rpm": {
+     "value": 2100,
+     "url": "https://www.mylittlesalesman.com/cummins-ntc350-engines-for-sale-i4c235f575m367484?ptid=118",
+     "note": "855 CID Big Cam 350 hp @2100"
+    }
+   }
+  },
+  {
+   "id": "subaru_ek23",
+   "name": "Subaru EK23 544 cc I2 (four-stroke)",
+   "layout": "I2",
+   "cyl": 2,
+   "bore": 76.0,
+   "stroke": 60.0,
+   "cc": 544,
+   "cr": 9.0,
+   "valvetrain": "SOHC, 2v",
+   "induction": "carburettor",
+   "fuel": "petrol",
+   "hp": 30,
+   "hp_rpm": 6000,
+   "nm": 42,
+   "nm_rpm": 3500,
+   "redline": 7000,
+   "fo": "1-2 (360° twin)",
+   "cooling": "water",
+   "src": "Wikipedia: List of Subaru engines",
+   "sources": {
+    "bore": {
+     "value": 76,
+     "url": "https://www.goo-net-exchange.com/catalog/SUBARU__SAMBAR_TRY/4501847"
+    },
+    "stroke": {
+     "value": 60,
+     "url": "https://www.goo-net-exchange.com/catalog/SUBARU__SAMBAR_TRY/4501847"
+    },
+    "cc": {
+     "value": 544,
+     "url": "https://en.wikipedia.org/wiki/List_of_Subaru_engines"
+    },
+    "cr": {
+     "value": 9.0,
+     "url": "https://www.goo-net-exchange.com/catalog/SUBARU__SAMBAR_TRY/4501839",
+     "note": "3-valve Sambar version"
+    },
+    "hp": {
+     "value": 34,
+     "url": "https://www.goo-net-exchange.com/catalog/SUBARU__SAMBAR_TRY/4501839",
+     "note": "PS"
+    },
+    "hp_rpm": {
+     "value": 6000,
+     "url": "https://www.goo-net-exchange.com/catalog/SUBARU__SAMBAR_TRY/4501839"
+    },
+    "redline": {
+     "value": 7000,
+     "url": "https://en.wikipedia.org/wiki/List_of_Subaru_engines"
+    },
+    "nm": {
+     "value": 42.2,
+     "url": "https://www.goo-net-exchange.com/catalog/SUBARU__SAMBAR_TRY/4501847"
+    },
+    "nm_rpm": {
+     "value": 3500,
+     "url": "https://www.goo-net-exchange.com/catalog/SUBARU__SAMBAR_TRY/4501847"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "lambo_l503",
+   "name": "Lamborghini L503 5.2 V12 (LM002)",
+   "layout": "V12",
+   "bank": 60,
+   "cyl": 12,
+   "bore": 85.5,
+   "stroke": 75.0,
+   "cc": 5167,
+   "cr": 9.5,
+   "valvetrain": "DOHC per bank, 4v",
+   "induction": "6x Weber 44 DCNF carburettors",
+   "fuel": "petrol",
+   "hp": 444,
+   "hp_rpm": 6800,
+   "nm": 500,
+   "nm_rpm": 4500,
+   "redline": 7000,
+   "fo": "1-7-4-10-2-8-6-12-3-9-5-11",
+   "src": "Wikipedia: Lamborghini V12",
+   "sources": {
+    "bore": {
+     "value": 85.5,
+     "url": "https://www.auto-data.net/en/lamborghini-lm002-5.2-450hp-3084"
+    },
+    "stroke": {
+     "value": 75,
+     "url": "https://www.auto-data.net/en/lamborghini-lm002-5.2-450hp-3084"
+    },
+    "cc": {
+     "value": 5167,
+     "url": "https://www.auto-data.net/en/lamborghini-lm002-5.2-450hp-3084"
+    },
+    "cr": {
+     "value": 9.5,
+     "url": "https://www.auto-data.net/en/lamborghini-lm002-5.2-450hp-3084"
+    },
+    "nm": {
+     "value": 500,
+     "url": "https://www.auto-data.net/en/lamborghini-lm002-5.2-450hp-3084"
+    },
+    "nm_rpm": {
+     "value": 4500,
+     "url": "https://www.auto-data.net/en/lamborghini-lm002-5.2-450hp-3084"
+    },
+    "redline": {
+     "value": 7000,
+     "url": "https://en.wikipedia.org/wiki/Lamborghini_V12"
+    },
+    "fo": {
+     "value": "1-7-4-10-2-8-6-12-3-9-5-11",
+     "url": "https://en.wikipedia.org/wiki/Lamborghini_V12"
+    },
+    "hp": {
+     "value": 450,
+     "url": "https://www.auto-data.net/en/lamborghini-lm002-5.2-450hp-3084",
+     "note": "444 bhp per kfz-tech.de"
+    },
+    "hp_rpm": {
+     "value": 6800,
+     "url": "https://www.auto-data.net/en/lamborghini-lm002-5.2-450hp-3084"
+    },
+    "bank": {
+     "value": 60,
+     "url": "https://www.pakwheels.com/forums/t/some-thing-amazing-russian-hummer/21327",
+     "note": "60 deg V12 L503"
+    }
+   }
+  },
+  {
+   "id": "buick_lc2",
+   "name": "Buick 3.8 SFI turbo V6 (LC2, GNX)",
+   "layout": "V6",
+   "bank": 90,
+   "cyl": 6,
+   "bore": 96.5,
+   "stroke": 86.4,
+   "cc": 3791,
+   "cr": 8.0,
+   "valvetrain": "OHV pushrod, 2v",
+   "induction": "Garrett T-3 turbo, intercooled, SFI",
+   "fuel": "petrol",
+   "hp": 276,
+   "hp_rpm": 4400,
+   "nm": 488,
+   "nm_rpm": 3000,
+   "redline": 5000,
+   "fo": "1-6-5-4-3-2",
+   "src": "Wikipedia: Buick V6 engine",
+   "sources": {
+    "cc": {
+     "value": 3791,
+     "url": "https://en.wikipedia.org/wiki/Buick_V6_engine"
+    },
+    "cr": {
+     "value": 8.5,
+     "url": "https://over-drive-magazine.com/2022/12/06/1987-buick-regal-rwd-cars-fact-sheet/"
+    },
+    "hp_rpm": {
+     "value": 4400,
+     "url": "https://www.musclecarfacts.com/buick-grand-national/138-1987-grand-national/",
+     "note": "over-drive says 5000"
+    },
+    "fo": {
+     "value": "1-6-5-4-3-2",
+     "url": "https://en.wikipedia.org/wiki/Buick_V6_engine"
+    },
+    "bore": {
+     "value": 96.5,
+     "url": "https://over-drive-magazine.com/2022/12/06/1987-buick-regal-rwd-cars-fact-sheet/",
+     "note": "3.8 in"
+    },
+    "stroke": {
+     "value": 86.4,
+     "url": "https://over-drive-magazine.com/2022/12/06/1987-buick-regal-rwd-cars-fact-sheet/",
+     "note": "3.4 in"
+    },
+    "hp": {
+     "value": 276,
+     "url": "https://www.musclecarfacts.com/buick-grand-national/138-1987-grand-national/"
+    },
+    "nm": {
+     "value": 488,
+     "url": "https://www.musclecarfacts.com/buick-grand-national/138-1987-grand-national/",
+     "note": "360 lb-ft"
+    },
+    "nm_rpm": {
+     "value": 3000,
+     "url": "https://www.musclecarfacts.com/buick-grand-national/138-1987-grand-national/"
+    },
+    "cam_duration": {
+     "value": "in 282 / ex 276 (193/196 w/o ramp)",
+     "url": "https://over-drive-magazine.com/2022/12/06/1987-buick-regal-rwd-cars-fact-sheet/"
+    },
+    "cam_lift": {
+     "value": "in 0.400 in / ex 0.422 in",
+     "url": "https://over-drive-magazine.com/2022/12/06/1987-buick-regal-rwd-cars-fact-sheet/"
+    },
+    "bank": {
+     "value": 90,
+     "url": "https://over-drive-magazine.com/2022/12/06/1987-buick-regal-rwd-cars-fact-sheet/",
+     "note": "90-degree V6 (LD5 base text)"
+    }
+   }
+  },
+  {
+   "id": "olds_307",
+   "name": "Oldsmobile 307 V8 (LV2)",
+   "layout": "V8",
+   "bank": 90,
+   "cyl": 8,
+   "bore": 96.5,
+   "stroke": 86.0,
+   "cc": 5033,
+   "cr": 8.0,
+   "valvetrain": "OHV pushrod, 2v, roller lifters (1986+)",
+   "induction": "4-bbl Quadrajet",
+   "fuel": "petrol",
+   "hp": 140,
+   "hp_rpm": 3200,
+   "nm": 346,
+   "nm_rpm": 2000,
+   "redline": 4500,
+   "fo": "1-8-4-3-6-5-7-2",
+   "src": "Wikipedia: Oldsmobile V8 engine",
+   "sources": {
+    "bore": {
+     "value": 96.5,
+     "url": "https://www.oocities.org/teamcat101/Olds307Tech.htm",
+     "note": "3.800 in"
+    },
+    "stroke": {
+     "value": 86.0,
+     "url": "https://www.oocities.org/teamcat101/Olds307Tech.htm",
+     "note": "3.385 in"
+    },
+    "cc": {
+     "value": 5033,
+     "url": "https://en.wikipedia.org/wiki/Oldsmobile_V8_engine"
+    },
+    "cr": {
+     "value": 8.0,
+     "url": "https://www.oocities.org/teamcat101/Olds307Tech.htm"
+    },
+    "hp": {
+     "value": 140,
+     "url": "https://oldsjunction.classicoldsmobile.com/oldsfaq/ofe307.htm",
+     "note": "Y engine 1982-90"
+    },
+    "hp_rpm": {
+     "value": 3200,
+     "url": "https://en.wikipedia.org/wiki/Oldsmobile_V8_engine"
+    },
+    "nm": {
+     "value": 346,
+     "url": "https://oldsjunction.classicoldsmobile.com/oldsfaq/ofe307.htm",
+     "note": "255 lb-ft"
+    },
+    "nm_rpm": {
+     "value": 2000,
+     "url": "https://en.wikipedia.org/wiki/Oldsmobile_V8_engine"
+    },
+    "fo": {
+     "value": "1-8-4-3-6-5-7-2",
+     "url": "https://www.oocities.org/teamcat101/Olds307Tech.htm"
+    },
+    "bank": {
+     "value": 90,
+     "url": "https://www.oocities.org/teamcat101/Olds307Tech.htm"
+    }
+   }
+  },
+  {
+   "id": "mack_e6_350",
+   "name": "Mack E6-350 I6",
+   "layout": "I6",
+   "cyl": 6,
+   "bore": 124.0,
+   "stroke": 165.1,
+   "cc": 11900,
+   "cr": 16.0,
+   "valvetrain": "OHV, 4v",
+   "induction": "turbocharged, intercooled",
+   "fuel": "diesel",
+   "hp": 350,
+   "hp_rpm": 1900,
+   "nm": 1627,
+   "nm_rpm": 1200,
+   "redline": 2100,
+   "fo": "1-5-3-6-2-4",
+   "src": "own compilation, unverified",
+   "sources": {
+    "bore": {
+     "value": 123.8,
+     "url": "https://www.thetruckersreport.com/truckingindustryforum/posts/9973543/",
+     "note": "4.875 in (same bore as E7)"
+    },
+    "stroke": {
+     "value": 152.4,
+     "url": "https://www.thetruckersreport.com/truckingindustryforum/posts/9973543/",
+     "note": "E7 stroke 6.5 = E6 6.0 + 0.5"
+    },
+    "cc": {
+     "value": 11010,
+     "url": "https://bigmacktrucks.com/topic/48371-mack-e6-e7-vs-their-competition",
+     "note": "672 cu in"
+    },
+    "hp": {
+     "value": 350,
+     "url": "https://www.truckpaper.com/listing/for-sale/209173867/1990-mack-e6-engine?print=1"
+    },
+    "hp_rpm": {
+     "value": 1750,
+     "url": "https://www.truckpaper.com/listing/for-sale/209173867/1990-mack-e6-engine?print=1"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    },
+    "nm": {
+     "value": 1695,
+     "url": "https://bigmacktrucks.com/topic/70746-e6-torque-specs/page/2",
+     "note": "forum: 1250 lb-ft @1250 for 1980 E6-350 2-valve; low confidence"
+    },
+    "nm_rpm": {
+     "value": 1250,
+     "url": "https://bigmacktrucks.com/topic/70746-e6-torque-specs/page/2",
+     "note": "low confidence"
+    }
+   }
+  },
+  {
+   "id": "scania_dsc11",
+   "name": "Scania DSC11 I6",
+   "layout": "I6",
+   "cyl": 6,
+   "bore": 127.0,
+   "stroke": 145.0,
+   "cc": 11020,
+   "cr": 15.0,
+   "valvetrain": "OHV, 2v",
+   "induction": "turbocharged, intercooled",
+   "fuel": "diesel",
+   "hp": 330,
+   "hp_rpm": 2000,
+   "nm": 1310,
+   "nm_rpm": 1300,
+   "redline": 2200,
+   "fo": "1-5-3-6-2-4",
+   "src": "own compilation, unverified",
+   "sources": {
+    "bore": {
+     "value": 127,
+     "url": "https://www.powertraininternationalweb.com/wp-content/uploads/2023/03/028_031_comparison-11L.pdf"
+    },
+    "stroke": {
+     "value": 145,
+     "url": "https://www.powertraininternationalweb.com/wp-content/uploads/2023/03/028_031_comparison-11L.pdf"
+    },
+    "cc": {
+     "value": 11022,
+     "url": "https://mymotorlist.com/engines/scania/ds11/"
+    },
+    "cr": {
+     "value": 16,
+     "url": "https://mymotorlist.com/engines/scania/ds11/",
+     "note": "barrington lists 15.0 for DS11"
+    },
+    "fo": {
+     "value": "1-5-3-6-2-4",
+     "url": "https://mymotorlist.com/engines/scania/ds11/"
+    },
+    "hp": {
+     "value": 360,
+     "url": "https://mymotorlist.com/engines/scania/ds11/",
+     "note": "DS11 range 320-380 hp"
+    },
+    "nm": {
+     "value": 1510,
+     "url": "https://mymotorlist.com/engines/scania/ds11/"
+    },
+    "nm_rpm": {
+     "value": 1200,
+     "url": "https://mymotorlist.com/engines/scania/ds11/"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "navistar_dt466",
+   "name": "Navistar DT466 I6",
+   "layout": "I6",
+   "cyl": 6,
+   "bore": 116.6,
+   "stroke": 127.0,
+   "cc": 7636,
+   "cr": 16.5,
+   "valvetrain": "OHV, 2v",
+   "induction": "turbocharged",
+   "fuel": "diesel",
+   "hp": 210,
+   "hp_rpm": 2600,
+   "nm": 705,
+   "nm_rpm": 1600,
+   "redline": 2600,
+   "fo": "1-5-3-6-2-4",
+   "src": "own compilation, unverified",
+   "sources": {
+    "bore": {
+     "value": 109.2,
+     "url": "https://waterstorage.tpub.com/TM-5-3820-256-10/css/TM-5-3820-256-10_25.htm",
+     "note": "4.30 in"
+    },
+    "stroke": {
+     "value": 135.9,
+     "url": "https://waterstorage.tpub.com/TM-5-3820-256-10/css/TM-5-3820-256-10_25.htm",
+     "note": "5.35 in"
+    },
+    "cc": {
+     "value": 7638,
+     "url": "https://waterstorage.tpub.com/TM-5-3820-256-10/css/TM-5-3820-256-10_25.htm",
+     "note": "466.1 cu in"
+    },
+    "cr": {
+     "value": 16.3,
+     "url": "https://waterstorage.tpub.com/TM-5-3820-256-10/css/TM-5-3820-256-10_25.htm"
+    },
+    "fo": {
+     "value": "1-5-3-6-2-4",
+     "url": "https://heavydutypros.com/international-dt466-torque-and-engine-specifications-pln-esn-after-888340.aspx"
+    },
+    "hp": {
+     "value": 210,
+     "url": "https://www.dieselworldmag.com/?p=42763",
+     "note": "early DT466 rating 210 hp @2800, 468 lb-ft @1900; later 160-300 hp"
+    },
+    "hp_rpm": {
+     "value": 2800,
+     "url": "https://www.dieselworldmag.com/?p=42763"
+    },
+    "nm": {
+     "value": 635,
+     "url": "https://www.dieselworldmag.com/?p=42763",
+     "note": "468 lb-ft"
+    },
+    "nm_rpm": {
+     "value": 1900,
+     "url": "https://www.dieselworldmag.com/?p=42763"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "mazda_b6ze",
+   "name": "Mazda B6ZE(RS) 1.6 I4",
+   "layout": "I4",
+   "cyl": 4,
+   "bore": 78.0,
+   "stroke": 83.6,
+   "cc": 1597,
+   "cr": 9.4,
+   "valvetrain": "DOHC, 4v",
+   "induction": "EFI",
+   "fuel": "petrol",
+   "hp": 116,
+   "hp_rpm": 6500,
+   "nm": 136,
+   "nm_rpm": 5500,
+   "redline": 7200,
+   "fo": "1-3-4-2",
+   "src": "Wikipedia: Mazda B engine",
+   "sources": {
+    "bore": {
+     "value": 78,
+     "url": "https://mossmiata.com/miata-1990"
+    },
+    "stroke": {
+     "value": 83.6,
+     "url": "https://mossmiata.com/miata-1990"
+    },
+    "cc": {
+     "value": 1597,
+     "url": "https://en.wikipedia.org/wiki/Mazda_B_engine"
+    },
+    "cr": {
+     "value": 9.4,
+     "url": "https://mossmiata.com/miata-1990"
+    },
+    "hp_rpm": {
+     "value": 6500,
+     "url": "https://mossmiata.com/miata-1990"
+    },
+    "nm": {
+     "value": 136,
+     "url": "https://mossmiata.com/miata-1990",
+     "note": "100 lb-ft"
+    },
+    "nm_rpm": {
+     "value": 5500,
+     "url": "https://mossmiata.com/miata-1990"
+    },
+    "redline": {
+     "value": 7200,
+     "url": "https://www.australiancar.reviews/?p=53858"
+    },
+    "hp": {
+     "value": 116,
+     "url": "https://mossmiata.com/miata-1990",
+     "note": "SAE net"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "nissan_rb26dett",
+   "name": "Nissan RB26DETT I6",
+   "layout": "I6",
+   "cyl": 6,
+   "bore": 86.0,
+   "stroke": 73.7,
+   "cc": 2568,
+   "cr": 8.5,
+   "valvetrain": "DOHC, 4v",
+   "induction": "twin turbo, intercooled, 6 individual throttles",
+   "fuel": "petrol",
+   "hp": 276,
+   "hp_rpm": 6800,
+   "nm": 353,
+   "nm_rpm": 4400,
+   "redline": 8000,
+   "fo": "1-5-3-6-2-4",
+   "rod": 121.5,
+   "src": "Wikipedia: Nissan RB engine",
+   "sources": {
+    "bore": {
+     "value": 86.0,
+     "url": "https://en.wikipedia.org/wiki/Nissan_RB_engine"
+    },
+    "stroke": {
+     "value": 73.7,
+     "url": "https://en.wikipedia.org/wiki/Nissan_RB_engine"
+    },
+    "cc": {
+     "value": 2568,
+     "url": "https://en.wikipedia.org/wiki/Nissan_RB_engine"
+    },
+    "hp": {
+     "value": 276,
+     "url": "https://car.motor-fan.jp/tech/10010963",
+     "note": "206 kW"
+    },
+    "hp_rpm": {
+     "value": 6800,
+     "url": "https://car.motor-fan.jp/tech/10010963"
+    },
+    "nm_rpm": {
+     "value": 4400,
+     "url": "https://car.motor-fan.jp/tech/10010963"
+    },
+    "redline": {
+     "value": 8000,
+     "url": "https://www.jbskyline.net/r34/gtr/specs/",
+     "note": "R34; autospeed gives 8200 limiter (R32)"
+    },
+    "cr": {
+     "value": 8.5,
+     "url": "https://car.motor-fan.jp/tech/10010963"
+    },
+    "nm": {
+     "value": 353,
+     "url": "https://car.motor-fan.jp/tech/10010963"
+    },
+    "rod": {
+     "value": 121.5,
+     "url": "https://www.mahle.com/media/usa/motorsports/nissan-rb26dett-webpage.pdf"
+    },
+    "cam_duration": {
+     "value": "in 240 / ex 236",
+     "url": "https://dsportmag.com/the-scene/top-ten-engines-inside-the-engines-that-powered-an-industry/4"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    },
+    "fo": {
+     "value": "1-5-3-6-2-4",
+     "url": "https://support.haltech.com/portal/en/kb/articles/rb-engine"
+    }
+   }
+  },
+  {
+   "id": "toyota_22re",
+   "name": "Toyota 22R-E 2.4 I4",
+   "layout": "I4",
+   "cyl": 4,
+   "bore": 92.0,
+   "stroke": 89.0,
+   "cc": 2366,
+   "cr": 9.0,
+   "valvetrain": "SOHC chain, 2v",
+   "induction": "EFI",
+   "fuel": "petrol",
+   "hp": 114,
+   "hp_rpm": 4800,
+   "nm": 187,
+   "nm_rpm": 2800,
+   "redline": 5200,
+   "fo": "1-3-4-2",
+   "src": "Wikipedia: Toyota R engine",
+   "sources": {
+    "bore": {
+     "value": 92.0,
+     "url": "https://en.wikipedia.org/wiki/Toyota_R_engine"
+    },
+    "stroke": {
+     "value": 89.0,
+     "url": "https://en.wikipedia.org/wiki/Toyota_R_engine"
+    },
+    "cc": {
+     "value": 2366,
+     "url": "https://en.wikipedia.org/wiki/Toyota_R_engine"
+    },
+    "hp_rpm": {
+     "value": 4800,
+     "url": "https://www.auto-data.net/en/compare?carId1=3118"
+    },
+    "nm": {
+     "value": 192,
+     "url": "https://www.auto-data.net/en/compare?carId1=3118"
+    },
+    "nm_rpm": {
+     "value": 3600,
+     "url": "https://www.auto-data.net/en/compare?carId1=3118"
+    },
+    "redline": {
+     "value": 5500,
+     "url": "https://www.lceperformance.com/tech-articles/engine-specific/20r-22r-re-rt-e-general/history-of-the-22r-re-toyota-engine/"
+    },
+    "cr": {
+     "value": 9.3,
+     "url": "https://www.auto-data.net/en/compare?carId1=3118",
+     "note": "sources give 9.0-9.4"
+    },
+    "hp": {
+     "value": 114,
+     "url": "https://www.auto-data.net/en/compare?carId1=3118"
+    },
+    "fo": {
+     "value": "1-3-4-2",
+     "url": "https://tractortechspecs.com/toyota_22re_specs.html"
+    },
+    "rod": {
+     "value": 148.1,
+     "url": "https://lceperformance.com/category-s/23265.htm",
+     "note": "5.830 in c-c"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "bmw_s14b23",
+   "name": "BMW S14B23 2.3 I4 (E30 M3)",
+   "layout": "I4",
+   "cyl": 4,
+   "bore": 93.4,
+   "stroke": 84.0,
+   "cc": 2302,
+   "cr": 10.5,
+   "valvetrain": "DOHC, 4v",
+   "induction": "Bosch Motronic, individual throttle bodies",
+   "fuel": "petrol",
+   "hp": 192,
+   "hp_rpm": 6750,
+   "nm": 230,
+   "nm_rpm": 4750,
+   "redline": 7250,
+   "fo": "1-3-4-2",
+   "src": "Wikipedia: BMW S14",
+   "sources": {
+    "bore": {
+     "value": 93.4,
+     "url": "https://en.wikipedia.org/wiki/BMW_S14"
+    },
+    "stroke": {
+     "value": 84.0,
+     "url": "https://en.wikipedia.org/wiki/BMW_S14"
+    },
+    "cc": {
+     "value": 2302,
+     "url": "https://en.wikipedia.org/wiki/BMW_S14"
+    },
+    "hp": {
+     "value": 195,
+     "url": "https://www.auto-data.net/en/bmw-m3-coupe-e30-2.3-195hp-cat-9886",
+     "note": "CAT"
+    },
+    "hp_rpm": {
+     "value": 6750,
+     "url": "https://www.auto-data.net/en/bmw-m3-coupe-e30-2.3-195hp-cat-9886"
+    },
+    "nm": {
+     "value": 230,
+     "url": "https://www.auto-data.net/en/bmw-m3-coupe-e30-2.3-195hp-cat-9886"
+    },
+    "nm_rpm": {
+     "value": 4750,
+     "url": "https://cararac.com/spec/bmw/m3/coupe-1990/"
+    },
+    "cr": {
+     "value": 10.5,
+     "url": "https://www.auto-data.net/en/bmw-m3-coupe-e30-2.3-195hp-cat-9886"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "lancia_831e5",
+   "name": "Lancia 2.0 16v turbo I4 (Delta HF Integrale Evo)",
+   "layout": "I4",
+   "cyl": 4,
+   "bore": 84.0,
+   "stroke": 90.0,
+   "cc": 1995,
+   "cr": 8.0,
+   "valvetrain": "DOHC, 4v",
+   "induction": "Garrett T3 turbo, intercooled",
+   "fuel": "petrol",
+   "hp": 210,
+   "hp_rpm": 5750,
+   "nm": 300,
+   "nm_rpm": 3500,
+   "redline": 6500,
+   "fo": "1-3-4-2",
+   "src": "Wikipedia: Lancia Delta HF Integrale",
+   "sources": {
+    "bore": {
+     "value": 84,
+     "url": "https://www.ultimatecarpage.com/spec/7321/Lancia-Delta-HF-Integrale-Evo.html"
+    },
+    "stroke": {
+     "value": 90,
+     "url": "https://www.ultimatecarpage.com/spec/7321/Lancia-Delta-HF-Integrale-Evo.html"
+    },
+    "cc": {
+     "value": 1995,
+     "url": "https://en.wikipedia.org/wiki/Lancia_Delta_HF_Integrale"
+    },
+    "hp": {
+     "value": 210,
+     "url": "https://www.ultimatecarpage.com/spec/7321/Lancia-Delta-HF-Integrale-Evo.html"
+    },
+    "hp_rpm": {
+     "value": 5750,
+     "url": "https://www.ultimatecarpage.com/spec/7321/Lancia-Delta-HF-Integrale-Evo.html"
+    },
+    "nm": {
+     "value": 298,
+     "url": "https://www.ultimatecarpage.com/spec/7321/Lancia-Delta-HF-Integrale-Evo.html"
+    },
+    "nm_rpm": {
+     "value": 3500,
+     "url": "https://www.ultimatecarpage.com/spec/7321/Lancia-Delta-HF-Integrale-Evo.html"
+    },
+    "cr": {
+     "value": 8.0,
+     "url": "https://supercarnostalgia.com/blog/lancia-delta-hf-integrale-evoluzione"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "toyota_2jzgte",
+   "name": "Toyota 2JZ-GTE 3.0 I6",
+   "layout": "I6",
+   "cyl": 6,
+   "bore": 86.0,
+   "stroke": 86.0,
+   "cc": 2997,
+   "cr": 8.5,
+   "valvetrain": "DOHC, 4v",
+   "induction": "sequential twin turbo, intercooled",
+   "fuel": "petrol",
+   "hp": 320,
+   "hp_rpm": 5600,
+   "nm": 427,
+   "nm_rpm": 4000,
+   "redline": 6800,
+   "fo": "1-5-3-6-2-4",
+   "rod": 142.0,
+   "src": "Wikipedia: Toyota JZ engine",
+   "sources": {
+    "bore": {
+     "value": 86.0,
+     "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine"
+    },
+    "stroke": {
+     "value": 86.0,
+     "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine"
+    },
+    "cc": {
+     "value": 2997,
+     "url": "https://en.wikipedia.org/wiki/Toyota_JZ_engine"
+    },
+    "cr": {
+     "value": 8.5,
+     "url": "https://www.auto-data.net/en/toyota-supra-iv-a80-3.0i-24v-turbo-280hp-automatic-28555"
+    },
+    "hp": {
+     "value": 276,
+     "url": "https://www.auto-data.net/en/toyota-supra-iv-a80-3.0i-24v-turbo-280hp-automatic-28555",
+     "note": "280 PS JDM; export 320 hp"
+    },
+    "hp_rpm": {
+     "value": 5600,
+     "url": "https://www.auto-data.net/en/toyota-supra-iv-a80-3.0i-24v-turbo-280hp-automatic-28555"
+    },
+    "nm_rpm": {
+     "value": 3600,
+     "url": "https://www.auto-data.net/en/toyota-supra-iv-a80-3.0i-24v-turbo-280hp-automatic-28555"
+    },
+    "nm": {
+     "value": 432,
+     "url": "https://www.auto-data.net/en/toyota-supra-iv-a80-3.0i-24v-turbo-280hp-automatic-28555"
+    },
+    "rod": {
+     "value": 142,
+     "url": "https://www.speeding.fi/i/guider-og-informasjon/modellspesifikk-info/toyota-2jz-bunndel.html"
+    },
+    "redline": {
+     "value": 6800,
+     "url": "https://8020automotive.com/toyota-2jz-gte-engine-complete-guide/"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    },
+    "fo": {
+     "value": "1-5-3-6-2-4",
+     "url": "https://engineoiljournal.com/6-cylinder-engine-firing-order-chart/"
+    }
+   }
+  },
+  {
+   "id": "ford_46_2v",
+   "name": "Ford 4.6 Modular 2V SOHC V8",
+   "layout": "V8",
+   "bank": 90,
+   "cyl": 8,
+   "bore": 90.2,
+   "stroke": 90.0,
+   "cc": 4601,
+   "cr": 9.4,
+   "valvetrain": "SOHC per bank, 2v",
+   "induction": "sequential EFI",
+   "fuel": "petrol",
+   "hp": 224,
+   "hp_rpm": 4800,
+   "nm": 366,
+   "nm_rpm": 4000,
+   "redline": 6000,
+   "fo": "1-3-7-2-6-5-4-8",
+   "rod": 150.7,
+   "src": "Wikipedia: Ford Modular engine",
+   "sources": {
+    "bore": {
+     "value": 90.2,
+     "url": "https://en.wikipedia.org/wiki/Ford_Modular_engine"
+    },
+    "stroke": {
+     "value": 90.0,
+     "url": "https://en.wikipedia.org/wiki/Ford_Modular_engine"
+    },
+    "cc": {
+     "value": 4601,
+     "url": "https://en.wikipedia.org/wiki/Ford_Modular_engine"
+    },
+    "nm": {
+     "value": 369,
+     "url": "https://ultimatespecs.com/car-specs/Ford/121589/Ford-Crown-Victoria-46-V8-224hp.html"
+    },
+    "nm_rpm": {
+     "value": 4000,
+     "url": "https://ultimatespecs.com/car-specs/Ford/121589/Ford-Crown-Victoria-46-V8-224hp.html"
+    },
+    "redline": {
+     "value": 6000,
+     "url": "https://en.wikipedia.org/wiki/Ford_Modular_engine"
+    },
+    "fo": {
+     "value": "1-3-7-2-6-5-4-8",
+     "url": "https://www.jegs.com/tech-articles/engine-firing-order-explained/"
+    },
+    "cr": {
+     "value": 9.4,
+     "url": "https://www.auto-data.net/en/compare&carId1=8103&carId2=&carId3="
+    },
+    "hp": {
+     "value": 224,
+     "url": "https://ultimatespecs.com/car-specs/Ford/121589/Ford-Crown-Victoria-46-V8-224hp.html"
+    },
+    "hp_rpm": {
+     "value": 4800,
+     "url": "https://ultimatespecs.com/car-specs/Ford/121589/Ford-Crown-Victoria-46-V8-224hp.html"
+    },
+    "rod": {
+     "value": 150.7,
+     "url": "https://www.sn95forums.com/threads/ford-modular-engine-what-is-it.13679/"
+    },
+    "bank": {
+     "value": 90,
+     "url": "https://8020automotive.com/4-6-ford-engine-ultimate-guide/"
+    }
+   }
+  },
+  {
+   "id": "iveco_cursor8",
+   "name": "Iveco Cursor 8 I6",
+   "layout": "I6",
+   "cyl": 6,
+   "bore": 115.0,
+   "stroke": 125.0,
+   "cc": 7790,
+   "cr": 16.0,
+   "valvetrain": "SOHC, 4v",
+   "induction": "turbocharged (VGT), intercooled, unit injectors",
+   "fuel": "diesel",
+   "hp": 290,
+   "hp_rpm": 2100,
+   "nm": 1300,
+   "nm_rpm": 1100,
+   "redline": 2400,
+   "fo": "1-5-3-6-2-4",
+   "src": "own compilation, unverified",
+   "sources": {
+    "bore": {
+     "value": 115,
+     "url": "https://www.iveco.su/manuals/RepairStats-C078-ENT-Nov04.pdf"
+    },
+    "stroke": {
+     "value": 125,
+     "url": "https://www.iveco.su/manuals/RepairStats-C078-ENT-Nov04.pdf"
+    },
+    "cc": {
+     "value": 7790,
+     "url": "https://www.iveco.su/manuals/RepairStats-C078-ENT-Nov04.pdf"
+    },
+    "cr": {
+     "value": 16,
+     "url": "https://www.iveco.su/manuals/RepairStats-C078-ENT-Nov04.pdf"
+    },
+    "hp": {
+     "value": 290,
+     "url": "https://www.iveco.com/Documents/Irisbus/Irisbus-Citelis.html",
+     "note": "Citelis: 245/290/380 hp"
+    },
+    "redline": {
+     "value": 2430,
+     "url": "https://www.iveco.su/manuals/RepairStats-C078-ENT-Nov04.pdf",
+     "note": "no-load peak rpm (industrial C78 ENT)"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "gm_53_ly5",
+   "name": "GM 5.3 Vortec V8 (LY5/LMG, 2007)",
+   "layout": "V8",
+   "bank": 90,
+   "cyl": 8,
+   "bore": 96.0,
+   "stroke": 92.0,
+   "cc": 5328,
+   "cr": 9.9,
+   "valvetrain": "OHV pushrod, 2v",
+   "induction": "sequential EFI",
+   "fuel": "petrol",
+   "hp": 320,
+   "hp_rpm": 5200,
+   "nm": 454,
+   "nm_rpm": 4000,
+   "redline": 6000,
+   "fo": "1-8-7-2-6-5-4-3",
+   "rod": 155.0,
+   "src": "Wikipedia: General Motors small-block engine",
+   "sources": {
+    "bore": {
+     "value": 96.0,
+     "url": "https://en.wikipedia.org/wiki/General_Motors_small-block_engine"
+    },
+    "stroke": {
+     "value": 92.0,
+     "url": "https://en.wikipedia.org/wiki/General_Motors_small-block_engine"
+    },
+    "cc": {
+     "value": 5328,
+     "url": "https://en.wikipedia.org/wiki/General_Motors_small-block_engine"
+    },
+    "cr": {
+     "value": 9.9,
+     "url": "https://en.wikipedia.org/wiki/General_Motors_small-block_engine"
+    },
+    "hp": {
+     "value": 320,
+     "url": "https://en.wikipedia.org/wiki/General_Motors_small-block_engine"
+    },
+    "hp_rpm": {
+     "value": 5200,
+     "url": "https://en.wikipedia.org/wiki/General_Motors_small-block_engine"
+    },
+    "nm": {
+     "value": 454,
+     "url": "https://en.wikipedia.org/wiki/General_Motors_small-block_engine"
+    },
+    "nm_rpm": {
+     "value": 4000,
+     "url": "https://en.wikipedia.org/wiki/General_Motors_small-block_engine"
+    },
+    "redline": {
+     "value": 6000,
+     "url": "https://en.wikipedia.org/wiki/General_Motors_small-block_engine"
+    },
+    "fo": {
+     "value": "1-8-7-2-6-5-4-3",
+     "url": "https://www.aa1car.com/library/chevy_firing_orders.htm",
+     "note": "LS engines"
+    }
+   }
+  },
+  {
+   "id": "ford_54_2v",
+   "name": "Ford 5.4 Triton 2V SOHC V8",
+   "layout": "V8",
+   "bank": 90,
+   "cyl": 8,
+   "bore": 90.2,
+   "stroke": 105.8,
+   "cc": 5409,
+   "cr": 9.0,
+   "valvetrain": "SOHC per bank, 2v",
+   "induction": "sequential EFI",
+   "fuel": "petrol",
+   "hp": 255,
+   "hp_rpm": 4500,
+   "nm": 474,
+   "nm_rpm": 2500,
+   "redline": 5000,
+   "fo": "1-3-7-2-6-5-4-8",
+   "rod": 169.1,
+   "src": "Wikipedia: Ford Modular engine",
+   "sources": {
+    "bore": {
+     "value": 90.2,
+     "url": "https://www.sn95forums.com/threads/ford-modular-engine-what-is-it.13679/"
+    },
+    "stroke": {
+     "value": 105.8,
+     "url": "https://www.sn95forums.com/threads/ford-modular-engine-what-is-it.13679/"
+    },
+    "cc": {
+     "value": 5409,
+     "url": "https://en.wikipedia.org/wiki/Ford_Modular_engine"
+    },
+    "cr": {
+     "value": 9.0,
+     "url": "https://fraserengineco.com/5-4l-ford-engines/"
+    },
+    "hp_rpm": {
+     "value": 4500,
+     "url": "https://fordauthority.com/fmc/ford-motor-company-engines/ford-modular-family/ford-5-4l-triton-engine"
+    },
+    "nm": {
+     "value": 475,
+     "url": "https://www.sn95forums.com/threads/ford-modular-engine-what-is-it.13679/",
+     "note": "350 lb-ft; fordauthority says 323"
+    },
+    "fo": {
+     "value": "1-3-7-2-6-5-4-8",
+     "url": "https://www.aa1car.com/library/ford_firing_orders.htm"
+    },
+    "rod": {
+     "value": 169.1,
+     "url": "https://www.sn95forums.com/threads/ford-modular-engine-what-is-it.13679/"
+    },
+    "hp": {
+     "value": 255,
+     "url": "https://fordauthority.com/fmc/ford-motor-company-engines/ford-modular-family/ford-5-4l-triton-engine",
+     "note": "E-Series"
+    },
+    "nm_rpm": {
+     "value": 2500,
+     "url": "https://fordauthority.com/fmc/ford-motor-company-engines/ford-modular-family/ford-5-4l-triton-engine"
+    },
+    "bank": {
+     "value": 90,
+     "url": "https://en.wikipedia.org/wiki/Ford_Modular_engine",
+     "note": "90-degree V8"
+    }
+   }
+  },
+  {
+   "id": "ford_25t_i5",
+   "name": "Ford 2.5 Duratec RS turbo I5 (Volvo B5254)",
+   "layout": "I5",
+   "cyl": 5,
+   "bore": 83.0,
+   "stroke": 93.2,
+   "cc": 2522,
+   "cr": 8.5,
+   "valvetrain": "DOHC, 4v",
+   "induction": "Borg-Warner K16 turbo, intercooled",
+   "fuel": "petrol",
+   "hp": 301,
+   "hp_rpm": 6500,
+   "nm": 440,
+   "nm_rpm": 2300,
+   "redline": 6800,
+   "fo": "1-2-4-5-3",
+   "src": "Wikipedia: Volvo Modular engine",
+   "sources": {
+    "bore": {
+     "value": 83,
+     "url": "https://www.topgear.com/car-reviews/ford/focus-st/25-rs-3dr/spec"
+    },
+    "stroke": {
+     "value": 93.2,
+     "url": "https://www.topgear.com/car-reviews/ford/focus-st/25-rs-3dr/spec"
+    },
+    "cc": {
+     "value": 2522,
+     "url": "https://www.auto-data.net/en/compare?carId1=7326"
+    },
+    "cr": {
+     "value": 8.5,
+     "url": "https://www.topgear.com/car-reviews/ford/focus-st/25-rs-3dr/spec"
+    },
+    "hp_rpm": {
+     "value": 6500,
+     "url": "https://www.ultimatecarpage.com/spec/3525/Ford-Focus-RS.html"
+    },
+    "hp": {
+     "value": 301,
+     "url": "https://www.ultimatecarpage.com/spec/3525/Ford-Focus-RS.html",
+     "note": "305 PS"
+    },
+    "nm": {
+     "value": 440,
+     "url": "https://www.ultimatecarpage.com/spec/3525/Ford-Focus-RS.html"
+    },
+    "nm_rpm": {
+     "value": 2300,
+     "url": "https://australiancar.reviews/_pdfs/Ford_FocusRS_Mk2-LV_PressKit_201009.pdf",
+     "note": "2250-4500 plateau"
+    },
+    "redline": {
+     "value": 7050,
+     "url": "https://retrocaricons.com/article/Ford_Focus_RS_Mk_2_129",
+     "note": "max engine speed"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    },
+    "fo": {
+     "value": "1-2-4-5-3",
+     "url": "https://www.volvoclub.org.uk/tech/data/S40-2004on-DataSheet-2.pdf",
+     "note": "Volvo B5254 data sheet"
+    }
+   }
+  },
+  {
+   "id": "renault_dxi13_480",
+   "name": "Renault DXi 13 480 I6",
+   "layout": "I6",
+   "cyl": 6,
+   "bore": 131.0,
+   "stroke": 158.0,
+   "cc": 12777,
+   "cr": 17.0,
+   "valvetrain": "SOHC, 4v",
+   "induction": "turbocharged, intercooled, unit injectors",
+   "fuel": "diesel",
+   "hp": 480,
+   "hp_rpm": 1900,
+   "nm": 2300,
+   "nm_rpm": 1100,
+   "redline": 2100,
+   "fo": "1-5-3-6-2-4",
+   "src": "own compilation, unverified",
+   "sources": {
+    "bore": {
+     "value": 131,
+     "url": "https://www.renault-trucks.co.uk/sites/default/files/2022-08/FN71DJK.pdf",
+     "note": "DTI 13 (successor; same bore/stroke)"
+    },
+    "stroke": {
+     "value": 158,
+     "url": "https://www.renault-trucks.co.uk/sites/default/files/2022-08/FN71DJK.pdf"
+    },
+    "cc": {
+     "value": 12800,
+     "url": "https://www.renault-trucks.co.uk/sites/default/files/2022-08/FN71DJK.pdf"
+    },
+    "hp": {
+     "value": 480,
+     "url": "https://chipupdate.file-service.com/account/en/specs-pages/renault-trucks/magnum/all/480hp"
+    },
+    "nm": {
+     "value": 2250,
+     "url": "https://chipupdate.file-service.com/account/en/specs-pages/renault-trucks/magnum/all/480hp"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "man_d0836",
+   "name": "MAN D0836 LOH I6",
+   "layout": "I6",
+   "cyl": 6,
+   "bore": 108.0,
+   "stroke": 125.0,
+   "cc": 6871,
+   "cr": 18.0,
+   "valvetrain": "OHV, 4v",
+   "induction": "turbocharged, intercooled, common rail",
+   "fuel": "diesel",
+   "hp": 280,
+   "hp_rpm": 2300,
+   "nm": 1100,
+   "nm_rpm": 1200,
+   "redline": 2400,
+   "fo": "1-5-3-6-2-4",
+   "src": "man.eu: 108x125, 6.9 L, 184-251 kW; mymotorlist.com 6871 cc; MAN spec sheet FO 1-5-3-6-2-4. Fit to Opalin unconfirmed",
+   "sources": {
+    "bore": {
+     "value": 108,
+     "url": "https://man.eu/engines/en/products/on-road/busses-and-special-vehicles/busses-and-special-vehicles.html"
+    },
+    "stroke": {
+     "value": 125,
+     "url": "https://man.eu/engines/en/products/on-road/busses-and-special-vehicles/busses-and-special-vehicles.html"
+    },
+    "cc": {
+     "value": 6871,
+     "url": "https://barringtondieselclub.co.za/man/man-d0836.html"
+    },
+    "hp": {
+     "value": 240,
+     "url": "https://www.scribd.com/document/463120594/D08-Euro-4-Engines",
+     "note": "D0836 LOH52 177 kW; 2008 Opalin listing shows LOH52 239 hp"
+    },
+    "hp_rpm": {
+     "value": 2300,
+     "url": "https://www.scribd.com/document/463120594/D08-Euro-4-Engines",
+     "note": "nominal speed"
+    },
+    "redline": {
+     "value": 2320,
+     "url": "https://www.scribd.com/document/463120594/D08-Euro-4-Engines",
+     "note": "governed on-load limit"
+    },
+    "fo": {
+     "value": "1-5-3-6-2-4",
+     "url": "https://portal.yandex.com.tr/yaozet/auto/man-d0834-d0836-diesel-engine-specifications-CdBI3Hzk",
+     "note": "MAN spec sheet summary"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    },
+    "cr": {
+     "value": 17.4,
+     "url": "https://www.scribd.com/document/463120594/D08-Euro-4-Engines",
+     "note": "MAN bus data sheet, D0836 LOH 52"
+    },
+    "nm": {
+     "value": 925,
+     "url": "https://www.scribd.com/document/463120594/D08-Euro-4-Engines",
+     "note": "LOH 52: 925 Nm @1200-1800"
+    },
+    "nm_rpm": {
+     "value": 1200,
+     "url": "https://www.scribd.com/document/463120594/D08-Euro-4-Engines"
+    }
+   }
+  },
+  {
+   "id": "lambo_l539",
+   "name": "Lamborghini L539 6.5 V12",
+   "layout": "V12",
+   "bank": 60,
+   "cyl": 12,
+   "bore": 95.0,
+   "stroke": 76.4,
+   "cc": 6498,
+   "cr": 11.8,
+   "valvetrain": "DOHC per bank, 4v",
+   "induction": "naturally aspirated, MPI",
+   "fuel": "petrol",
+   "hp": 690,
+   "hp_rpm": 8250,
+   "nm": 690,
+   "nm_rpm": 5500,
+   "redline": 8500,
+   "fo": "1-7-4-10-2-8-6-12-3-9-5-11",
+   "src": "Wikipedia: Lamborghini V12",
+   "sources": {
+    "bore": {
+     "value": 95,
+     "url": "https://www.autoblog.gr/wp-content/uploads/2011/02/lamborghini_aventador_lp_700-4_-_technical_data.pdf",
+     "note": "Lamborghini press technical data"
+    },
+    "stroke": {
+     "value": 76.4,
+     "url": "https://www.autoblog.gr/wp-content/uploads/2011/02/lamborghini_aventador_lp_700-4_-_technical_data.pdf"
+    },
+    "cc": {
+     "value": 6498,
+     "url": "https://www.autoblog.gr/wp-content/uploads/2011/02/lamborghini_aventador_lp_700-4_-_technical_data.pdf"
+    },
+    "cr": {
+     "value": 11.8,
+     "url": "https://www.autoblog.gr/wp-content/uploads/2011/02/lamborghini_aventador_lp_700-4_-_technical_data.pdf"
+    },
+    "hp_rpm": {
+     "value": 8250,
+     "url": "https://www.autoblog.gr/wp-content/uploads/2011/02/lamborghini_aventador_lp_700-4_-_technical_data.pdf"
+    },
+    "nm": {
+     "value": 690,
+     "url": "https://www.autoblog.gr/wp-content/uploads/2011/02/lamborghini_aventador_lp_700-4_-_technical_data.pdf"
+    },
+    "nm_rpm": {
+     "value": 5500,
+     "url": "https://www.autoblog.gr/wp-content/uploads/2011/02/lamborghini_aventador_lp_700-4_-_technical_data.pdf"
+    },
+    "redline": {
+     "value": 8500,
+     "url": "https://autozine.org/Archive/Lamborghini/old/Aventador.html",
+     "note": "revs to 8500; lambocars lists 8250"
+    },
+    "fo": {
+     "value": "1-7-4-10-2-8-6-12-3-9-5-11",
+     "url": "https://en.wikipedia.org/wiki/Lamborghini_V12"
+    },
+    "bank": {
+     "value": 60,
+     "url": "https://www.autoblog.gr/wp-content/uploads/2011/02/lamborghini_aventador_lp_700-4_-_technical_data.pdf"
+    },
+    "hp": {
+     "value": 690,
+     "url": "https://www.autoblog.gr/wp-content/uploads/2011/02/lamborghini_aventador_lp_700-4_-_technical_data.pdf",
+     "note": "700 CV / 515 kW"
+    }
+   }
+  },
+  {
+   "id": "chrysler_57_hemi",
+   "name": "Chrysler 5.7 HEMI V8",
+   "layout": "V8",
+   "bank": 90,
+   "cyl": 8,
+   "bore": 99.5,
+   "stroke": 90.9,
+   "cc": 5654,
+   "cr": 10.5,
+   "valvetrain": "OHV pushrod, 2v, MDS",
+   "induction": "sequential EFI",
+   "fuel": "petrol",
+   "hp": 370,
+   "hp_rpm": 5250,
+   "nm": 536,
+   "nm_rpm": 4200,
+   "redline": 5800,
+   "fo": "1-8-4-3-6-5-7-2",
+   "src": "Wikipedia: Chrysler Hemi engine",
+   "sources": {
+    "bore": {
+     "value": 99.5,
+     "url": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2012_DG_Charger_SP.pdf",
+     "note": "Chrysler 2012 Charger spec sheet"
+    },
+    "stroke": {
+     "value": 90.9,
+     "url": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2012_DG_Charger_SP.pdf"
+    },
+    "cc": {
+     "value": 5654,
+     "url": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2012_DG_Charger_SP.pdf"
+    },
+    "hp": {
+     "value": 370,
+     "url": "https://www.jdpower.com/cars/2012/dodge/charger-v8/sedan-4d-r-t/specs"
+    },
+    "nm": {
+     "value": 536,
+     "url": "https://manualshive.com/ru/manual/dodge/2012-charger/2515603?page=2"
+    },
+    "redline": {
+     "value": 5800,
+     "url": "https://manualshive.com/ru/manual/dodge/2012-charger/2515603?page=2",
+     "note": "electronically limited"
+    },
+    "fo": {
+     "value": "1-8-4-3-6-5-7-2",
+     "url": "https://www.jegs.com/tech-articles/engine-firing-order-explained/"
+    },
+    "bank": {
+     "value": 90,
+     "url": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2012_DG_Charger_SP.pdf"
+    },
+    "cr": {
+     "value": 10.5,
+     "url": "https://manualshive.com/en/manual/dodge/charger-2011/2515786?page=2"
+    },
+    "hp_rpm": {
+     "value": 5250,
+     "url": "https://www.jdpower.com/cars/2012/dodge/charger-v8/sedan-4d-r-t/specs"
+    },
+    "nm_rpm": {
+     "value": 4200,
+     "url": "https://manualshive.com/ru/manual/dodge/2012-charger/2515603?page=2"
+    }
+   }
+  },
+  {
+   "id": "mazda_skyactiv_g25",
+   "name": "Mazda Skyactiv-G 2.5 I4",
+   "layout": "I4",
+   "cyl": 4,
+   "bore": 89.0,
+   "stroke": 100.0,
+   "cc": 2488,
+   "cr": 13.0,
+   "valvetrain": "DOHC, 4v",
+   "induction": "direct injection",
+   "fuel": "petrol",
+   "hp": 184,
+   "hp_rpm": 5700,
+   "nm": 250,
+   "nm_rpm": 3250,
+   "redline": 6500,
+   "fo": "1-3-4-2",
+   "src": "Wikipedia: Skyactiv",
+   "sources": {
+    "bore": {
+     "value": 89,
+     "url": "https://www.wardsauto.com/news/archive-wards-best-mazda-cxs-launch-in-texas/782420/"
+    },
+    "stroke": {
+     "value": 100,
+     "url": "https://www.wardsauto.com/news/archive-wards-best-mazda-cxs-launch-in-texas/782420/"
+    },
+    "cc": {
+     "value": 2488,
+     "url": "https://auto-data.net/en/mazda-cx-5-2.5-skyactiv-g-184hp-automatic-51977"
+    },
+    "cr": {
+     "value": 13.0,
+     "url": "https://www.wardsauto.com/news/archive-wards-best-mazda-cxs-launch-in-texas/782420/"
+    },
+    "nm": {
+     "value": 251,
+     "url": "https://www.wardsauto.com/news/archive-wards-best-mazda-cxs-launch-in-texas/782420/"
+    },
+    "hp": {
+     "value": 184,
+     "url": "https://www.wardsauto.com/news/archive-wards-best-mazda-cxs-launch-in-texas/782420/"
+    },
+    "hp_rpm": {
+     "value": 5700,
+     "url": "https://www.wardsauto.com/news/archive-wards-best-mazda-cxs-launch-in-texas/782420/"
+    },
+    "nm_rpm": {
+     "value": 3250,
+     "url": "https://www.wardsauto.com/news/archive-wards-best-mazda-cxs-launch-in-texas/782420/"
+    },
+    "redline": {
+     "value": 6500,
+     "url": "https://auto-data.net/en/mazda-cx-5-2.5-skyactiv-g-184hp-automatic-51977",
+     "note": "max engine speed"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "ford_16_tivct",
+   "name": "Ford 1.6 Ti-VCT Sigma I4",
+   "layout": "I4",
+   "cyl": 4,
+   "bore": 79.0,
+   "stroke": 81.4,
+   "cc": 1596,
+   "cr": 11.0,
+   "valvetrain": "DOHC, 4v, twin VCT",
+   "induction": "sequential EFI",
+   "fuel": "petrol",
+   "hp": 120,
+   "hp_rpm": 6350,
+   "nm": 152,
+   "nm_rpm": 5000,
+   "redline": 6800,
+   "fo": "1-3-4-2",
+   "src": "Wikipedia: Ford Sigma engine",
+   "sources": {
+    "bore": {
+     "value": 79,
+     "url": "https://www.auto-data.net/en/ford-fiesta-vii-sedan-mk7-1.6-ti-vct-120hp-powershift-56328"
+    },
+    "stroke": {
+     "value": 81.4,
+     "url": "https://www.auto-data.net/en/ford-fiesta-vii-sedan-mk7-1.6-ti-vct-120hp-powershift-56328"
+    },
+    "cc": {
+     "value": 1596,
+     "url": "https://www.auto-data.net/en/ford-fiesta-vii-sedan-mk7-1.6-ti-vct-120hp-powershift-56328"
+    },
+    "cr": {
+     "value": 11,
+     "url": "https://www.auto-data.net/en/ford-fiesta-vii-sedan-mk7-1.6-ti-vct-120hp-powershift-56328"
+    },
+    "hp": {
+     "value": 120,
+     "url": "https://www.auto-data.net/en/ford-fiesta-vii-sedan-mk7-facelift-2013-1.6-ti-vct-120hp-56326"
+    },
+    "nm": {
+     "value": 152,
+     "url": "https://www.auto-data.net/en/ford-fiesta-vii-sedan-mk7-facelift-2013-1.6-ti-vct-120hp-56326"
+    },
+    "nm_rpm": {
+     "value": 5000,
+     "url": "https://www.auto-data.net/en/ford-fiesta-vii-sedan-mk7-facelift-2013-1.6-ti-vct-120hp-56326"
+    },
+    "redline": {
+     "value": 6800,
+     "url": "https://en.wikipedia.org/wiki/Ford_Sigma_engine"
+    },
+    "hp_rpm": {
+     "value": 6350,
+     "url": "https://www.auto-data.net/en/ford-fiesta-vii-sedan-mk7-facelift-2013-1.6-ti-vct-120hp-56326"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "mb_om934",
+   "name": "Mercedes-Benz OM 934 5.1 I4",
+   "layout": "I4",
+   "cyl": 4,
+   "bore": 110.0,
+   "stroke": 135.0,
+   "cc": 5132,
+   "cr": 17.6,
+   "valvetrain": "DOHC, 4v",
+   "induction": "turbocharged, intercooled, common rail",
+   "fuel": "diesel",
+   "hp": 231,
+   "hp_rpm": 2200,
+   "nm": 900,
+   "nm_rpm": 1200,
+   "redline": 2400,
+   "fo": "1-3-4-2",
+   "src": "own compilation, unverified",
+   "sources": {
+    "bore": {
+     "value": 110,
+     "url": "https://de.wikibooks.org/wiki/Traktorenlexikon:_Mercedes-Benz_U_5023_(Unimog-Baureihe_437.4)"
+    },
+    "stroke": {
+     "value": 135,
+     "url": "https://de.wikibooks.org/wiki/Traktorenlexikon:_Mercedes-Benz_U_5023_(Unimog-Baureihe_437.4)"
+    },
+    "cc": {
+     "value": 5132,
+     "url": "https://mercedes-benz-trucks.com/en_GB/models/unimog-off-road/technical-data.html"
+    },
+    "cr": {
+     "value": 17.6,
+     "url": "https://mercedes-benz-trucks.com/en_GB/models/unimog-off-road/technical-data.html"
+    },
+    "hp": {
+     "value": 228,
+     "url": "https://mercedes-benz-trucks.com/en_GB/models/unimog-off-road/technical-data.html",
+     "note": "170 kW / 231 PS"
+    },
+    "hp_rpm": {
+     "value": 2200,
+     "url": "https://mercedes-benz-trucks.com/en_GB/models/unimog-off-road/technical-data.html",
+     "note": "nominal engine speed"
+    },
+    "nm": {
+     "value": 900,
+     "url": "https://mercedes-benz-trucks.com/en_GB/models/unimog-off-road/technical-data.html"
+    },
+    "nm_rpm": {
+     "value": 1400,
+     "url": "https://mercedes-benz-trucks.com/en_GB/models/unimog-off-road/technical-data.html",
+     "note": "1200-1600 plateau"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "volvo_d13",
+   "name": "Volvo D13 I6",
+   "layout": "I6",
+   "cyl": 6,
+   "bore": 131.0,
+   "stroke": 158.0,
+   "cc": 12777,
+   "cr": 17.0,
+   "valvetrain": "SOHC, 4v",
+   "induction": "turbocharged (VGT), intercooled, unit injectors",
+   "fuel": "diesel",
+   "hp": 435,
+   "hp_rpm": 1800,
+   "nm": 2100,
+   "nm_rpm": 1100,
+   "redline": 2100,
+   "fo": "1-5-3-6-2-4",
+   "src": "Wikipedia: Volvo D13",
+   "sources": {
+    "bore": {
+     "value": 131,
+     "url": "https://stpi.it.volvo.com/STPIFiles/Volvo/FactSheet/D13C460,%20EU5SCR-M_Eng_02_1144722.pdf"
+    },
+    "stroke": {
+     "value": 158,
+     "url": "https://stpi.it.volvo.com/STPIFiles/Volvo/FactSheet/D13C460,%20EU5SCR-M_Eng_02_1144722.pdf"
+    },
+    "cc": {
+     "value": 12800,
+     "url": "https://stpi.it.volvo.com/STPIFiles/Volvo/FactSheet/D13C460,%20EU5SCR-M_Eng_02_1144722.pdf"
+    },
+    "cr": {
+     "value": 17.8,
+     "url": "https://stpi.it.volvo.com/STPIFiles/Volvo/FactSheet/D13C460,%20EU5SCR-M_Eng_02_1144722.pdf",
+     "note": "D13C460 EU5"
+    },
+    "redline": {
+     "value": 2100,
+     "url": "https://techpub.prevostcar.com/content/media/18797/view",
+     "note": "governed rpm"
+    },
+    "hp": {
+     "value": 460,
+     "url": "https://stpi.it.volvo.com/STPIFiles/Volvo/FactSheet/D13C460,%20EU5SCR-M_Eng_02_1144722.pdf",
+     "note": "D13C460; VNL ratings vary"
+    },
+    "hp_rpm": {
+     "value": 1900,
+     "url": "https://stpi.it.volvo.com/STPIFiles/Volvo/FactSheet/D13C460,%20EU5SCR-M_Eng_02_1144722.pdf",
+     "note": "1400-1900 plateau"
+    },
+    "nm": {
+     "value": 2300,
+     "url": "https://stpi.it.volvo.com/STPIFiles/Volvo/FactSheet/D13C460,%20EU5SCR-M_Eng_02_1144722.pdf"
+    },
+    "nm_rpm": {
+     "value": 1000,
+     "url": "https://stpi.it.volvo.com/STPIFiles/Volvo/FactSheet/D13C460,%20EU5SCR-M_Eng_02_1144722.pdf",
+     "note": "1000-1400 plateau"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    },
+    "fo": {
+     "value": "1-5-3-6-2-4",
+     "url": "https://techpub.prevostcar.com/content/media/18797/view",
+     "note": "Volvo D13 specs (Prevost)"
+    }
+   }
+  },
+  {
+   "id": "yamaha_cp4",
+   "name": "Yamaha YZF-R1 998 cc crossplane I4 (2015)",
+   "layout": "I4",
+   "cyl": 4,
+   "bore": 79.0,
+   "stroke": 50.9,
+   "cc": 998,
+   "cr": 13.0,
+   "valvetrain": "DOHC, 4v, titanium rods",
+   "induction": "fuel injection, ride-by-wire",
+   "fuel": "petrol",
+   "hp": 197,
+   "hp_rpm": 13500,
+   "nm": 112,
+   "nm_rpm": 11500,
+   "redline": 14000,
+   "fo": "crossplane: 270°-180°-90°-180° (1-3-2-4)",
+   "src": "Wikipedia: Yamaha YZF-R1",
+   "sources": {
+    "bore": {
+     "value": 79,
+     "url": "https://global.yamaha-motor.com/news/2014/1104/yzf-r1.html"
+    },
+    "stroke": {
+     "value": 50.9,
+     "url": "https://global.yamaha-motor.com/news/2014/1104/yzf-r1.html"
+    },
+    "cc": {
+     "value": 998,
+     "url": "https://global.yamaha-motor.com/news/2014/1104/yzf-r1.html"
+    },
+    "cr": {
+     "value": 13.0,
+     "url": "https://global.yamaha-motor.com/news/2014/1104/yzf-r1.html"
+    },
+    "hp": {
+     "value": 197,
+     "url": "https://global.yamaha-motor.com/news/2014/1104/yzf-r1.html",
+     "note": "200 PS / 147.1 kW"
+    },
+    "hp_rpm": {
+     "value": 13500,
+     "url": "https://global.yamaha-motor.com/news/2014/1104/yzf-r1.html"
+    },
+    "nm": {
+     "value": 112.4,
+     "url": "https://global.yamaha-motor.com/news/2014/1104/yzf-r1.html"
+    },
+    "nm_rpm": {
+     "value": 11500,
+     "url": "https://global.yamaha-motor.com/news/2014/1104/yzf-r1.html"
+    },
+    "fo": {
+     "value": "firing intervals 270-180-90-180 deg",
+     "url": "https://mcnews.com.au/2015-yamaha-yzf-r1-full-reveal/",
+     "note": "cylinder order not given by source"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "bmw_n55b30t0",
+   "name": "BMW N55B30T0 3.0 turbo I6 (M2)",
+   "layout": "I6",
+   "cyl": 6,
+   "bore": 84.0,
+   "stroke": 89.6,
+   "cc": 2979,
+   "cr": 10.2,
+   "valvetrain": "DOHC, 4v, Valvetronic, double VANOS",
+   "induction": "twin-scroll turbo, direct injection",
+   "fuel": "petrol",
+   "hp": 365,
+   "hp_rpm": 6500,
+   "nm": 465,
+   "nm_rpm": 1400,
+   "redline": 7000,
+   "fo": "1-5-3-6-2-4",
+   "src": "Wikipedia: BMW N55",
+   "sources": {
+    "bore": {
+     "value": 84,
+     "url": "https://www.bimmerarchive.org/m-code/n55b30t0.html"
+    },
+    "stroke": {
+     "value": 89.6,
+     "url": "https://www.bimmerarchive.org/m-code/n55b30t0.html"
+    },
+    "cc": {
+     "value": 2979,
+     "url": "https://www.bimmerarchive.org/m-code/n55b30t0.html"
+    },
+    "cr": {
+     "value": 10.2,
+     "url": "https://www.bimmerarchive.org/m-code/n55b30t0.html"
+    },
+    "hp": {
+     "value": 365,
+     "url": "https://www.bimmerarchive.org/m-code/n55b30t0.html",
+     "note": "370 PS / 272 kW"
+    },
+    "hp_rpm": {
+     "value": 6500,
+     "url": "https://www.bimmerarchive.org/m-code/n55b30t0.html"
+    },
+    "nm": {
+     "value": 465,
+     "url": "https://www.bimmerarchive.org/m-code/n55b30t0.html",
+     "note": "500 Nm overboost (kfz-tech)"
+    },
+    "redline": {
+     "value": 7000,
+     "url": "https://bmw-specs.pages.dev/m2/2016-2021/3.0l-engine/specs",
+     "note": "weak source"
+    },
+    "nm_rpm": {
+     "value": 1400,
+     "url": "https://www.bimmerarchive.org/m-code/n55b30t0.html",
+     "note": "1400-5560 plateau"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "ford_54_3v",
+   "name": "Ford 5.4 Triton 3V SOHC V8",
+   "layout": "V8",
+   "bank": 90,
+   "cyl": 8,
+   "bore": 90.2,
+   "stroke": 105.8,
+   "cc": 5409,
+   "cr": 9.8,
+   "valvetrain": "SOHC per bank, 3v, VCT",
+   "induction": "sequential EFI",
+   "fuel": "petrol",
+   "hp": 300,
+   "hp_rpm": 5000,
+   "nm": 495,
+   "nm_rpm": 3750,
+   "redline": 5500,
+   "fo": "1-3-7-2-6-5-4-8",
+   "src": "Wikipedia: Ford Modular engine",
+   "sources": {
+    "bore": {
+     "value": 90.2,
+     "url": "https://www.sn95forums.com/threads/ford-modular-engine-what-is-it.13679/"
+    },
+    "stroke": {
+     "value": 105.8,
+     "url": "https://www.sn95forums.com/threads/ford-modular-engine-what-is-it.13679/"
+    },
+    "cc": {
+     "value": 5409,
+     "url": "https://en.wikipedia.org/wiki/Ford_Modular_engine"
+    },
+    "hp": {
+     "value": 300,
+     "url": "https://www.sn95forums.com/threads/ford-modular-engine-what-is-it.13679/",
+     "note": "2004-08 F-Series 3V"
+    },
+    "nm": {
+     "value": 495,
+     "url": "https://www.sn95forums.com/threads/ford-modular-engine-what-is-it.13679/"
+    },
+    "redline": {
+     "value": 5500,
+     "url": "https://en.wikipedia.org/wiki/Ford_Modular_engine"
+    },
+    "fo": {
+     "value": "1-3-7-2-6-5-4-8",
+     "url": "https://www.aa1car.com/library/ford_firing_orders.htm"
+    },
+    "rod": {
+     "value": 169.1,
+     "url": "https://www.sn95forums.com/threads/ford-modular-engine-what-is-it.13679/"
+    },
+    "cr": {
+     "value": 9.8,
+     "url": "https://fordauthority.com/fmc/ford-motor-company-engines/ford-modular-family/ford-5-4l-triton-engine"
+    },
+    "hp_rpm": {
+     "value": 5000,
+     "url": "https://fordauthority.com/fmc/ford-motor-company-engines/ford-modular-family/ford-5-4l-triton-engine"
+    },
+    "nm_rpm": {
+     "value": 3500,
+     "url": "https://fordauthority.com/fmc/ford-motor-company-engines/ford-modular-family/ford-5-4l-triton-engine"
+    },
+    "bank": {
+     "value": 90,
+     "url": "https://en.wikipedia.org/wiki/Ford_Modular_engine"
+    }
+   }
+  },
+  {
+   "id": "ford_kent_1600",
+   "name": "Ford Kent 1.6 crossflow I4 (Formula Ford)",
+   "layout": "I4",
+   "cyl": 4,
+   "bore": 80.98,
+   "stroke": 77.62,
+   "cc": 1599,
+   "cr": 9.0,
+   "valvetrain": "OHV pushrod, 2v",
+   "induction": "1x Weber 32/36 carburettor",
+   "fuel": "petrol",
+   "hp": 110,
+   "hp_rpm": 6000,
+   "nm": 140,
+   "nm_rpm": 4500,
+   "redline": 6500,
+   "fo": "1-2-4-3",
+   "src": "Wikipedia: Ford Kent engine",
+   "sources": {
+    "stroke": {
+     "value": 77.62,
+     "url": "https://formulaford.org.au/_files/ugd/1748a5_1b6a7fd5a9c9497db6dd9d154315bc52.pdf"
+    },
+    "cc": {
+     "value": 1599,
+     "url": "https://en.wikipedia.org/wiki/Ford_Kent_engine"
+    },
+    "bore": {
+     "value": 81,
+     "url": "https://formulaford.org.au/_files/ugd/1748a5_1b6a7fd5a9c9497db6dd9d154315bc52.pdf",
+     "note": "FF regs nominal"
+    },
+    "cr": {
+     "value": 9.0,
+     "url": "https://motor-car.net/ford-engines/item/16094-kent-engine",
+     "note": "road 1.6 Escort"
+    },
+    "fo": {
+     "value": "1-2-4-3",
+     "url": "https://motor-car.net/ford-engines/item/16094-kent-engine"
+    },
+    "cam_lift": {
+     "value": "in 0.356 in / ex 0.358 in",
+     "url": "https://www.pegasusautoracing.com/pdfs/RaceEngineTechSpecs.pdf",
+     "note": "FF1600 max at 0 clearance"
+    },
+    "ign_timing": {
+     "value": "38-40 BTDC (total)",
+     "url": "https://www.pegasusautoracing.com/pdfs/RaceEngineTechSpecs.pdf"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    },
+    "hp": {
+     "value": 104,
+     "url": "https://jalopnik.com/5383307/ford-introduces-16l-duratec-race-engine-restarts-kent-production",
+     "note": "Ford: Kent 1600 FF engine 105 PS"
+    },
+    "redline": {
+     "value": 6800,
+     "url": "https://www.motorsportmagazine.com/archive/article/june-1985/29/the-constructors-5-formula-ford-1600-engine-buil/",
+     "note": "FF1600 rev limits rose from ~6200 to ~6800 rpm"
+    }
+   }
+  },
+  {
+   "id": "cummins_isx15",
+   "name": "Cummins ISX15 I6",
+   "layout": "I6",
+   "cyl": 6,
+   "bore": 137.0,
+   "stroke": 169.0,
+   "cc": 14900,
+   "cr": 17.0,
+   "valvetrain": "DOHC, 4v",
+   "induction": "VGT turbo, intercooled, XPI common rail",
+   "fuel": "diesel",
+   "hp": 450,
+   "hp_rpm": 1800,
+   "nm": 2237,
+   "nm_rpm": 1100,
+   "redline": 2100,
+   "fo": "1-5-3-6-2-4",
+   "src": "Wikipedia: Cummins ISX",
+   "sources": {
+    "bore": {
+     "value": 137,
+     "url": "https://www.internationaltrucks.com/engines/cummins-isx15"
+    },
+    "stroke": {
+     "value": 169,
+     "url": "https://www.internationaltrucks.com/engines/cummins-isx15"
+    },
+    "cc": {
+     "value": 14900,
+     "url": "https://www.internationaltrucks.com/engines/cummins-isx15"
+    },
+    "fo": {
+     "value": "1-5-3-6-2-4",
+     "url": "https://dieselpro.com/cummins-isx-rebuild-kit"
+    },
+    "hp": {
+     "value": 450,
+     "url": "https://xr793.com/wp-content/uploads/2021/11/2013-International-Cummins-ISX15-Spec-Sheet.pdf",
+     "note": "ISX15 450 rating; range 400-600"
+    },
+    "nm": {
+     "value": 2237,
+     "url": "https://xr793.com/wp-content/uploads/2021/11/2013-International-Cummins-ISX15-Spec-Sheet.pdf",
+     "note": "1650 lb-ft"
+    },
+    "nm_rpm": {
+     "value": 1000,
+     "url": "https://xr793.com/wp-content/uploads/2021/11/2013-International-Cummins-ISX15-Spec-Sheet.pdf"
+    },
+    "redline": {
+     "value": 1800,
+     "url": "https://xr793.com/wp-content/uploads/2021/11/2013-International-Cummins-ISX15-Spec-Sheet.pdf",
+     "note": "governed 1800/2000"
+    },
+    "hp_rpm": {
+     "value": 1800,
+     "url": "https://www.overdriveonline.com/equipment/article/14882820/engine-innovation-cummins-isx15",
+     "note": "450 hp at 1750 per test; governed 1800"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "vespa_px150",
+   "name": "Piaggio Vespa PX150 two-stroke single",
+   "layout": "I1",
+   "cyl": 1,
+   "cycle": 2,
+   "bore": 57.8,
+   "stroke": 57.0,
+   "cc": 150,
+   "cr": 8.2,
+   "valvetrain": "rotary valve (crank)",
+   "induction": "Dell'Orto SI 20/17 carburettor",
+   "fuel": "petrol (oil premix)",
+   "hp": 9,
+   "hp_rpm": 6000,
+   "nm": 11,
+   "nm_rpm": 4500,
+   "redline": 6500,
+   "fo": "1",
+   "cooling": "fan-forced air",
+   "src": "Wikipedia: Vespa PX",
+   "sources": {
+    "bore": {
+     "value": 57.8,
+     "url": "https://www.bikesales.com.au/editorial/details/vespa-px150-coming-soon-24033/"
+    },
+    "stroke": {
+     "value": 57,
+     "url": "https://www.bikesales.com.au/editorial/details/vespa-px150-coming-soon-24033/"
+    },
+    "cc": {
+     "value": 150,
+     "url": "https://en.wikipedia.org/wiki/Vespa_PX"
+    },
+    "hp_rpm": {
+     "value": 5700,
+     "url": "https://www.ultimatespecs.com/motorcycles-specs/vespa/vespa-px-150-2006"
+    },
+    "redline": {
+     "value": 6500,
+     "url": "https://en.wikipedia.org/wiki/Vespa_PX"
+    },
+    "fo": {
+     "value": "1",
+     "url": "https://en.wikipedia.org/wiki/Vespa_PX"
+    },
+    "cr": {
+     "value": 8.2,
+     "url": "https://2smoto.com/distu.asp?id=9118",
+     "note": "P150X; PX150E kit 8.0"
+    },
+    "hp": {
+     "value": 9,
+     "url": "https://www.ultimatespecs.com/motorcycles-specs/vespa/vespa-px-150-2006"
+    },
+    "nm": {
+     "value": 11.9,
+     "url": "https://www.ultimatespecs.com/motorcycles-specs/vespa/vespa-px-150-2006"
+    },
+    "nm_rpm": {
+     "value": 4000,
+     "url": "https://www.ultimatespecs.com/motorcycles-specs/vespa/vespa-px-150-2006"
+    },
+    "induction": {
+     "value": "rotary valve in crankcase",
+     "url": "https://www.bikesales.com.au/editorial/details/vespa-px150-coming-soon-24033/"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "honda_gx160",
+   "name": "Honda GX160 single",
+   "layout": "I1",
+   "cyl": 1,
+   "bore": 68.0,
+   "stroke": 45.0,
+   "cc": 163,
+   "cr": 8.5,
+   "valvetrain": "OHV, 2v",
+   "induction": "float carburettor, governor",
+   "fuel": "petrol",
+   "hp": 4.8,
+   "hp_rpm": 3600,
+   "nm": 10.3,
+   "nm_rpm": 2500,
+   "redline": 3900,
+   "fo": "1",
+   "cooling": "air",
+   "src": "own compilation, unverified",
+   "sources": {
+    "bore": {
+     "value": 68,
+     "url": "https://hondanews.com/en-US/releases/release-0cde2246a552407380ff246f705f8d0d-honda-mid-gx-engines-specifications"
+    },
+    "stroke": {
+     "value": 45,
+     "url": "https://hondanews.com/en-US/releases/release-0cde2246a552407380ff246f705f8d0d-honda-mid-gx-engines-specifications"
+    },
+    "cc": {
+     "value": 163,
+     "url": "https://hondanews.com/en-US/releases/release-0cde2246a552407380ff246f705f8d0d-honda-mid-gx-engines-specifications"
+    },
+    "cr": {
+     "value": 9.0,
+     "url": "https://hondanews.com/en-US/releases/release-0cde2246a552407380ff246f705f8d0d-honda-mid-gx-engines-specifications"
+    },
+    "hp": {
+     "value": 4.8,
+     "url": "https://engines.honda.com/models/model-detail/mid-gx"
+    },
+    "hp_rpm": {
+     "value": 3600,
+     "url": "https://engines.honda.com/models/model-detail/mid-gx"
+    },
+    "nm": {
+     "value": 10.3,
+     "url": "https://engines.honda.com/models/model-detail/mid-gx"
+    },
+    "nm_rpm": {
+     "value": 2500,
+     "url": "https://engines.honda.com/models/model-detail/mid-gx"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "scania_dc9",
+   "name": "Scania DC9 9.3 L I5",
+   "layout": "I5",
+   "cyl": 5,
+   "bore": 130.0,
+   "stroke": 140.0,
+   "cc": 9290,
+   "cr": 17.3,
+   "valvetrain": "OHV, 4v",
+   "induction": "turbocharged, intercooled, XPI common rail",
+   "fuel": "diesel",
+   "hp": 230,
+   "hp_rpm": 1900,
+   "nm": 1050,
+   "nm_rpm": 1100,
+   "redline": 2300,
+   "fo": "1-2-4-5-3",
+   "src": "Wikipedia: Scania P-series",
+   "sources": {
+    "bore": {
+     "value": 130,
+     "url": "https://www.keltruck.com/?p=7217",
+     "note": "DC09 truck engines"
+    },
+    "cc": {
+     "value": 9300,
+     "url": "https://www.keltruck.com/?p=7217"
+    },
+    "hp": {
+     "value": 280,
+     "url": "https://www.keltruck.com/?p=7217",
+     "note": "lowest DC09 truck rating 280 hp; game says 190 HP"
+    },
+    "stroke": {
+     "value": 140,
+     "url": "https://www.keltruck.com/?p=7217"
+    },
+    "fo": {
+     "value": "1-2-4-5-3",
+     "url": "https://www.keltruck.com/?p=7217"
+    },
+    "cr": {
+     "value": 19,
+     "url": "https://www.ukhaulier.co.uk/?p=32218",
+     "note": "DC09 Euro 6; industrial DC09 16:1-17:1"
+    },
+    "hp_rpm": {
+     "value": 1900,
+     "url": "https://www.keltruck.com/?p=7217"
+    },
+    "nm": {
+     "value": 1400,
+     "url": "https://www.keltruck.com/?p=7217"
+    },
+    "nm_rpm": {
+     "value": 1000,
+     "url": "https://www.keltruck.com/?p=7217",
+     "note": "1000-1350 plateau"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "scania_dc13",
+   "name": "Scania DC13 12.7 L I6",
+   "layout": "I6",
+   "cyl": 6,
+   "bore": 130.0,
+   "stroke": 160.0,
+   "cc": 12740,
+   "cr": 18.0,
+   "valvetrain": "OHV, 4v",
+   "induction": "turbocharged, intercooled, XPI common rail",
+   "fuel": "diesel",
+   "hp": 380,
+   "hp_rpm": 1900,
+   "nm": 1900,
+   "nm_rpm": 1000,
+   "redline": 2200,
+   "fo": "1-5-3-6-2-4",
+   "src": "Wikipedia: Scania P-series",
+   "sources": {
+    "bore": {
+     "value": 130,
+     "url": "https://bodybuilder.scania.com/content/dam/bodybuilder/tbb-files/belgium/fisches-techniques/motorenspecificaties---spécification-du-moteur/13/506+MS+SCR+only1612.pdf"
+    },
+    "stroke": {
+     "value": 160,
+     "url": "https://bodybuilder.scania.com/content/dam/bodybuilder/tbb-files/belgium/fisches-techniques/motorenspecificaties---spécification-du-moteur/13/506+MS+SCR+only1612.pdf"
+    },
+    "cc": {
+     "value": 12700,
+     "url": "https://bodybuilder.scania.com/content/dam/bodybuilder/tbb-files/belgium/fisches-techniques/motorenspecificaties---spécification-du-moteur/13/506+MS+SCR+only1612.pdf"
+    },
+    "nm_rpm": {
+     "value": 1000,
+     "url": "https://bodybuilder.scania.com/content/dam/bodybuilder/tbb-files/belgium/fisches-techniques/motorenspecificaties---spécification-du-moteur/13/376+MS+SCR+only+1704.pdf",
+     "note": "1000-1300 plateau"
+    },
+    "fo": {
+     "value": "1-5-3-6-2-4",
+     "url": "https://www.scania.com/content/dam/group/press-and-media/exhibitions---events/eurosatory-2026/dc13-engine-leaflet.pdf"
+    },
+    "cr": {
+     "value": 19,
+     "url": "https://www.scania.com/content/dam/group/press-and-media/exhibitions---events/eurosatory-2026/dc13-engine-leaflet.pdf",
+     "note": "truck versions 18:1-21:1"
+    },
+    "hp": {
+     "value": 370,
+     "url": "https://bodybuilder.scania.com/content/dam/bodybuilder/tbb-files/belgium/fisches-techniques/motorenspecificaties---spécification-du-moteur/13/376+MS+SCR+only+1704.pdf",
+     "note": "DC13 370"
+    },
+    "hp_rpm": {
+     "value": 1900,
+     "url": "https://bodybuilder.scania.com/content/dam/bodybuilder/tbb-files/belgium/fisches-techniques/motorenspecificaties---spécification-du-moteur/13/376+MS+SCR+only+1704.pdf"
+    },
+    "nm": {
+     "value": 1900,
+     "url": "https://bodybuilder.scania.com/content/dam/bodybuilder/tbb-files/belgium/fisches-techniques/motorenspecificaties---spécification-du-moteur/13/376+MS+SCR+only+1704.pdf"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "volvo_d9",
+   "name": "Volvo D9B 9.4 L I6",
+   "layout": "I6",
+   "cyl": 6,
+   "bore": 120.0,
+   "stroke": 138.0,
+   "cc": 9364,
+   "cr": 17.0,
+   "valvetrain": "SOHC, 4v",
+   "induction": "turbocharged, intercooled, unit injectors",
+   "fuel": "diesel",
+   "hp": 260,
+   "hp_rpm": 1900,
+   "nm": 1250,
+   "nm_rpm": 1100,
+   "redline": 2200,
+   "fo": "1-5-3-6-2-4",
+   "src": "Wikipedia: Volvo FM",
+   "sources": {
+    "hp_rpm": {
+     "value": 1900,
+     "url": "https://www.cptdb.ca/wiki/index.php/Volvo_D9B"
+    },
+    "bore": {
+     "value": 120,
+     "url": "https://www.scribd.com/document/574117225/D9A260"
+    },
+    "stroke": {
+     "value": 138,
+     "url": "https://www.scribd.com/document/574117225/D9A260"
+    },
+    "cc": {
+     "value": 9400,
+     "url": "https://www.scribd.com/document/574117225/D9A260"
+    },
+    "cr": {
+     "value": 18,
+     "url": "https://mymotorlist.com/engines/volvo/d9b380/",
+     "note": "D9B380; D9A 18.5:1"
+    },
+    "hp": {
+     "value": 260,
+     "url": "https://www.cptdb.ca/wiki/index.php/Volvo_D9B",
+     "note": "D9B260"
+    },
+    "redline": {
+     "value": 2400,
+     "url": "https://www.cptdb.ca/wiki/index.php/Volvo_D9B"
+    },
+    "nm": {
+     "value": 1100,
+     "url": "https://www.cptdb.ca/wiki/index.php/Volvo_D9B",
+     "note": "D9A260 truck: 1250 Nm"
+    },
+    "nm_rpm": {
+     "value": 900,
+     "url": "https://www.cptdb.ca/wiki/index.php/Volvo_D9B",
+     "note": "900-1500 plateau"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "cummins_nhrbs",
+   "name": "Cummins NHRBS (Beck DH1040)",
+   "layout": "I6",
+   "bank": null,
+   "cyl": 6,
+   "bore": null,
+   "stroke": null,
+   "cc": null,
+   "cr": null,
+   "valvetrain": "OHV 4v",
+   "induction": "supercharged (RBS = Roots blower)",
+   "fuel": "diesel",
+   "hp": 300,
+   "hp_rpm": null,
+   "nm": null,
+   "nm_rpm": null,
+   "redline": null,
+   "fo": "1-5-3-6-2-4",
+   "rod": null,
+   "src": "coachbuilt/Beck DH1040 history: \"300 HP Cummins NHRBS\"",
+   "sources": {
+    "bore": {
+     "value": 130.2,
+     "url": "https://www.bigmacktrucks.com/registry/bmod_info/cummins_eng.pdf",
+     "note": "NH 743 family 5 1/8 in"
+    },
+    "stroke": {
+     "value": 152.4,
+     "url": "https://www.bigmacktrucks.com/registry/bmod_info/cummins_eng.pdf",
+     "note": "6 in"
+    },
+    "cc": {
+     "value": 12176,
+     "url": "https://www.bigmacktrucks.com/registry/bmod_info/cummins_eng.pdf",
+     "note": "743 cu in"
+    },
+    "hp_rpm": {
+     "value": 2100,
+     "url": "https://www.bigmacktrucks.com/registry/bmod_info/cummins_eng.pdf",
+     "note": "NHRS-6 supercharged 320@2100; NHS-6 290@2100"
+    },
+    "rod": {
+     "value": 304.8,
+     "url": "https://www.dieselpartsdirect.com/documents/cummins-specs/cummins-nh220-if-specs.pdf",
+     "note": "NH 743: 12 in c-c"
+    },
+    "induction": {
+     "value": "Roots-type supercharger (Schwitzer)",
+     "url": "https://dieselworldmag.com/?p=36437",
+     "note": "NHBS supercharged line 1945-54"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "cat_d343",
+   "name": "Caterpillar D343T (769)",
+   "layout": "I6",
+   "bank": null,
+   "cyl": 6,
+   "bore": 137.2,
+   "stroke": 165.1,
+   "cc": 14600,
+   "cr": null,
+   "valvetrain": "OHC",
+   "induction": "turbocharged",
+   "fuel": "diesel",
+   "hp": 400,
+   "hp_rpm": 1900,
+   "nm": null,
+   "nm_rpm": null,
+   "redline": null,
+   "fo": "1-5-3-6-2-4",
+   "rod": null,
+   "src": "web search: 5.4x6.5 in, 14.6 L, 375-415 hp @1900",
+   "sources": {
+    "bore": {
+     "value": 137.2,
+     "url": "https://catalog.elginind.com/engine/caterpillar/valves/cd369d4f-0935-4672-a86b-7c3a316e0cc6",
+     "note": "5.400 in"
+    },
+    "stroke": {
+     "value": 165.1,
+     "url": "https://catalog.elginind.com/engine/caterpillar/valves/cd369d4f-0935-4672-a86b-7c3a316e0cc6",
+     "note": "6.5 in"
+    },
+    "cc": {
+     "value": 14634,
+     "url": "https://catalog.elginind.com/engine/caterpillar/valves/cd369d4f-0935-4672-a86b-7c3a316e0cc6",
+     "note": "893 cu in"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "fiat_8060_05",
+   "name": "Fiat/Iveco 8060.05 (Zeta) 5.9 L",
+   "layout": "I6",
+   "bank": null,
+   "cyl": 6,
+   "bore": null,
+   "stroke": null,
+   "cc": 5183,
+   "cr": null,
+   "valvetrain": "OHV",
+   "induction": "naturally aspirated",
+   "fuel": "diesel",
+   "hp": 138,
+   "hp_rpm": 3000,
+   "nm": null,
+   "nm_rpm": null,
+   "redline": 3200,
+   "fo": "1-5-3-6-2-4",
+   "rod": null,
+   "src": "web search: 5183 cc, 136-140 PS @2800-3200",
+   "sources": {
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    },
+    "bore": {
+     "value": 104,
+     "url": "https://en.wikipedia.org/wiki/Iveco_EuroCargo",
+     "note": "8060 series 104x115, 5861 cc"
+    },
+    "stroke": {
+     "value": 115,
+     "url": "https://en.wikipedia.org/wiki/Iveco_EuroCargo"
+    },
+    "cc": {
+     "value": 5861,
+     "url": "https://www.kmotorshop.com/en/device/motor-list/35",
+     "note": "all 8060.05.xxx listed 5861 cc; the 5184 cc engine is 8060.02"
+    },
+    "hp": {
+     "value": 138,
+     "url": "https://www.kmotorshop.com/en/device/motor-list/35",
+     "note": "8060.05.2xx 135-139 HP (older .0xx/.66x 108-120 HP)"
+    }
+   }
+  },
+  {
+   "id": "volvo_tad881ve",
+   "name": "Volvo Penta TAD881-VE (Konecranes SMV 25-1200 C)",
+   "layout": "I6",
+   "bank": null,
+   "cyl": 6,
+   "bore": 110,
+   "stroke": 135,
+   "cc": 7700,
+   "cr": null,
+   "valvetrain": "OHC 4v",
+   "induction": "turbo + intercooler",
+   "fuel": "diesel",
+   "hp": 248,
+   "hp_rpm": null,
+   "nm": 1150,
+   "nm_rpm": null,
+   "redline": null,
+   "fo": "1-5-3-6-2-4",
+   "rod": null,
+   "src": "lectura-specs.com 25-1200 C: TAD881-VE 185 kW, 7.7 L, 110x135, 1150 Nm; forkliftcenter listings: TAD851/871/881VE",
+   "sources": {
+    "bore": {
+     "value": 110,
+     "url": "https://pubs.volvopenta.com/publications//47711511"
+    },
+    "stroke": {
+     "value": 135,
+     "url": "https://pubs.volvopenta.com/publications//47711511"
+    },
+    "cc": {
+     "value": 7700,
+     "url": "https://pubs.volvopenta.com/publications//47711511"
+    },
+    "cr": {
+     "value": 17.2,
+     "url": "https://pubs.volvopenta.com/publications//47711511"
+    },
+    "hp": {
+     "value": 248,
+     "url": "https://pubs.volvopenta.com/publications//47711511",
+     "note": "185 kW / 252 PS"
+    },
+    "hp_rpm": {
+     "value": 2210,
+     "url": "https://pubs.volvopenta.com/publications//47711511"
+    },
+    "nm": {
+     "value": 1150,
+     "url": "https://pubs.volvopenta.com/publications//47711511"
+    },
+    "nm_rpm": {
+     "value": 1400,
+     "url": "https://pubs.volvopenta.com/publications//47711511"
+    },
+    "idle": {
+     "value": 600,
+     "url": "https://pubs.volvopenta.com/publications//47711511"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "gm_f8c",
+   "name": "Daewoo/GM F8C 0.8 I3 (Labo)",
+   "layout": "I3",
+   "bank": null,
+   "cyl": 3,
+   "bore": 68.5,
+   "stroke": 72,
+   "cc": 796,
+   "cr": 9.3,
+   "valvetrain": "SOHC 2v",
+   "induction": "NA (MPI; carb on early F8B)",
+   "fuel": "petrol",
+   "hp": 52,
+   "hp_rpm": 5900,
+   "nm": 69,
+   "nm_rpm": 4600,
+   "redline": null,
+   "fo": "1-3-2",
+   "rod": null,
+   "src": "auto-data.net F8CV: 68.5x72, CR 9.3, 52 hp@5900, 69 Nm@4600 (Matiz figures; Labo tune not confirmed)",
+   "sources": {
+    "bore": {
+     "value": 68.5,
+     "url": "https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/Daewoo_S-TEC_engine"
+    },
+    "stroke": {
+     "value": 72,
+     "url": "https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/Daewoo_S-TEC_engine"
+    },
+    "cc": {
+     "value": 796,
+     "url": "https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/Daewoo_S-TEC_engine"
+    },
+    "cr": {
+     "value": 9.3,
+     "url": "https://en.wikipedia.org/wiki/Daewoo_S-TEC_engine"
+    },
+    "fuel": {
+     "value": "LPG (Damas/Labo)",
+     "url": "https://automobile.fandom.com/wiki/Daewoo_Damas",
+     "note": "game says gasoline"
+    },
+    "hp": {
+     "value": 38,
+     "url": "https://www.autoevolution.com/engine/daewoo-damas-ii-2003-08-lpg.html",
+     "note": "Damas II 0.8 LPG (same engine as Labo per fandom)"
+    },
+    "hp_rpm": {
+     "value": 4900,
+     "url": "https://www.autoevolution.com/engine/daewoo-damas-ii-2003-08-lpg.html"
+    },
+    "nm": {
+     "value": 62,
+     "url": "https://www.autoevolution.com/engine/daewoo-damas-ii-2003-08-lpg.html"
+    },
+    "nm_rpm": {
+     "value": 2200,
+     "url": "https://www.autoevolution.com/engine/daewoo-damas-ii-2003-08-lpg.html"
+    },
+    "valvetrain": {
+     "value": "SOHC",
+     "url": "https://automobile.fandom.com/wiki/Daewoo_Damas"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    }
+   }
+  },
+  {
+   "id": "honda_cb250_k",
+   "name": "Honda CB250 K0-K5 parallel twin",
+   "layout": "I2",
+   "bank": null,
+   "cyl": 2,
+   "bore": 56,
+   "stroke": 50.6,
+   "cc": 249,
+   "cr": 9.5,
+   "valvetrain": "SOHC 2v",
+   "induction": "2x CV carb",
+   "fuel": "petrol",
+   "hp": 30,
+   "hp_rpm": 10500,
+   "nm": null,
+   "nm_rpm": null,
+   "redline": null,
+   "fo": null,
+   "rod": null,
+   "src": "Wikipedia Honda Dream CB250 (30 hp@10500); webbikeworld.com CB250K0 (56x50.6, CR 9.5)",
+   "sources": {
+    "bore": {
+     "value": 56,
+     "url": "https://moto-data.net/honda/cb-250-1972-1973"
+    },
+    "stroke": {
+     "value": 50.6,
+     "url": "https://moto-data.net/honda/cb-250-1972-1973"
+    },
+    "cc": {
+     "value": 249,
+     "url": "https://moto-data.net/honda/cb-250-1972-1973"
+    },
+    "hp": {
+     "value": 30,
+     "url": "https://moto-data.net/honda/cb-250-1972-1973",
+     "note": "@10500 rpm"
+    },
+    "hp_rpm": {
+     "value": 10500,
+     "url": "https://moto-data.net/honda/cb-250-1972-1973"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    },
+    "fo": {
+     "value": "180° crank: fires 180°/540°",
+     "url": "https://www.hagerty.co.uk/articles/motorcycles/the-honda-cb250-was-no-ball-of-fire-but-mine-got-close",
+     "note": "CB250 K: SOHC, 180-degree crankshaft"
+    },
+    "cr": {
+     "value": 9.5,
+     "url": "https://moto-data.net/honda/cb-250-1972-1973"
+    },
+    "nm": {
+     "value": 18,
+     "url": "https://www.webbikeworld.com/honda-sport-7/",
+     "note": "18 Nm @6500 (same page lists 20 hp, so treat as low-confidence)"
+    },
+    "nm_rpm": {
+     "value": 6500,
+     "url": "https://www.webbikeworld.com/honda-sport-7/",
+     "note": "low-confidence"
+    }
+   }
+  },
+  {
+   "id": "ford_dorset_363",
+   "name": "Ford Dorset 363 I6 diesel (F-600, tuned to game 190 hp)",
+   "layout": "I6",
+   "cyl": 6,
+   "bore": 105.0,
+   "stroke": 115.0,
+   "cc": 5975,
+   "cr": null,
+   "valvetrain": "OHV, 2v",
+   "induction": "naturally aspirated, direct injection",
+   "fuel": "diesel",
+   "hp": 190,
+   "hp_rpm": null,
+   "nm": null,
+   "nm_rpm": null,
+   "redline": null,
+   "fo": "1-5-3-6-2-4",
+   "rod": null,
+   "src": "owner decision 2026-11-13: follow game spec Medium-Duty 190HP",
+   "sources": {
+    "bore": {
+     "value": 105,
+     "url": "https://www.tractordata.com/farm-tractors/001/6/7/1673-county-fc-1004-engine.html",
+     "note": "Ford 363 diesel 4.126x4.524 in"
+    },
+    "stroke": {
+     "value": 115,
+     "url": "https://www.tractordata.com/farm-tractors/001/6/7/1673-county-fc-1004-engine.html"
+    },
+    "cc": {
+     "value": 5950,
+     "url": "https://www.tractordata.com/farm-tractors/001/6/7/1673-county-fc-1004-engine.html",
+     "note": "363 ci"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    },
+    "hp": {
+     "value": 190,
+     "url": "-",
+     "note": "game spec Medium-Duty 190HP (owner decision); real Dorset 363 was 128 hp per foleyengines.com"
+    }
+   }
+  },
+  {
+   "id": "fpt_f1c_30",
+   "name": "FPT/Iveco F1C 3.0 I4 diesel (Gulliver stand-in, tuned to game 140 hp)",
+   "layout": "I4",
+   "cyl": 4,
+   "bore": 95.8,
+   "stroke": 104.0,
+   "cc": 2998,
+   "cr": null,
+   "valvetrain": "DOHC, 4v",
+   "induction": "turbocharged, intercooled, common rail",
+   "fuel": "diesel",
+   "hp": 140,
+   "hp_rpm": null,
+   "nm": null,
+   "nm_rpm": null,
+   "redline": null,
+   "fo": "1-3-4-2",
+   "rod": null,
+   "src": "owner decision 2026-11-13: stand-in diesel for electric Gulliver, game spec 140HP",
+   "sources": {
+    "bore": {
+     "value": 95.8,
+     "url": "https://www.carexpert.com.au/iveco/daily/2007/powertrain-and-performance",
+     "note": "F1C 3.0, in-line 4, DOHC 4v"
+    },
+    "stroke": {
+     "value": 104,
+     "url": "https://www.carexpert.com.au/iveco/daily/2007/powertrain-and-performance"
+    },
+    "cc": {
+     "value": 2998,
+     "url": "https://www.carexpert.com.au/iveco/daily/2007/powertrain-and-performance"
+    },
+    "bank": {
+     "value": "n/a",
+     "url": "-",
+     "note": "inline engine, no bank angle"
+    },
+    "hp": {
+     "value": 140,
+     "url": "-",
+     "note": "game spec 140HP (owner decision); nearest real rating: 2009-era Euro 4 3.0 HPI 146 hp / 350 Nm (iveco.com press kit)"
+    }
+   }
+  }
+ ],
+ "vehicle_engine": [
+  {
+   "real_vehicle": "1932 Ford 5-Window Coupe",
+   "engine": "Ford flathead V8 221 (1932)",
+   "reason": "the 1932 V8 Model 18",
+   "article": "Ford flathead V8 engine",
+   "section_hint": "221",
+   "engine_ids": [
+    "ford_flathead_221"
+   ]
+  },
+  {
+   "real_vehicle": "1945 Willys MB 'Jeep'",
+   "engine": "Willys L134 Go Devil I4",
+   "reason": "only engine",
+   "article": "Willys Go Devil engine",
+   "section_hint": "",
+   "engine_ids": [
+    "willys_l134"
+   ]
+  },
+  {
+   "real_vehicle": "1948 Ford F-1",
+   "engine": "Ford flathead V8 239",
+   "reason": "game V8",
+   "article": "Ford flathead V8 engine",
+   "section_hint": "239",
+   "engine_ids": [
+    "ford_flathead_239"
+   ]
+  },
+  {
+   "real_vehicle": "1950 Volkswagen Transporter",
+   "engine": "Volkswagen 1.1 L air-cooled flat-four (1131 cc)",
+   "reason": "1950 engine",
+   "article": "Volkswagen air-cooled engine",
+   "section_hint": "1131",
+   "engine_ids": [
+    "vw_type1_1131"
+   ]
+  },
+  {
+   "real_vehicle": "1955 Beck 'Semi' Deck & Half Cruiser",
+   "engine": "Cummins NHRBS I6 (300 hp)",
+   "reason": "web: Beck DH1040 history",
+   "article": "Beck",
+   "section_hint": "",
+   "engine_ids": [
+    "cummins_nhrbs"
+   ]
+  },
+  {
+   "real_vehicle": "1964 Chevrolet Impala",
+   "engine": "Chevrolet 283 small-block V8",
+   "reason": "game V8 180",
+   "article": "Chevrolet small-block engine (first and second generation)",
+   "section_hint": "283",
+   "engine_ids": [
+    "chevy_283"
+   ]
+  },
+  {
+   "real_vehicle": "1965 Austin Mini Cooper",
+   "engine": "BMC A-series 1275 Cooper S",
+   "reason": "game I4 90 nearest",
+   "article": "BMC A-series engine",
+   "section_hint": "1275",
+   "engine_ids": [
+    "bmc_a_1275s"
+   ]
+  },
+  {
+   "real_vehicle": "1966 Caterpillar 769",
+   "engine": "Caterpillar D343T I6",
+   "reason": "web search",
+   "article": "Caterpillar D343",
+   "section_hint": "",
+   "engine_ids": [
+    "cat_d343"
+   ]
+  },
+  {
+   "real_vehicle": "1967 Chevrolet C-10",
+   "engine": "Chevrolet 283 small-block V8",
+   "reason": "game V8 140",
+   "article": "Chevrolet small-block engine (first and second generation)",
+   "section_hint": "283",
+   "engine_ids": [
+    "chevy_283"
+   ]
+  },
+  {
+   "real_vehicle": "1967 Ford F-600",
+   "engine": "Ford Dorset 363 I6 diesel, tuned to game 190 hp",
+   "reason": "owner: follow game spec (Medium-Duty 190HP diesel). Geometry from the period-correct 1967 Dorset 363 (105x115 mm, tractordata); power raised from real 128 hp to 190 hp",
+   "article": "Ford F-Series (fifth generation)",
+   "section_hint": "",
+   "engine_ids": [
+    "ford_dorset_363"
+   ]
+  },
+  {
+   "real_vehicle": "1969 Chevrolet Camaro SS",
+   "engine": "Chevrolet 350 small-block V8 (L48)",
+   "reason": "SS",
+   "article": "Chevrolet small-block engine (first and second generation)",
+   "section_hint": "350",
+   "engine_ids": [
+    "chevy_350_l48"
+   ]
+  },
+  {
+   "real_vehicle": "1969 Chevrolet Nova",
+   "engine": "Chevrolet 307 small-block V8",
+   "reason": "1969 base V8",
+   "article": "Chevrolet small-block engine (first and second generation)",
+   "section_hint": "307",
+   "engine_ids": [
+    "chevy_307"
+   ]
+  },
+  {
+   "real_vehicle": "1969 Nissan Fairlady Z",
+   "engine": "Nissan L24 I6",
+   "reason": "HS30",
+   "article": "Nissan L engine",
+   "section_hint": "L24",
+   "engine_ids": [
+    "nissan_l24"
+   ]
+  },
+  {
+   "real_vehicle": "1970 GMC M35",
+   "engine": "Continental LDT-465 multifuel I6",
+   "reason": "1970 M35A2",
+   "article": "LDT 465",
+   "section_hint": "",
+   "engine_ids": [
+    "continental_ldt465"
+   ]
+  },
+  {
+   "real_vehicle": "1971 Chevrolet P30 Step Van",
+   "engine": "Chevrolet 350 small-block V8",
+   "reason": "game V8 180",
+   "article": "Chevrolet small-block engine (first and second generation)",
+   "section_hint": "350",
+   "engine_ids": [
+    "chevy_350_truck"
+   ]
+  },
+  {
+   "real_vehicle": "1972 Volkswagen Transporter",
+   "engine": "Volkswagen Type 4 1.7 L flat-four",
+   "reason": "1972 T2",
+   "article": "Volkswagen air-cooled engine",
+   "section_hint": "1679",
+   "engine_ids": [
+    "vw_type4_1679"
+   ]
+  },
+  {
+   "real_vehicle": "1974 Volkswagen Type 181",
+   "engine": "Volkswagen 1.6 L air-cooled flat-four",
+   "reason": "1974",
+   "article": "Volkswagen air-cooled engine",
+   "section_hint": "1584",
+   "engine_ids": [
+    "vw_type1_1584"
+   ]
+  },
+  {
+   "real_vehicle": "1975 Dodge Coronet",
+   "engine": "Chrysler 318 LA V8",
+   "reason": "game V8 180",
+   "article": "Chrysler LA engine",
+   "section_hint": "318",
+   "engine_ids": [
+    "chrysler_318_la"
+   ]
+  },
+  {
+   "real_vehicle": "1977 Iveco Zeta",
+   "engine": "Fiat 8060.05 I6 diesel 5861 cc",
+   "reason": "web search",
+   "article": "Iveco Zeta",
+   "section_hint": "",
+   "engine_ids": [
+    "fiat_8060_05"
+   ]
+  },
+  {
+   "real_vehicle": "1979 Dodge Ram Van",
+   "engine": "Chrysler 360 LA V8",
+   "reason": "no factory diesel; largest gas",
+   "article": "Chrysler LA engine",
+   "section_hint": "360",
+   "engine_ids": [
+    "chrysler_360_la"
+   ]
+  },
+  {
+   "real_vehicle": "1980 GMC Vandura",
+   "engine": "Chevrolet 305 small-block V8",
+   "reason": "game V8 140",
+   "article": "Chevrolet small-block engine (first and second generation)",
+   "section_hint": "305",
+   "engine_ids": [
+    "chevy_305"
+   ]
+  },
+  {
+   "real_vehicle": "1980 MCI MC-9",
+   "engine": "Detroit Diesel 6V92TA",
+   "reason": "busesandmore.com: 6V-92TA 277 hp @2100 (8V-71 280 hp also offered)",
+   "article": "Detroit Diesel Series 92",
+   "section_hint": "",
+   "engine_ids": [
+    "detroit_6v92ta"
+   ]
+  },
+  {
+   "real_vehicle": "1981 Citroën 2CV",
+   "engine": "Citroën 602 cc flat-twin",
+   "reason": "2CV6",
+   "article": "Citroën 2CV",
+   "section_hint": "602",
+   "engine_ids": [
+    "citroen_602"
+   ]
+  },
+  {
+   "real_vehicle": "1981 Dodge Diplomat",
+   "engine": "Chrysler 318 LA V8",
+   "reason": "game V8 180",
+   "article": "Chrysler LA engine",
+   "section_hint": "318",
+   "engine_ids": [
+    "chrysler_318_la"
+   ]
+  },
+  {
+   "real_vehicle": "1982 Ford F-150 XL",
+   "engine": "Ford 302 Windsor V8",
+   "reason": "game V8 140",
+   "article": "Ford Windsor engine",
+   "section_hint": "302",
+   "engine_ids": [
+    "ford_302"
+   ]
+  },
+  {
+   "real_vehicle": "1982 Lada 2107",
+   "engine": "VAZ-2106 1.6 L I4",
+   "reason": "1.6",
+   "article": "Lada Classic",
+   "section_hint": "2106",
+   "engine_ids": [
+    "vaz_2106"
+   ]
+  },
+  {
+   "real_vehicle": "1983 Ford LTD Country Squire",
+   "engine": "Ford 302 Windsor V8",
+   "reason": "1983",
+   "article": "Ford Windsor engine",
+   "section_hint": "302",
+   "engine_ids": [
+    "ford_302"
+   ]
+  },
+  {
+   "real_vehicle": "1983 Nissan Micra K10",
+   "engine": "Nissan MA10S I4",
+   "reason": "main engine",
+   "article": "Nissan MA engine",
+   "section_hint": "MA10",
+   "engine_ids": [
+    "nissan_ma10s"
+   ]
+  },
+  {
+   "real_vehicle": "1983 Steinwinter Supercargo 2040",
+   "engine": "Mercedes-Benz OM 422 V8 (NA)",
+   "reason": "The Drive: OM422 276 hp; barringtondieselclub: OM422 NA 275 hp @2300 matches. OM442 claim (supercarblondie/clickpetroleo) inconsistent: they give 12.8 L but OM442 is 14.6 L",
+   "article": "Mercedes-Benz OM 422",
+   "section_hint": "",
+   "engine_ids": [
+    "mb_om422"
+   ]
+  },
+  {
+   "real_vehicle": "1984 Porsche 911",
+   "engine": "Porsche 3.2 L flat-six (930/20)",
+   "reason": "1984 Carrera",
+   "article": "Porsche 911 (classic)",
+   "section_hint": "3.2",
+   "engine_ids": [
+    "porsche_930_20"
+   ]
+  },
+  {
+   "real_vehicle": "1985 Freightliner FLA",
+   "engine": "Cummins NTC-350 Big Cam I6",
+   "reason": "350 hp",
+   "article": "Cummins N14",
+   "section_hint": "",
+   "engine_ids": [
+    "cummins_ntc350"
+   ]
+  },
+  {
+   "real_vehicle": "1985 Subaru Sambar",
+   "engine": "Subaru EK23 I2",
+   "reason": "1985 4-stroke",
+   "article": "List of Subaru engines",
+   "section_hint": "EK23",
+   "engine_ids": [
+    "subaru_ek23"
+   ]
+  },
+  {
+   "real_vehicle": "1986 Dodge Ram Van",
+   "engine": "Chrysler 318 LA V8",
+   "reason": "game V8 140",
+   "article": "Chrysler LA engine",
+   "section_hint": "318",
+   "engine_ids": [
+    "chrysler_318_la"
+   ]
+  },
+  {
+   "real_vehicle": "1986 Lamborghini LM002",
+   "engine": "Lamborghini L503 5.2 V12",
+   "reason": "only road engine",
+   "article": "Lamborghini V12",
+   "section_hint": "L503",
+   "engine_ids": [
+    "lambo_l503"
+   ]
+  },
+  {
+   "real_vehicle": "1987 Buick GNX",
+   "engine": "Buick 3.8 turbo V6 (LC2)",
+   "reason": "GNX",
+   "article": "Buick V6 engine",
+   "section_hint": "LC2",
+   "engine_ids": [
+    "buick_lc2"
+   ]
+  },
+  {
+   "real_vehicle": "1987 Cadillac Fleetwood",
+   "engine": "Oldsmobile 307 V8",
+   "reason": "RWD Brougham/limo",
+   "article": "Oldsmobile V8 engine",
+   "section_hint": "307",
+   "engine_ids": [
+    "olds_307"
+   ]
+  },
+  {
+   "real_vehicle": "1987 Mack R-Series",
+   "engine": "Mack E6-350 I6",
+   "reason": "350 hp",
+   "article": "Mack Trucks",
+   "section_hint": "E6",
+   "engine_ids": [
+    "mack_e6_350"
+   ]
+  },
+  {
+   "real_vehicle": "1987 Scania 113H",
+   "engine": "Scania DSC11 I6",
+   "reason": "113 + 350 hp",
+   "article": "Scania 3-series",
+   "section_hint": "DSC11",
+   "engine_ids": [
+    "scania_dsc11"
+   ]
+  },
+  {
+   "real_vehicle": "1989 International 3800",
+   "engine": "Navistar DT466 I6",
+   "reason": "bus diesel",
+   "article": "Navistar DT466",
+   "section_hint": "",
+   "engine_ids": [
+    "navistar_dt466"
+   ]
+  },
+  {
+   "real_vehicle": "1989 Mazda MX-5",
+   "engine": "Mazda B6ZE 1.6 I4",
+   "reason": "NA",
+   "article": "Mazda B engine",
+   "section_hint": "B6ZE",
+   "engine_ids": [
+    "mazda_b6ze"
+   ]
+  },
+  {
+   "real_vehicle": "1989 Nissan Skyline GT-R",
+   "engine": "Nissan RB26DETT I6",
+   "reason": "R32",
+   "article": "Nissan RB engine",
+   "section_hint": "RB26DETT",
+   "engine_ids": [
+    "nissan_rb26dett"
+   ]
+  },
+  {
+   "real_vehicle": "1990 Toyota Pickup",
+   "engine": "Toyota 22R-E I4",
+   "reason": "1990 pickup",
+   "article": "Toyota R engine",
+   "section_hint": "22R-E",
+   "engine_ids": [
+    "toyota_22re"
+   ]
+  },
+  {
+   "real_vehicle": "1991 BMW M3",
+   "engine": "BMW S14B23 I4",
+   "reason": "E30",
+   "article": "BMW S14",
+   "section_hint": "S14B23",
+   "engine_ids": [
+    "bmw_s14b23"
+   ]
+  },
+  {
+   "real_vehicle": "1992 Lancia Delta HF Integrale Evo",
+   "engine": "Fiat/Lancia 2.0 16v turbo I4",
+   "reason": "Evo",
+   "article": "Lancia Delta HF Integrale",
+   "section_hint": "",
+   "engine_ids": [
+    "lancia_831e5"
+   ]
+  },
+  {
+   "real_vehicle": "1993 Toyota Supra",
+   "engine": "Toyota 2JZ-GTE I6",
+   "reason": "A80",
+   "article": "Toyota JZ engine",
+   "section_hint": "2JZ-GTE",
+   "engine_ids": [
+    "toyota_2jzgte"
+   ]
+  },
+  {
+   "real_vehicle": "2003 Ford Crown Victoria",
+   "engine": "Ford 4.6 Modular 2V V8",
+   "reason": "only engine",
+   "article": "Ford Modular engine",
+   "section_hint": "4.6",
+   "engine_ids": [
+    "ford_46_2v"
+   ]
+  },
+  {
+   "real_vehicle": "2003 Lincoln Town Car Stretched Limousine",
+   "engine": "Ford 4.6 Modular 2V V8",
+   "reason": "only engine",
+   "article": "Ford Modular engine",
+   "section_hint": "4.6",
+   "engine_ids": [
+    "ford_46_2v"
+   ]
+  },
+  {
+   "real_vehicle": "2005 Irisbus Citelis",
+   "engine": "Iveco Cursor 8 I6",
+   "reason": "infobox",
+   "article": "Iveco Cursor",
+   "section_hint": "Cursor 8",
+   "engine_ids": [
+    "iveco_cursor8"
+   ]
+  },
+  {
+   "real_vehicle": "2007 Chevrolet Tahoe",
+   "engine": "GM 5.3 Vortec V8 (LMG/LY5)",
+   "reason": "game V8 320",
+   "article": "General Motors small-block engine",
+   "section_hint": "5.3",
+   "engine_ids": [
+    "gm_53_ly5"
+   ]
+  },
+  {
+   "real_vehicle": "2008 Ford E-Series",
+   "engine": "Ford 5.4 Triton 2V V8",
+   "reason": "game V8 240",
+   "article": "Ford Modular engine",
+   "section_hint": "5.4",
+   "engine_ids": [
+    "ford_54_2v"
+   ]
+  },
+  {
+   "real_vehicle": "2009 Ford Focus RS",
+   "engine": "Ford/Volvo 2.5 turbo I5 (Duratec RS)",
+   "reason": "only engine",
+   "article": "Volvo Modular engine",
+   "section_hint": "2.5",
+   "engine_ids": [
+    "ford_25t_i5"
+   ]
+  },
+  {
+   "real_vehicle": "2009 Renault Magnum 480",
+   "engine": "Renault DXi 13 (480) I6",
+   "reason": "480 hp",
+   "article": "Renault Magnum",
+   "section_hint": "DXi",
+   "engine_ids": [
+    "renault_dxi13_480"
+   ]
+  },
+  {
+   "real_vehicle": "2009 TEMSA Opalin",
+   "engine": "MAN D0836 LOH I6 (Opalin 9; Opalin 8 used 4-cyl D0834)",
+   "reason": "phototrans.pl Opalin 9: D0836LOH65; truckscout24 2008 Opalin: D0836 LOH52 239 hp; worldabh.info Opalin 8: D0834 LFL55",
+   "article": "TEMSA Opalin",
+   "section_hint": "",
+   "engine_ids": [
+    "man_d0836"
+   ]
+  },
+  {
+   "real_vehicle": "2009 Tecnobus Gulliver",
+   "engine": "FPT/Iveco F1C 3.0 I4 diesel (stand-in), tuned to game 140 hp",
+   "reason": "owner: real Gulliver is electric only, use a stand-in diesel. F1C picked: Italian, period (Euro 4 Daily 3.0 HPI 146 hp, 2006+), minibus class, closest rating to game 140HP",
+   "article": "Tecnobus Gulliver",
+   "section_hint": "",
+   "engine_ids": [
+    "fpt_f1c_30"
+   ]
+  },
+  {
+   "real_vehicle": "2011 Lamborghini Aventador LP 700-4",
+   "engine": "Lamborghini L539 6.5 V12",
+   "reason": "only engine",
+   "article": "Lamborghini V12",
+   "section_hint": "L539",
+   "engine_ids": [
+    "lambo_l539"
+   ]
+  },
+  {
+   "real_vehicle": "2012 Dodge Charger",
+   "engine": "Chrysler 5.7 HEMI V8",
+   "reason": "game V8 240",
+   "article": "Chrysler Hemi engine",
+   "section_hint": "5.7",
+   "engine_ids": [
+    "chrysler_57_hemi"
+   ]
+  },
+  {
+   "real_vehicle": "2012 Mazda CX-5",
+   "engine": "Mazda Skyactiv-G 2.5 I4",
+   "reason": "petrol",
+   "article": "Skyactiv",
+   "section_hint": "2.5",
+   "engine_ids": [
+    "mazda_skyactiv_g25"
+   ]
+  },
+  {
+   "real_vehicle": "2013 Ford Fiesta",
+   "engine": "Ford 1.6 Ti-VCT (Sigma) I4",
+   "reason": "US Fiesta",
+   "article": "Ford Sigma engine",
+   "section_hint": "1.6",
+   "engine_ids": [
+    "ford_16_tivct"
+   ]
+  },
+  {
+   "real_vehicle": "2014 Daewoo Labo",
+   "engine": "GM Korea/Daewoo F8C 0.8 I3 (game says I4 50HP; real Labo is 3-cyl)",
+   "reason": "auto-data.net F8CV",
+   "article": "Daewoo Labo",
+   "section_hint": "",
+   "engine_ids": [
+    "gm_f8c"
+   ]
+  },
+  {
+   "real_vehicle": "2014 Mercedes Unimog U5023",
+   "engine": "Mercedes-Benz OM 934 I4",
+   "reason": "U5023",
+   "article": "Unimog",
+   "section_hint": "",
+   "engine_ids": [
+    "mb_om934"
+   ]
+  },
+  {
+   "real_vehicle": "2014 Volvo VNL",
+   "engine": "Volvo D13 I6",
+   "reason": "game 350-440",
+   "article": "Volvo D13",
+   "section_hint": "",
+   "engine_ids": [
+    "volvo_d13"
+   ]
+  },
+  {
+   "real_vehicle": "2015 Yamaha YZF R1",
+   "engine": "Yamaha CP4 998 cc I4",
+   "reason": "only engine",
+   "article": "Yamaha YZF-R1",
+   "section_hint": "",
+   "engine_ids": [
+    "yamaha_cp4"
+   ]
+  },
+  {
+   "real_vehicle": "2016 BMW M2",
+   "engine": "BMW N55B30T0 I6",
+   "reason": "2016 M2",
+   "article": "BMW N55",
+   "section_hint": "",
+   "engine_ids": [
+    "bmw_n55b30t0"
+   ]
+  },
+  {
+   "real_vehicle": "2019 Konecranes SMV 25-1200 C",
+   "engine": "Volvo Penta TAD881-VE I6 7.7 L",
+   "reason": "lectura-specs.com; forkliftcenter.com",
+   "article": "Konecranes",
+   "section_hint": "",
+   "engine_ids": [
+    "volvo_tad881ve"
+   ]
+  },
+  {
+   "real_vehicle": "Ford F350-F550 Dually",
+   "engine": "Ford 5.4 Triton 3V V8",
+   "reason": "game V8 320",
+   "article": "Ford Modular engine",
+   "section_hint": "5.4",
+   "engine_ids": [
+    "ford_54_3v"
+   ]
+  },
+  {
+   "real_vehicle": "Formula 1600",
+   "engine": "Ford Kent 1.6 I4",
+   "reason": "Formula Ford 1600",
+   "article": "Ford Kent engine",
+   "section_hint": "1.6",
+   "engine_ids": [
+    "ford_kent_1600"
+   ]
+  },
+  {
+   "real_vehicle": "Honda CB250",
+   "engine": "Honda CB250 K-series parallel twin 249 cc (fits game 30HP)",
+   "reason": "Wikipedia Honda Dream CB250; webbikeworld",
+   "article": "Honda CB250",
+   "section_hint": "",
+   "engine_ids": [
+    "honda_cb250_k"
+   ]
+  },
+  {
+   "real_vehicle": "Peterbilt 389",
+   "engine": "Cummins ISX15 I6",
+   "reason": "game 440",
+   "article": "Cummins ISX",
+   "section_hint": "",
+   "engine_ids": [
+    "cummins_isx15"
+   ]
+  },
+  {
+   "real_vehicle": "Piaggio Vespa",
+   "engine": "Piaggio 150 cc two-stroke single (PX150)",
+   "reason": "common Vespa",
+   "article": "Vespa PX",
+   "section_hint": "",
+   "engine_ids": [
+    "vespa_px150"
+   ]
+  },
+  {
+   "real_vehicle": "Race Car Kart",
+   "engine": "Honda GX160 single",
+   "reason": "owner-supplied fact (2026-11-11)",
+   "article": "Honda GX engine",
+   "section_hint": "GX160",
+   "engine_ids": [
+    "honda_gx160"
+   ]
+  },
+  {
+   "real_vehicle": "Scania P-Series",
+   "engine": "Scania DC9 I5 (190-hp class) / Scania DC13 I6 (350-hp class)",
+   "reason": "game hp",
+   "article": "Scania P-series",
+   "section_hint": "",
+   "engine_ids": [
+    "scania_dc9",
+    "scania_dc13"
+   ]
+  },
+  {
+   "real_vehicle": "Scania PRT 380",
+   "engine": "Scania DC13 I6 (380)",
+   "reason": "model name",
+   "article": "Scania PRT-range",
+   "section_hint": "",
+   "engine_ids": [
+    "scania_dc13"
+   ]
+  },
+  {
+   "real_vehicle": "Volvo FM",
+   "engine": "Volvo D9 I6",
+   "reason": "game 250",
+   "article": "Volvo FM",
+   "section_hint": "",
+   "engine_ids": [
+    "volvo_d9"
+   ]
+  }
+ ],
+ "game_vehicles": [
+  {
+   "id": "AirCity",
+   "name": "Air City",
+   "inspiration": "2005 Irisbus Citelis",
+   "game_engine": "Bus 230HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Bus, Medium Duty",
+   "transmission": "6 Speed Bus",
+   "added_mass": "7,400 kg"
+  },
+  {
+   "id": "Ambi",
+   "name": "Ambi",
+   "inspiration": "2008 Ford E-Series",
+   "game_engine": "V8 240HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Sports",
+   "added_mass": "1,400 kg"
+  },
+  {
+   "id": "Atlas_4x2_Semi",
+   "name": "Atlas 4x2 Semi",
+   "inspiration": "1987 Scania 113H",
+   "game_engine": "Heavy-Duty 260HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Semi Tractor, Heavy Duty",
+   "transmission": "6 Speed Truck",
+   "added_mass": "4,700 kg"
+  },
+  {
+   "id": "Atlas_6x2_Dryvan",
+   "name": "Atlas 6x2 Dry Van",
+   "inspiration": "1987 Scania 113H",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Heavy Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "6,800 kg"
+  },
+  {
+   "id": "Atlas_6x2_Flatbed",
+   "name": "Atlas 6x2 Flatbed",
+   "inspiration": "1987 Scania 113H",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Heavy Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "5,800 kg"
+  },
+  {
+   "id": "Atlas_6x2_Garbage",
+   "name": "Atlas 6x2 Garbage",
+   "inspiration": "1987 Scania 113H",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Heavy Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "8,600 kg"
+  },
+  {
+   "id": "Atlas_6x2_Semi",
+   "name": "Atlas 6x2 Semi",
+   "inspiration": "1987 Scania 113H",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Semi Tractor, Heavy Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "5,900 kg"
+  },
+  {
+   "id": "Atlas_6x2_Tanker",
+   "name": "Atlas 6x2 Tanker",
+   "inspiration": "1987 Scania 113H",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Heavy Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "9,800 kg"
+  },
+  {
+   "id": "Atlas_6x4_Semi",
+   "name": "Atlas 6x4 Semi",
+   "inspiration": "1987 Scania 113H",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Semi Tractor, Heavy Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "5,900 kg"
+  },
+  {
+   "id": "Atlas_8x4_Dump",
+   "name": "Atlas 8x4 Dump",
+   "inspiration": "1987 Scania 113H",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Heavy Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "5,500 kg"
+  },
+  {
+   "id": "Bongo",
+   "name": "Bongo",
+   "inspiration": "1972 Volkswagen Transporter",
+   "game_engine": "I4 90HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Sports",
+   "added_mass": "1,000 kg"
+  },
+  {
+   "id": "Bongo_Bus",
+   "name": "Bongo Bus",
+   "inspiration": "1972 Volkswagen Transporter",
+   "game_engine": "I4 90HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Sports",
+   "added_mass": "0 kg"
+  },
+  {
+   "id": "Bora",
+   "name": "Bora",
+   "inspiration": "1985 Subaru Sambar",
+   "game_engine": "I4 90HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Pickup, Light Duty",
+   "transmission": "4 Speed Sports",
+   "added_mass": "800 kg"
+  },
+  {
+   "id": "Boxy",
+   "name": "Boxy",
+   "inspiration": "1971 Chevrolet P30 Step Van",
+   "game_engine": "V8 180HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Pickup, Light Duty",
+   "transmission": "4 Speed Sports",
+   "added_mass": "2,000 kg"
+  },
+  {
+   "id": "Brutus_Ambulance",
+   "name": "Brutus Ambulance",
+   "inspiration": "2014 Mercedes Unimog U5023",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "AWD",
+   "type": "Truck, Medium Duty",
+   "transmission": "6 Speed Truck",
+   "added_mass": "7,500 kg"
+  },
+  {
+   "id": "Brutus_FireEngine",
+   "name": "Brutus Fire Engine",
+   "inspiration": "2014 Mercedes Unimog U5023",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "AWD",
+   "type": "Truck, Medium Duty",
+   "transmission": "6 Speed Truck",
+   "added_mass": "6,500 kg"
+  },
+  {
+   "id": "Brutus_Tanker",
+   "name": "Brutus Tanker",
+   "inspiration": "2014 Mercedes Unimog U5023",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "AWD",
+   "type": "Truck, Medium Duty",
+   "transmission": "6 Speed Truck",
+   "added_mass": "7,000 kg"
+  },
+  {
+   "id": "Brutus_Wrecker",
+   "name": "Brutus Wrecker",
+   "inspiration": "2014 Mercedes Unimog U5023",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "AWD",
+   "type": "Truck, Medium Duty",
+   "transmission": "6 Speed Truck",
+   "added_mass": "9,550 kg"
+  },
+  {
+   "id": "Campy",
+   "name": "Campy",
+   "inspiration": "1979 Dodge Ram Van",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Motorhome, Medium Duty",
+   "transmission": "6 Speed Truck",
+   "added_mass": "4,500 kg"
+  },
+  {
+   "id": "Cervos",
+   "name": "Cervos",
+   "inspiration": "1964 Chevrolet Impala",
+   "game_engine": "V8 180HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "1,300 kg"
+  },
+  {
+   "id": "CheetahMk1",
+   "name": "Cheetah Mk1",
+   "inspiration": "1980 MCI MC-9",
+   "game_engine": "Bus 400HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Bus, Heavy Duty",
+   "transmission": "6 Speed Bus",
+   "added_mass": "11,000 kg"
+  },
+  {
+   "id": "Civo",
+   "name": "Civo",
+   "inspiration": "2005 Irisbus Citelis",
+   "game_engine": "Bus 230HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Bus, Medium Duty",
+   "transmission": "6 Speed Bus",
+   "added_mass": "9,100 kg"
+  },
+  {
+   "id": "Compacty",
+   "name": "Compacty",
+   "inspiration": "Scania P-Series",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Medium Duty",
+   "transmission": "6 Speed Truck",
+   "added_mass": "2,500 kg"
+  },
+  {
+   "id": "Cora",
+   "name": "Cora",
+   "inspiration": "2016 BMW M2",
+   "game_engine": "V8 240HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "900 kg"
+  },
+  {
+   "id": "Dabo",
+   "name": "Dabo",
+   "inspiration": "2014 Daewoo Labo",
+   "game_engine": "I4 50HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Pickup, Light Duty",
+   "transmission": "5 Speed Sports",
+   "added_mass": "700 kg"
+  },
+  {
+   "id": "Daffy",
+   "name": "Daffy",
+   "inspiration": "1981 Citroën 2CV",
+   "game_engine": "H2 30HP",
+   "fuel": "Gasoline",
+   "drive": "FWD",
+   "type": "Small",
+   "transmission": "Daffy",
+   "added_mass": "250 kg"
+  },
+  {
+   "id": "Dory",
+   "name": "Dory",
+   "inspiration": "1948 Ford F-1",
+   "game_engine": "V8 140HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Pickup, Light Duty",
+   "transmission": "4 Speed Sports",
+   "added_mass": "1,800 kg"
+  },
+  {
+   "id": "DoryWrecker",
+   "name": "Dory Wrecker",
+   "inspiration": "1948 Ford F-1",
+   "game_engine": "V8 140HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Pickup, Light Duty",
+   "transmission": "4 Speed Sports",
+   "added_mass": "2,200 kg"
+  },
+  {
+   "id": "Duke",
+   "name": "Duke",
+   "inspiration": "1987 Buick GNX",
+   "game_engine": "V8 180HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "1,000 kg"
+  },
+  {
+   "id": "Dumbi",
+   "name": "Dumbi",
+   "inspiration": "2009 TEMSA Opalin",
+   "game_engine": "Bus 230HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Bus, Medium Duty",
+   "transmission": "6 Speed Light Bus",
+   "added_mass": "8,500 kg"
+  },
+  {
+   "id": "Dumpy",
+   "name": "Dumpy",
+   "inspiration": "Scania P-Series",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Heavy Duty",
+   "transmission": "6 Speed Truck",
+   "added_mass": "4,000 kg"
+  },
+  {
+   "id": "Duro",
+   "name": "Duro",
+   "inspiration": "Ford F350-F550 Dually",
+   "game_engine": "V8 320HP",
+   "fuel": "Gasoline",
+   "drive": "AWD",
+   "type": "Pickup, Medium Duty",
+   "transmission": "HM6",
+   "added_mass": "2,510 kg"
+  },
+  {
+   "id": "Elisa",
+   "name": "Elisa",
+   "inspiration": "2003 Ford Crown Victoria",
+   "game_engine": "V8 180HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "1,520 kg"
+  },
+  {
+   "id": "Elisa2",
+   "name": "Elisa 2",
+   "inspiration": "2003 Ford Crown Victoria",
+   "game_engine": "V8 180HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "1,520 kg"
+  },
+  {
+   "id": "Elisa2_Police",
+   "name": "Elisa 2 Police",
+   "inspiration": "2003 Ford Crown Victoria",
+   "game_engine": "V8 240HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "1,720 kg"
+  },
+  {
+   "id": "Elisa_Police",
+   "name": "Elisa Police",
+   "inspiration": "2003 Ford Crown Victoria",
+   "game_engine": "V8 240HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "1,520 kg"
+  },
+  {
+   "id": "ElisaTaxi",
+   "name": "Elisa Taxi",
+   "inspiration": "2003 Ford Crown Victoria",
+   "game_engine": "V8 180HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "1,520 kg"
+  },
+  {
+   "id": "EnfoGT",
+   "name": "Enfo GT",
+   "inspiration": "2009 Ford Focus RS",
+   "game_engine": "V8 320HP",
+   "fuel": "Gasoline",
+   "drive": "AWD",
+   "type": "Small",
+   "transmission": "6 Speed Sports",
+   "added_mass": "900 kg"
+  },
+  {
+   "id": "Essam",
+   "name": "Essam",
+   "inspiration": "1969 Nissan Fairlady Z",
+   "game_engine": "I4 150HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "900 kg"
+  },
+  {
+   "id": "EVan",
+   "name": "EVan",
+   "inspiration": "Arrival Van",
+   "game_engine": "EV 130HP",
+   "fuel": "Electric",
+   "drive": "FWD",
+   "type": "Pickup, Light Duty",
+   "transmission": "EV 1 Speed",
+   "added_mass": "2,750 kg"
+  },
+  {
+   "id": "FL1",
+   "name": "FL1",
+   "inspiration": "1985 Freightliner FLA",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Semi Tractor, Heavy Duty",
+   "transmission": "13 Speed",
+   "added_mass": "7,500 kg"
+  },
+  {
+   "id": "FormulaSCM",
+   "name": "Formula SCM",
+   "inspiration": "Formula 1600",
+   "game_engine": "I4 150HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Racecar",
+   "transmission": "Formula SCM 4 Speed",
+   "added_mass": "450 kg"
+  },
+  {
+   "id": "Fortem",
+   "name": "Fortem",
+   "inspiration": "1984 Porsche 911",
+   "game_engine": "V8 240HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "5 Speed Sports",
+   "added_mass": "800 kg"
+  },
+  {
+   "id": "Fox",
+   "name": "Fox",
+   "inspiration": "1945 Willys MB 'Jeep'",
+   "game_engine": "I4 90HP",
+   "fuel": "Gasoline",
+   "drive": "AWD",
+   "type": "Small",
+   "transmission": "4 Speed Sports",
+   "added_mass": "700 kg"
+  },
+  {
+   "id": "GolimaRotator",
+   "name": "Golima Rotator",
+   "inspiration": "Peterbilt 389",
+   "game_engine": "Heavy-Duty 440HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Heavy Duty",
+   "transmission": "13 Speed",
+   "added_mass": "24,850 kg"
+  },
+  {
+   "id": "Golima_Semi",
+   "name": "Golima Semi",
+   "inspiration": "Peterbilt 389",
+   "game_engine": "Heavy-Duty 440HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Semi Tractor, Heavy Duty",
+   "transmission": "13 Speed",
+   "added_mass": "8,500 kg"
+  },
+  {
+   "id": "Gunthoo",
+   "name": "Gunthoo",
+   "inspiration": "Honda CB250",
+   "game_engine": "Bike 30HP",
+   "fuel": "Gasoline",
+   "drive": "",
+   "type": "Bike",
+   "transmission": "Bike 6 Speed",
+   "added_mass": "120 kg"
+  },
+  {
+   "id": "Gunthoo_Police",
+   "name": "Gunthoo Police",
+   "inspiration": "Honda CB250",
+   "game_engine": "Bike 50HP",
+   "fuel": "Gasoline",
+   "drive": "",
+   "type": "Bike",
+   "transmission": "Bike 6 Speed",
+   "added_mass": "130 kg"
+  },
+  {
+   "id": "Hana",
+   "name": "Hana",
+   "inspiration": "1982 Ford F-150 XL",
+   "game_engine": "V8 140HP",
+   "fuel": "Gasoline",
+   "drive": "AWD",
+   "type": "Pickup, Light Duty",
+   "transmission": "4 Speed Sports",
+   "added_mass": "1,500 kg"
+  },
+  {
+   "id": "Jemusi_Dump",
+   "name": "Jemusi Dump",
+   "inspiration": "1970 GMC M35",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "AWD",
+   "type": "Truck, Medium Duty",
+   "transmission": "5 Speed Truck",
+   "added_mass": "4,200 kg"
+  },
+  {
+   "id": "Jemusi_Flatbed",
+   "name": "Jemusi Flatbed",
+   "inspiration": "1970 GMC M35",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "AWD",
+   "type": "Truck, Medium Duty",
+   "transmission": "5 Speed Truck",
+   "added_mass": "6,100 kg"
+  },
+  {
+   "id": "Jemusi",
+   "name": "Jemusi Logger",
+   "inspiration": "1970 GMC M35",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "AWD",
+   "type": "Truck, Medium Duty",
+   "transmission": "5 Speed Truck",
+   "added_mass": "4,000 kg"
+  },
+  {
+   "id": "Jemusi_Semi",
+   "name": "Jemusi Semi",
+   "inspiration": "1970 GMC M35",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "AWD",
+   "type": "Semi Tractor, Medium Duty",
+   "transmission": "5 Speed Truck",
+   "added_mass": "3,500 kg"
+  },
+  {
+   "id": "Jemusi_Tanker",
+   "name": "Jemusi Tanker",
+   "inspiration": "1970 GMC M35",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "AWD",
+   "type": "Truck, Medium Duty",
+   "transmission": "5 Speed Truck",
+   "added_mass": "6,000 kg"
+  },
+  {
+   "id": "Kira_Box",
+   "name": "Kira Box",
+   "inspiration": "1977 Iveco Zeta",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Medium Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "3,500 kg"
+  },
+  {
+   "id": "Kira_Flatbed",
+   "name": "Kira Flatbed",
+   "inspiration": "1977 Iveco Zeta",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Medium Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "3,500 kg"
+  },
+  {
+   "id": "Kira_Rollback",
+   "name": "Kira Rollback Tow",
+   "inspiration": "1977 Iveco Zeta",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Medium Duty",
+   "transmission": "6 Speed Truck",
+   "added_mass": "5,000 kg"
+  },
+  {
+   "id": "Kira_Tanker",
+   "name": "Kira Tanker",
+   "inspiration": "1977 Iveco Zeta",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Medium Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "3,500 kg"
+  },
+  {
+   "id": "Kira_Van",
+   "name": "Kira Van",
+   "inspiration": "1977 Iveco Zeta",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Medium Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "4,000 kg"
+  },
+  {
+   "id": "Koma",
+   "name": "Koma",
+   "inspiration": "1965 Austin Mini Cooper",
+   "game_engine": "I4 90HP",
+   "fuel": "Gasoline",
+   "drive": "FWD",
+   "type": "Small",
+   "transmission": "4 Speed Sports",
+   "added_mass": "600 kg"
+  },
+  {
+   "id": "Kuda_Semi",
+   "name": "Kuda",
+   "inspiration": "2009 Renault Magnum 480",
+   "game_engine": "Heavy-Duty 440HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Semi Tractor, Heavy Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "5,600 kg"
+  },
+  {
+   "id": "Kuda_Container_6x2",
+   "name": "Kuda Container 6x2",
+   "inspiration": "2009 Renault Magnum 480",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Heavy Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "6,000 kg"
+  },
+  {
+   "id": "Kuda_Dyrvan_4x2",
+   "name": "Kuda Dry Van",
+   "inspiration": "2009 Renault Magnum 480",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Heavy Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "5,500 kg"
+  },
+  {
+   "id": "Kuda_Flatbed_4x2",
+   "name": "Kuda Flatbed",
+   "inspiration": "2009 Renault Magnum 480",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Heavy Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "5,000 kg"
+  },
+  {
+   "id": "Kuda_LiveFishTank_4x2",
+   "name": "Kuda LFT",
+   "inspiration": "2009 Renault Magnum 480",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Heavy Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "7,200 kg"
+  },
+  {
+   "id": "Lamas",
+   "name": "Lamas",
+   "inspiration": "2014 Daewoo Labo",
+   "game_engine": "I4 50HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Pickup, Light Duty",
+   "transmission": "5 Speed Sports",
+   "added_mass": "525 kg"
+  },
+  {
+   "id": "Liliput",
+   "name": "Liliput",
+   "inspiration": "2009 Tecnobus Gulliver",
+   "game_engine": "Bus 140HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Bus, Medium Duty",
+   "transmission": "4 Speed Mini Bus",
+   "added_mass": "2,400 kg"
+  },
+  {
+   "id": "Lobo",
+   "name": "Lobo",
+   "inspiration": "1983 Steinwinter Supercargo 2040",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Semi Tractor, Heavy Duty",
+   "transmission": "13 Speed",
+   "added_mass": "4,600 kg"
+  },
+  {
+   "id": "Longhorn_Rollback",
+   "name": "Longhorn Rollback",
+   "inspiration": "2014 Volvo VNL",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Heavy Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "9,800 kg"
+  },
+  {
+   "id": "Longhorn_Rollback_UL",
+   "name": "Longhorn Rollback UL",
+   "inspiration": "2014 Volvo VNL",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Heavy Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "7,800 kg"
+  },
+  {
+   "id": "Longhorn_Semi",
+   "name": "Longhorn Semi",
+   "inspiration": "2014 Volvo VNL",
+   "game_engine": "Heavy-Duty 440HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Semi Tractor, Heavy Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "8,500 kg"
+  },
+  {
+   "id": "Longhorn_Semi_4x2",
+   "name": "Longhorn Semi DC 4x2",
+   "inspiration": "2014 Volvo VNL",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Semi Tractor, Heavy Duty",
+   "transmission": "6 Speed Truck Mk1",
+   "added_mass": "7,200 kg"
+  },
+  {
+   "id": "Magis",
+   "name": "Magis",
+   "inspiration": "1993 Toyota Supra",
+   "game_engine": "V8 240HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "5 Speed Sports",
+   "added_mass": "1,120 kg"
+  },
+  {
+   "id": "Maity",
+   "name": "Maity",
+   "inspiration": "Scania P-Series",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Medium Duty",
+   "transmission": "6 Speed Truck",
+   "added_mass": "2,500 kg"
+  },
+  {
+   "id": "Mammoth",
+   "name": "Mammoth",
+   "inspiration": "1986 Lamborghini LM002",
+   "game_engine": "V12 400HP",
+   "fuel": "Gasoline",
+   "drive": "AWD",
+   "type": "Pickup, Light Duty",
+   "transmission": "5 Speed Sports",
+   "added_mass": "2,300 kg"
+  },
+  {
+   "id": "Micky",
+   "name": "Micky",
+   "inspiration": "1983 Nissan Micra K10",
+   "game_engine": "I4 90HP",
+   "fuel": "Gasoline",
+   "drive": "FWD",
+   "type": "Small",
+   "transmission": "5 Speed Sports",
+   "added_mass": "400 kg"
+  },
+  {
+   "id": "Mitage",
+   "name": "Mitage",
+   "inspiration": "2012 Mazda CX-5",
+   "game_engine": "V8 180HP",
+   "fuel": "Gasoline",
+   "drive": "AWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "1,700 kg"
+  },
+  {
+   "id": "Mixi",
+   "name": "Mixi",
+   "inspiration": "Scania P-Series",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Heavy Duty",
+   "transmission": "6 Speed Truck",
+   "added_mass": "9,500 kg"
+  },
+  {
+   "id": "Monarch",
+   "name": "Monarch",
+   "inspiration": "1987 Cadillac Fleetwood",
+   "game_engine": "V8 180HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "1,350 kg"
+  },
+  {
+   "id": "Monarch_Limo",
+   "name": "Monarch Limo",
+   "inspiration": "1987 Cadillac Fleetwood",
+   "game_engine": "V8 180HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "1,850 kg"
+  },
+  {
+   "id": "Muhan",
+   "name": "Muhan",
+   "inspiration": "2007 Chevrolet Tahoe",
+   "game_engine": "V8 320HP",
+   "fuel": "Gasoline",
+   "drive": "AWD",
+   "type": "Small",
+   "transmission": "HM6",
+   "added_mass": "2,000 kg"
+  },
+  {
+   "id": "Muhan_Police",
+   "name": "Muhan Police",
+   "inspiration": "2007 Chevrolet Tahoe",
+   "game_engine": "V8 320HP",
+   "fuel": "Gasoline",
+   "drive": "AWD",
+   "type": "Small",
+   "transmission": "HM6",
+   "added_mass": "2,000 kg"
+  },
+  {
+   "id": "Neo",
+   "name": "Neo",
+   "inspiration": "1992 Lancia Delta HF Integrale Evo",
+   "game_engine": "I4 150HP",
+   "fuel": "Gasoline",
+   "drive": "AWD",
+   "type": "Small",
+   "transmission": "5 Speed Sports",
+   "added_mass": "600 kg"
+  },
+  {
+   "id": "Nimo",
+   "name": "Nimo",
+   "inspiration": "2003 Lincoln Town Car Stretched Limousine",
+   "game_engine": "V8 240HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "5 Speed Sports",
+   "added_mass": "2,800 kg"
+  },
+  {
+   "id": "Nuke",
+   "name": "Nuke",
+   "inspiration": "1981 Dodge Diplomat",
+   "game_engine": "V8 180HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "1,100 kg"
+  },
+  {
+   "id": "NukePolice",
+   "name": "Nuke Police",
+   "inspiration": "1981 Dodge Diplomat",
+   "game_engine": "V8 180HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "1,200 kg"
+  },
+  {
+   "id": "NukeTaxi",
+   "name": "Nuke Taxi",
+   "inspiration": "1981 Dodge Diplomat",
+   "game_engine": "V8 180HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "0 kg"
+  },
+  {
+   "id": "Panther",
+   "name": "Panther",
+   "inspiration": "1989 Mazda MX-5",
+   "game_engine": "I4 150HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "500 kg"
+  },
+  {
+   "id": "Police",
+   "name": "Police",
+   "inspiration": "2012 Dodge Charger",
+   "game_engine": "V8 240HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Sports",
+   "added_mass": "1,700 kg"
+  },
+  {
+   "id": "PoliceInterceptor1",
+   "name": "Police Interceptor 1",
+   "inspiration": "1975 Dodge Coronet",
+   "game_engine": "V8 180HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Sports",
+   "added_mass": "1,800 kg"
+  },
+  {
+   "id": "Pulio",
+   "name": "Pulio",
+   "inspiration": "1967 Ford F-600",
+   "game_engine": "Medium-Duty 190HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Medium Duty",
+   "transmission": "6 Speed Truck",
+   "added_mass": "2,900 kg"
+  },
+  {
+   "id": "Pulse",
+   "name": "Pulse",
+   "inspiration": "2022 Honda E",
+   "game_engine": "EV 130HP",
+   "fuel": "Electric",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "EV 1 Speed",
+   "added_mass": "1,100 kg"
+  },
+  {
+   "id": "Ranch",
+   "name": "Ranchy",
+   "inspiration": "1967 Chevrolet C-10",
+   "game_engine": "V8 140HP",
+   "fuel": "Gasoline",
+   "drive": "AWD",
+   "type": "Pickup, Light Duty",
+   "transmission": "4 Speed Sports",
+   "added_mass": "1,800 kg"
+  },
+  {
+   "id": "Raton",
+   "name": "Raton",
+   "inspiration": "2011 Lamborghini Aventador LP 700-4",
+   "game_engine": "V12 400HP",
+   "fuel": "Gasoline",
+   "drive": "AWD",
+   "type": "Small",
+   "transmission": "6 Speed Sports",
+   "added_mass": "1,300 kg"
+  },
+  {
+   "id": "Raven",
+   "name": "Raven",
+   "inspiration": "1932 Ford 5-Window Coupe",
+   "game_engine": "V8 320HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "750 kg"
+  },
+  {
+   "id": "Roadmaster",
+   "name": "Roadmaster",
+   "inspiration": "1955 Beck 'Semi' Deck & Half Cruiser",
+   "game_engine": "Bus 300HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Bus, Heavy Duty",
+   "transmission": "6 Speed Bus",
+   "added_mass": "10,200 kg"
+  },
+  {
+   "id": "Savannah",
+   "name": "Savannah",
+   "inspiration": "1974 Volkswagen Type 181",
+   "game_engine": "I4 90HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Sports",
+   "added_mass": "600 kg"
+  },
+  {
+   "id": "SCM_Kart_One",
+   "name": "SCM Kart One",
+   "inspiration": "Race Car Kart",
+   "game_engine": "Kart 10HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Kart",
+   "transmission": "Kart 1 Speed",
+   "added_mass": "40 kg"
+  },
+  {
+   "id": "Scooty",
+   "name": "Scooty",
+   "inspiration": "Piaggio Vespa",
+   "game_engine": "Scooter 10HP",
+   "fuel": "Gasoline",
+   "drive": "",
+   "type": "Bike",
+   "transmission": "Scooter CVT",
+   "added_mass": "50 kg"
+  },
+  {
+   "id": "SRT",
+   "name": "SRT",
+   "inspiration": "Scania PRT 380",
+   "game_engine": "Heavy-Duty 260HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Semi Tractor, Heavy Duty",
+   "transmission": "6 Speed Truck",
+   "added_mass": "4,800 kg"
+  },
+  {
+   "id": "Stagon",
+   "name": "Stagon",
+   "inspiration": "1983 Ford LTD Country Squire",
+   "game_engine": "V8 180HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "1,800 kg"
+  },
+  {
+   "id": "Stella",
+   "name": "Stella",
+   "inspiration": "2013 Ford Fiesta",
+   "game_engine": "V8 140HP",
+   "fuel": "Gasoline",
+   "drive": "FWD",
+   "type": "Small",
+   "transmission": "5 Speed Sports",
+   "added_mass": "800 kg"
+  },
+  {
+   "id": "Stinger",
+   "name": "Stinger",
+   "inspiration": "1969 Chevrolet Camaro SS",
+   "game_engine": "V8 140HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Sports",
+   "added_mass": "1,100 kg"
+  },
+  {
+   "id": "SV200",
+   "name": "SV200",
+   "inspiration": "1989 International 3800",
+   "game_engine": "Bus 230HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Bus, Medium Duty",
+   "transmission": "6 Speed Bus",
+   "added_mass": "7,500 kg"
+  },
+  {
+   "id": "Tavan",
+   "name": "Tavan",
+   "inspiration": "1980 GMC Vandura",
+   "game_engine": "V8 140HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Pickup, Light Duty",
+   "transmission": "4 Speed Sports",
+   "added_mass": "1,550 kg"
+  },
+  {
+   "id": "Tavan_Ambulance",
+   "name": "Tavan Ambulance",
+   "inspiration": "1980 GMC Vandura",
+   "game_engine": "V8 240HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Sports",
+   "added_mass": "2,050 kg"
+  },
+  {
+   "id": "Terra",
+   "name": "Terra",
+   "inspiration": "1966 Caterpillar 769",
+   "game_engine": "Heavy-Machine 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Heavy Machinery, Heavy Duty",
+   "transmission": "Mine Truck 7 Speed",
+   "added_mass": "24,100 kg"
+  },
+  {
+   "id": "Titan",
+   "name": "Titan",
+   "inspiration": "1987 Mack R-Series",
+   "game_engine": "Heavy-Duty 350HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Semi Tractor, Heavy Duty",
+   "transmission": "13 Speed",
+   "added_mass": "7,500 kg"
+  },
+  {
+   "id": "Townie",
+   "name": "Townie",
+   "inspiration": "1950 Volkswagen Transporter",
+   "game_engine": "V8 140HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Sports",
+   "added_mass": "1,900 kg"
+  },
+  {
+   "id": "Townie_Bus",
+   "name": "Townie Bus",
+   "inspiration": "1950 Volkswagen Transporter",
+   "game_engine": "V8 140HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Sports",
+   "added_mass": "0 kg"
+  },
+  {
+   "id": "Tronko",
+   "name": "Tronko",
+   "inspiration": "Volvo FM",
+   "game_engine": "Medium-Duty 250HP",
+   "fuel": "Diesel",
+   "drive": "RWD",
+   "type": "Truck, Medium Duty",
+   "transmission": "6 Speed Truck",
+   "added_mass": "4,000 kg"
+  },
+  {
+   "id": "Trophy_Taxi",
+   "name": "Trophy Taxi",
+   "inspiration": "1982 Lada 2107",
+   "game_engine": "I4 90HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "960 kg"
+  },
+  {
+   "id": "Trophy2",
+   "name": "Trophy2",
+   "inspiration": "1982 Lada 2107",
+   "game_engine": "I4 90HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Muscle",
+   "added_mass": "960 kg"
+  },
+  {
+   "id": "Tuscan",
+   "name": "Tuscan",
+   "inspiration": "1969 Chevrolet Nova",
+   "game_engine": "V8 140HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "4 Speed Sports",
+   "added_mass": "950 kg"
+  },
+  {
+   "id": "Vani",
+   "name": "Vani",
+   "inspiration": "1986 Dodge Ram Van",
+   "game_engine": "V8 140HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Pickup, Light Duty",
+   "transmission": "4 Speed Sports",
+   "added_mass": "1,400 kg"
+  },
+  {
+   "id": "Vista",
+   "name": "Vista",
+   "inspiration": "1989 Nissan Skyline GT-R",
+   "game_engine": "V8 240HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "5 Speed Sports",
+   "added_mass": "1,100 kg"
+  },
+  {
+   "id": "Voltex",
+   "name": "Voltex",
+   "inspiration": "1990 Toyota Pickup",
+   "game_engine": "V8 140HP",
+   "fuel": "Gasoline",
+   "drive": "AWD",
+   "type": "Pickup, Light Duty",
+   "transmission": "4 Speed Sports",
+   "added_mass": "1,100 kg"
+  },
+  {
+   "id": "Vulcan",
+   "name": "Vulcan",
+   "inspiration": "2019 Konecranes SMV 25-1200 C",
+   "game_engine": "Heavy-Duty 260HP",
+   "fuel": "Diesel",
+   "drive": "FWD",
+   "type": "Heavy Machinery, Heavy Duty",
+   "transmission": "HD Folklift 3 Speed",
+   "added_mass": "31,800 kg"
+  },
+  {
+   "id": "Zero",
+   "name": "Zero",
+   "inspiration": "2015 Yamaha YZF R1",
+   "game_engine": "Bike i4 100HP",
+   "fuel": "Gasoline",
+   "drive": "",
+   "type": "Bike",
+   "transmission": "Bike 6 Speed Sport",
+   "added_mass": "0 kg"
+  },
+  {
+   "id": "Zino",
+   "name": "Zino",
+   "inspiration": "1991 BMW M3",
+   "game_engine": "V8 140HP",
+   "fuel": "Gasoline",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "5 Speed Sports",
+   "added_mass": "600 kg"
+  },
+  {
+   "id": "Zydro",
+   "name": "Zydro",
+   "inspiration": "2022 Hyundai N Vision 74",
+   "game_engine": "EV 300HP",
+   "fuel": "Electric",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "EV 1 Speed",
+   "added_mass": "2,100 kg"
+  },
+  {
+   "id": "Zydro_Police",
+   "name": "Zydro Police",
+   "inspiration": "2022 Hyundai N Vision 74",
+   "game_engine": "EV 670HP",
+   "fuel": "Electric",
+   "drive": "RWD",
+   "type": "Small",
+   "transmission": "EV 1 Speed",
+   "added_mass": "2,100 kg"
+  }
+ ],
+ "exhaust": {
+  "1969 Chevrolet Camaro SS": {
+   "layout": "dual, cast-iron manifolds, transverse rear muffler",
+   "pipe_in": 2.0,
+   "notes": "1969 GM small-block systems 2 in all the way back",
+   "src": [
+    "https://www.rickscamaros.com/camaro-original-style-exhaust-system-kit-2-1969-33-386886-1.html",
+    "https://www.tst.forums.ncrs.org/forum/technical-discussion/72953-1969-exhaust-question"
+   ]
+  },
+  "2003 Ford Crown Victoria": {
+   "layout": "dual with H-pipe, cast manifolds",
+   "pipe_in": 2.25,
+   "tail_in": 2.0,
+   "notes": "size from direct-fit Borla 140360 (2.25 into 2 in); stock size not stated by Ford",
+   "src": [
+    "https://shop.harbourcitydiesel.com/borla-140360-cat-back-exhaust-system-touring"
+   ]
+  },
+  "2003 Lincoln Town Car Stretched Limousine": {
+   "same_as": "2003 Ford Crown Victoria",
+   "notes": "same Panther platform / 4.6 2V; assumption, not sourced"
+  },
+  "1989 Nissan Skyline GT-R": {
+   "layout": "twin turbo, front pipe 60-70 mm, single main pipe",
+   "turbo_outlet_mm": 58,
+   "front_pipe_mm": "60-70",
+   "main_pipe_mm": 70,
+   "notes": "stock exhaust 19.5 kg; tip tapers 92 to 70 mm",
+   "src": [
+    "https://www.tegiwa.com/products/rse-full-titanium-exhaust-nissan-skyline-gt-r-r32",
+    "https://www.tegiwa.com/products/rse-full-titanium-front-pipe-nissan-skyline-gt-r-r32-r33-r34-rb26dett",
+    "https://www.realstreetperformance.com/tomei-expreme-turbine-outlet-pipes-nissan-skyline-gtr-gt-r-r32-r33-r34-r26dett.html"
+   ]
+  },
+  "1993 Toyota Supra": {
+   "layout": "sequential twin turbo, single system",
+   "centre_pipe_mm": "70 narrowing to 64",
+   "src": [
+    "https://www.tegiwa.com/products/rse-full-titanium-mid-pipe-toyota-supra-jza80"
+   ]
+  },
+  "1989 Mazda MX-5": {
+   "layout": "OEM tubular 4-2-1 manifold, single pipe",
+   "pipe_in": 1.875,
+   "notes": "OEM manifold and piping described as long",
+   "src": [
+    "https://8020automotive.com/na-nb-miata-headers-upgrade-guide/"
+   ]
+  },
+  "Peterbilt 389": {
+   "layout": "single or dual vertical stacks",
+   "pipe_in": 5.0,
+   "notes": "5 in is standard on 379/389",
+   "src": [
+    "https://www.4statetrucks.com/semi-truck-exhaust",
+    "https://www.4statetrucks.com/peterbilt-389-chrome-stacks-tops/?mpp=20"
+   ]
+  },
+  "1965 Austin Mini Cooper": {
+   "layout": "cast/tubular 3-branch manifold into single pipe",
+   "pipe_in": 1.5,
+   "notes": "original-type manifold outlet ~1.75 OD / 1.625 ID (Maniflow reproduction); front pipe 1.5 in clamp",
+   "src": [
+    "https://www.minimania.com/pdfile/Mini%20Mania%20Catalog.Exhaust%20Manifolds.Mufflers.23.pdf",
+    "https://www.minimania.com/part/C-STR816"
+   ]
+  },
+  "1984 Porsche 911": {
+   "layout": "two heat exchangers (3 primaries each), pre-silencer, crossover, rear silencer",
+   "primary_od_mm": 41,
+   "notes": "1984 Porsche raised heat exchanger down pipe from 39 to 41 mm; Carrera port 38 mm",
+   "src": [
+    "https://www.design911.co.uk/porsche/930--911--turbo-3-3l/heat-exchangers/?ol=zh",
+    "https://forums.pelicanparts.com/911-930-turbo-super-charging-forum/715019-exhaust-port-size-comparison-request.html",
+    "https://www.design911.co.uk/porsche/911-1984-89/heat-exchangers/"
+   ]
+  },
+  "1974 Volkswagen Type 181": {
+   "layout": "heat exchangers into transverse muffler, two tailpipes",
+   "pipe_in": 1.375,
+   "notes": "stock-style systems use 1 3/8 in tubing (aftermarket stock-replacement)",
+   "src": [
+    "https://www.heritagepartscentre.com/eu/volkswagen/beetle/exhaust.html?p=2",
+    "https://www.jbugs.com/product/113251053AK.html"
+   ]
+  }
+ }
+}
