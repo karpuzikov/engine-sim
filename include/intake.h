@@ -64,6 +64,7 @@ class Intake : public Part {
         // A diesel host leans this out at part load: diesels meter fuel, not air.
         inline double getMolecularAfr() const { return m_molecularAfr; }
         inline void setMolecularAfr(double afr) { m_molecularAfr = afr; }
+        inline void setPremixedFuel(bool premixedFuel) { m_premixedFuel = premixedFuel; }
 
         GasSystem m_system;
         double m_throttle;
@@ -78,6 +79,7 @@ class Intake : public Part {
         double m_idleFlowK;
         double m_runnerFlowRate;
         double m_molecularAfr;
+        bool m_premixedFuel;
         double m_idleThrottlePlatePosition;
         double m_runnerLength;
         double m_velocityDecay;

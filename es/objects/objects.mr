@@ -608,7 +608,34 @@ public node ignition_module => __engine_sim__ignition_module {
     input rev_limit [float]: 7000.0 * units.rpm;
     input limiter_duration [float]: 0.5 * units.sec;
     input sparks_per_cycle [float]: 1;
+    input compression_ignition [bool]: false;
+    input max_fuel_per_injection [float]: 0.0;
+    input idle_speed [float]: 0.0;
+    input governed_speed [float]: 0.0;
+    input autoignition_temperature [float]: (210.0 + 273.15) * units.K;
     alias output __out [ignition_module_channel];
+}
+
+// Diesel fuel injection pump: injects at the timing curve's crank angle, the
+// charge lights by compression. The pedal meters fuel; an idle governor holds
+// idle_speed and a maximum-speed governor cuts fuel above governed_speed.
+public node diesel_injection_pump {
+    input timing_curve;
+    input max_fuel_per_injection;
+    input idle_speed: 700 * units.rpm;
+    input governed_speed: 2400 * units.rpm;
+    input sparks_per_cycle: 1;
+    input autoignition_temperature: (210.0 + 273.15) * units.K;
+    alias output __out:
+        ignition_module(
+            timing_curve: timing_curve,
+            rev_limit: 100000 * units.rpm,
+            sparks_per_cycle: sparks_per_cycle,
+            compression_ignition: true,
+            max_fuel_per_injection: max_fuel_per_injection,
+            idle_speed: idle_speed,
+            governed_speed: governed_speed,
+            autoignition_temperature: autoignition_temperature);
 }
 
 public node ignition_wire => __engine_sim__ignition_wire {

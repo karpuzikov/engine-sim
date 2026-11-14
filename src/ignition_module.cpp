@@ -16,6 +16,12 @@ IgnitionModule::IgnitionModule() {
     m_revLimitTimer = 0.0;
     m_revLimit = 0;
     m_limiterDuration = 0;
+    m_sparksPerCycle = 1;
+    m_compressionIgnition = false;
+    m_maxFuelPerInjection = 0;
+    m_idleSpeed = 0;
+    m_governedSpeed = 0;
+    m_autoignitionTemperature = 0;
 }
 
 IgnitionModule::~IgnitionModule() {
@@ -37,6 +43,11 @@ void IgnitionModule::initialize(const Parameters &params) {
     m_revLimit = params.revLimit;
     m_limiterDuration = params.limiterDuration;
     m_sparksPerCycle = static_cast<int>(params.sparksPerCycle);
+    m_compressionIgnition = params.compressionIgnition;
+    m_maxFuelPerInjection = params.maxFuelPerInjection;
+    m_idleSpeed = params.idleSpeed;
+    m_governedSpeed = params.governedSpeed;
+    m_autoignitionTemperature = params.autoignitionTemperature;
 }
 
 void IgnitionModule::setFiringOrder(int cylinderIndex, double angle) {
@@ -108,6 +119,18 @@ void IgnitionModule::resetIgnitionEvents() {
     for (int i = 0; i < m_cylinderCount; ++i) {
         m_plugs[i].ignitionEvent = false;
     }
+}
+
+double IgnitionModule::calculateFuelPerInjection(double pedal) const {
+    const double speed = std::abs(m_crankshaft->m_body.v_theta);
+
+    // Idle governor: full fuel while cranking, none above 110% of idle speed.
+    const double idleFuel = clamp((1.1 * m_idleSpeed - speed) / (0.3 * m_idleSpeed));
+
+    // Maximum-speed governor: full fuel up to the governed speed, none above 110% of it.
+    const double governorCut = clamp((1.1 * m_governedSpeed - speed) / (0.1 * m_governedSpeed));
+
+    return std::fmax(clamp(pedal), idleFuel) * governorCut * m_maxFuelPerInjection;
 }
 
 double IgnitionModule::getTimingAdvance() {

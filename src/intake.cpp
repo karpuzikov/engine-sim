@@ -14,6 +14,7 @@ Intake::Intake() {
     m_flowRate = 0;
     m_totalFuelInjected = 0;
     m_molecularAfr = 0;
+    m_premixedFuel = true;
     m_runnerLength = 0;
     m_supplyPressure = units::pressure(1.0, units::atm);
     m_supplyTemperature = units::celcius(25.0);
@@ -77,6 +78,13 @@ void Intake::process(double dt) {
     fuelMix.p_fuel = (1.0 - p_idle_air);
     fuelMix.p_inert = p_idle_air * 0.75;
     fuelMix.p_o2 = p_idle_air * 0.25;
+
+    if (!m_premixedFuel) {
+        // Fuel is injected into the cylinders: the intake carries air only.
+        fuelAirMix.p_fuel = fuelMix.p_fuel = 0.0;
+        fuelAirMix.p_inert = fuelMix.p_inert = 0.75;
+        fuelAirMix.p_o2 = fuelMix.p_o2 = 0.25;
+    }
 
     const double throttle = getThrottlePlatePosition();
     const double flowAttenuation = std::cos(throttle * constants::pi / 2);

@@ -310,6 +310,7 @@ add_executable(engine-sim-test
     test/gas_system_tests.cpp
     test/function_test.cpp
     test/synthesizer_tests.cpp
+    test/diesel_governor_tests.cpp
 )
 
 target_link_libraries(engine-sim-test

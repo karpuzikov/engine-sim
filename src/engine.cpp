@@ -145,6 +145,9 @@ double Engine::getSpeedControl() {
 }
 
 void Engine::setThrottle(double throttle) {
+    // A compression-ignition engine meters fuel, not air: its intake stays wide open.
+    if (m_ignitionModule.isCompressionIgnition()) throttle = 0.0;
+
     for (int i = 0; i < m_intakeCount; ++i) {
         m_intakes[i].m_throttle = throttle;
     }
