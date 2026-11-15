@@ -42,6 +42,9 @@ class Synthesizer {
 
         struct Parameters {
             int inputChannelCount = 1;
+            // Channels from this index on carry structure-borne and intake sound: no jitter and no air noise (Engine
+            // Simulator's turbulence model of the exhaust). -1: none.
+            int firstDryChannel = -1;
             int inputBufferSize = 1024;
             int audioBufferSize = 44100;
             float inputSampleRate = 10000;
@@ -115,6 +118,7 @@ class Synthesizer {
         InputChannel *m_inputChannels;
         AudioParameters m_audioParameters;
         int m_inputChannelCount;
+        int m_firstDryChannel;
         int m_inputBufferSize;
         int m_inputSamplesRead;
         int m_latency;

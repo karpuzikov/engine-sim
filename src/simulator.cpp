@@ -208,9 +208,23 @@ void Simulator::initializeSynthesizer() {
     synthParams.audioBufferSize = 44100;
     synthParams.audioSampleRate = 44100;
     synthParams.inputBufferSize = 44100;
-    synthParams.inputChannelCount = m_engine->getExhaustSystemCount();
+    synthParams.inputChannelCount = m_engine->getExhaustSystemCount() + 2;
+    synthParams.firstDryChannel = m_engine->getExhaustSystemCount();
     synthParams.inputSampleRate = static_cast<float>(getSimulationFrequency());
     m_synthesizer.initialize(synthParams);
+
+    // Heard directly: no impulse response.
+    const int16_t direct = INT16_MAX;
+    m_synthesizer.initializeImpulseResponse(&direct, 1, 1.0f, intakeSoundChannel());
+    m_synthesizer.initializeImpulseResponse(&direct, 1, 1.0f, blockSoundChannel());
+}
+
+int Simulator::intakeSoundChannel() const {
+    return m_engine->getExhaustSystemCount();
+}
+
+int Simulator::blockSoundChannel() const {
+    return m_engine->getExhaustSystemCount() + 1;
 }
 
 void Simulator::simulateStep_() {

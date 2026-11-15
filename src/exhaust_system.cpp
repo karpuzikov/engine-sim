@@ -75,6 +75,7 @@ void ExhaustSystem::process(double dt) {
     flowParams.k_flow = m_outletFlowRate;
 
     m_flow = m_system.flow(flowParams);
+    m_outletFlowThisStep -= m_flow; // m_flow counts gas coming in from the atmosphere
 
     m_system.dissipateExcessVelocity();
     m_system.updateVelocity(dt, m_velocityDecay);

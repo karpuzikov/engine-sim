@@ -2,6 +2,7 @@
 #define ATG_ENGINE_SIM_PISTON_ENGINE_SIMULATOR_H
 
 #include "simulator.h"
+#include "butterworth_low_pass_filter.h"
 
 #include "engine.h"
 #include "transmission.h"
@@ -12,7 +13,6 @@
 #include "starter_motor.h"
 #include "derivative_filter.h"
 #include "vehicle_drag_constraint.h"
-#include "delay_filter.h"
 
 #include "scs.h"
 
@@ -37,14 +37,6 @@ class PistonEngineSimulator : public Simulator {
 
         DerivativeFilter m_derivativeFilter;
 
-        // Off (default): the original signal, exhaust runner pressure divided
-        // by cylinder count and exhaust length squared. On: the sound pressure
-        // 1 m from the exhaust, from the volume flow every cylinder pushes out,
-        // delayed along its primary (monopole source: p = rho / (4 pi r) dQ/dt).
-        // The exhaust system's impulse response models the pipe to the tail.
-        // Big engines are then louder by physics.
-        bool m_physicalExhaustSound = false;
-
     protected:
         virtual void simulateStep_() override;
 
@@ -54,10 +46,11 @@ class PistonEngineSimulator : public Simulator {
         
     protected:
         virtual void writeToSynthesizer() override;
-        void writePhysicalExhaustSound();
+        void writeExhaustSound(double fade);
+        void writeIntakeSound(double fade);
+        void writeBlockSound(double fade);
 
     protected:
-        DelayFilter *m_delayFilters;
 
         atg_scs::FixedPositionConstraint *m_crankConstraints;
         atg_scs::ClutchConstraint *m_crankshaftLinks;
@@ -75,8 +68,11 @@ class PistonEngineSimulator : public Simulator {
         Vehicle *m_vehicle;
 
         double *m_exhaustFlowStagingBuffer;
+        double *m_lastCylinderPressure;
+        ButterworthLowPassFilter<double> m_blockStructureLowPass;
+        double m_soundFilterSampleRate;
         double *m_lastTailpipeVolumeFlow;
-        double m_delayFilterSampleRate;
+        double m_lastIntakeMouthVolumeFlow = 0.0;
 
         int m_fluidSimulationSteps;
 };

@@ -42,6 +42,9 @@ class ExhaustSystem : public Part {
 
         inline GasSystem *getSystem() { return &m_system; }
 
+        // Moles leaving for the atmosphere this simulation step: its sound.
+        double m_outletFlowThisStep = 0.0;
+
     protected:
         GasSystem m_atmosphere;
         GasSystem m_system;

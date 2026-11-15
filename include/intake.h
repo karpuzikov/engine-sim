@@ -70,6 +70,8 @@ class Intake : public Part {
 
         double m_flow;
         double m_flowRate;
+        // Moles drawn in through the mouth (throttle and idle circuit) this simulation step: its sound.
+        double m_mouthFlowThisStep = 0.0;
         double m_totalFuelInjected;
 
     protected:

@@ -38,6 +38,7 @@ Synthesizer::~Synthesizer() {
 
 void Synthesizer::initialize(const Parameters &p) {
     m_inputChannelCount = p.inputChannelCount;
+    m_firstDryChannel = p.firstDryChannel < 0 ? p.inputChannelCount : p.firstDryChannel;
     m_inputBufferSize = p.inputBufferSize;
     m_inputWriteOffset = p.inputBufferSize;
     m_audioBufferSize = p.audioBufferSize;
@@ -316,6 +317,12 @@ int16_t Synthesizer::renderAudio(int inputSample) {
 
     float signal = 0;
     for (int i = 0; i < m_inputChannelCount; ++i) {
+        if (i >= m_firstDryChannel) {
+            const float f_in = m_inputChannels[i].transferBuffer[inputSample];
+            const float f = f_in - m_filters[i].inputDcFilter.fast_f(f_in);
+            signal += convAmount * m_filters[i].convolution.f(f) + (1 - convAmount) * f;
+            continue;
+        }
         const float r_0 = 2.0 * ((double)rand() / RAND_MAX) - 1.0;
 
         const float jitteredSample =

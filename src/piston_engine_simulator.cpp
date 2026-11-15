@@ -12,7 +12,6 @@ PistonEngineSimulator::PistonEngineSimulator() {
     m_engine = nullptr;
     m_transmission = nullptr;
     m_vehicle = nullptr;
-    m_delayFilters = nullptr;
 
     m_crankConstraints = nullptr;
     m_cylinderWallConstraints = nullptr;
@@ -22,7 +21,8 @@ PistonEngineSimulator::PistonEngineSimulator() {
 
     m_exhaustFlowStagingBuffer = nullptr;
     m_lastTailpipeVolumeFlow = nullptr;
-    m_delayFilterSampleRate = 0.0;
+    m_lastCylinderPressure = nullptr;
+    m_soundFilterSampleRate = 0.0;
 
     m_derivativeFilter.m_dt = 1.0;
     m_fluidSimulationSteps = 8;
@@ -34,7 +34,6 @@ PistonEngineSimulator::~PistonEngineSimulator() {
     assert(m_linkConstraints == nullptr);
     assert(m_crankshaftFrictionConstraints == nullptr);
     assert(m_exhaustFlowStagingBuffer == nullptr);
-    assert(m_delayFilters == nullptr);
 }
 
 void PistonEngineSimulator::loadSimulation(Engine *engine, Vehicle *vehicle, Transmission *transmission) {
@@ -55,7 +54,6 @@ void PistonEngineSimulator::loadSimulation(Engine *engine, Vehicle *vehicle, Tra
     m_linkConstraints = new atg_scs::LinkConstraint[linkCount];
     m_crankshaftFrictionConstraints = new atg_scs::RotationFrictionConstraint[crankCount];
     m_crankshaftLinks = new atg_scs::ClutchConstraint[crankCount - 1];
-    m_delayFilters = new DelayFilter[cylinderCount];
 
     const double ks = 5000;
     const double kd = 10;
@@ -215,23 +213,13 @@ void PistonEngineSimulator::placeAndInitialize() {
             m_engine->getChamber(i)->getVolume(),
             units::celcius(25.0)
         );
-
-        Piston *piston = m_engine->getChamber(i)->getPiston();
-        CylinderHead *head = m_engine->getChamber(i)->getCylinderHead();
-        ExhaustSystem *exhaust = head->getExhaustSystem(piston->getCylinderIndex());
-        const double exhaustLength =
-            head->getHeaderPrimaryLength(piston->getCylinderIndex())
-            + exhaust->getLength();
-        const double speedOfSound = 343.0 * units::m / units::sec;
-        const double delay = exhaustLength / speedOfSound;
-        m_delayFilters[i].initialize(delay, 10000.0);
     }
 
     m_engine->getIgnitionModule()->reset();
 
-    m_exhaustFlowStagingBuffer = new double[m_engine->getExhaustSystemCount()];
+    m_exhaustFlowStagingBuffer = new double[m_engine->getExhaustSystemCount() + 2];
+    m_lastCylinderPressure = new double[m_engine->getCylinderCount()]();
     m_lastTailpipeVolumeFlow = new double[m_engine->getExhaustSystemCount()]();
-    m_delayFilterSampleRate = 10000.0;
 }
 
 void PistonEngineSimulator::placeCylinder(int i) {
@@ -301,8 +289,13 @@ void PistonEngineSimulator::simulateStep_() {
         m_engine->getChamber(i)->resetLastTimestepExhaustFlow();
         m_engine->getChamber(i)->resetLastTimestepIntakeFlow();
     }
-
+    for (int i = 0; i < m_engine->getIntakeCount(); ++i) {
+        m_engine->getIntake(i)->m_mouthFlowThisStep = 0.0;
+    }
     const int exhaustSystemCount = m_engine->getExhaustSystemCount();
+    for (int i = 0; i < exhaustSystemCount; ++i) {
+        m_engine->getExhaustSystem(i)->m_outletFlowThisStep = 0.0;
+    }
     const int intakeCount = m_engine->getIntakeCount();
     const double fluidTimestep = timestep / m_fluidSimulationSteps;
     for (int i = 0; i < m_fluidSimulationSteps; ++i) {
@@ -355,8 +348,9 @@ void PistonEngineSimulator::destroy() {
     if (m_crankshaftLinks != nullptr) delete[] m_crankshaftLinks;
     if (m_crankshaftFrictionConstraints != nullptr) delete[] m_crankshaftFrictionConstraints;
     if (m_exhaustFlowStagingBuffer != nullptr) delete[] m_exhaustFlowStagingBuffer;
+    if (m_lastCylinderPressure != nullptr) delete[] m_lastCylinderPressure;
+    m_lastCylinderPressure = nullptr;
     if (m_system != nullptr) delete m_system;
-    if (m_delayFilters != nullptr) delete[] m_delayFilters;
     if (m_lastTailpipeVolumeFlow != nullptr) delete[] m_lastTailpipeVolumeFlow;
     m_lastTailpipeVolumeFlow = nullptr;
 
@@ -371,111 +365,107 @@ void PistonEngineSimulator::destroy() {
     m_vehicle = nullptr;
     m_transmission = nullptr;
     m_engine = nullptr;
-    m_delayFilters = nullptr;
     Simulator::destroy();
 }
 
-void PistonEngineSimulator::writePhysicalExhaustSound() {
-    // Exhaust gas around 700 K: c = sqrt(1.33 * 287 J/(kg K) * 700 K).
-    constexpr double ExhaustGasSpeedOfSound = 517.0 * units::m / units::sec;
-    constexpr double AirDensity = 1.204 * units::kg / units::m3;
-    constexpr double ListenerDistance = 1.0 * units::m;
+// Engine sound is the sound pressure each source radiates 1 m away, from the simulated gas and pressures alone,
+// so one engine is louder than another for physical reasons only: how much gas it moves and how fast, and how
+// hard its cylinders' pressure rises. No script's volume settings enter it.
+namespace {
+constexpr double AirDensity = 1.204 * units::kg / units::m3;
+constexpr double ListenerDistance = 1.0 * units::m;
+// The air an intake draws, as volume: outside air at 25 C, 1 atm.
+constexpr double AmbientTemperature = units::celcius(25.0);
+constexpr double AmbientPressure = units::pressure(1.0, units::atm);
 
-    const double timestep = getTimestep();
-    const int cylinderCount = m_engine->getCylinderCount();
+// The intake mouth draws through an air box: an expansion chamber, whose transmission loss peaks at
+// 20 log10(m / 2) for an area ratio m (Munjal, "Acoustics of Ducts and Mufflers"); a box of ~16x its inlet's
+// area (300 vs 20 cm^2) takes 18 dB. The host's impulse response adds the box's low-pass shape.
+// shortcut: one area ratio for every engine; the cars' air boxes are not in their data.
+constexpr double AirBoxTransmission = 0.125; // -18 dB
+
+// An open pipe end is a monopole: p = rho / (4 pi r) dQ/dt for a volume flow Q.
+double monopoleSoundPressure(double volumeFlow, double lastVolumeFlow, double timestep) {
+    return AirDensity / (4.0 * constants::pi * ListenerDistance) * (volumeFlow - lastVolumeFlow) / timestep;
+}
+
+// Combustion noise through the engine structure (Kojima & Fukuda, "An analysis on combustion noise in engines",
+// Inst. of Acoustics): radiated power = G x the cylinder pressure's power on the chamber wall, so at r on a
+// hemisphere of area As = 2 pi r^2, p = sqrt(G Ac / As) x the cylinder pressure, Ac the chamber wall (here the
+// piston crown). G rises with frequency as the structure transmits better (their figures): here dp/dt, so
+// +6 dB/octave, normalised at 1 kHz, and a high-pass at 500 Hz under which the block barely moves.
+// One G for every engine, set by one measurement: a Scania 110 truck engine (turbo diesel) radiates about 86 dB(A)
+// (Priede, Commercial Motor 1971-07-16). Every engine here burns like a petrol engine (the owner's rule), and petrol
+// combustion excites the structure ~10 dB less than a turbo diesel's (petrol 16-23 dB, turbo diesel 8-12 dB under a
+// naturally aspirated diesel: Anderton, "I.C. engine combustion noise", Inst. of Acoustics), so this G gives the
+// 12.7-litre Scania DC13 ~76 dB(A) at 1 m at full load, 3/4 redline.
+constexpr double BlockTransmissionAt1kHz = 2.0e-10;
+constexpr double BlockStructureCornerHz = 500.0;
+constexpr double BlockTransmissionReferenceHz = 1000.0;
+} // namespace
+
+void PistonEngineSimulator::writeToSynthesizer() {
     const int exhaustSystemCount = m_engine->getExhaustSystemCount();
-    if (1.0 / timestep != m_delayFilterSampleRate) {
-        m_delayFilterSampleRate = 1.0 / timestep;
-        for (int i = 0; i < cylinderCount; ++i) {
-            Piston *piston = m_engine->getPiston(i);
-            CylinderHead *head = m_engine->getHead(piston->getCylinderBank()->getIndex());
-            // Only the primary: the exhaust system's own propagation belongs to
-            // its impulse response (the host's model of the real pipe).
-            const double primaryLength = head->getHeaderPrimaryLength(piston->getCylinderIndex());
-            m_delayFilters[i].initialize(primaryLength / ExhaustGasSpeedOfSound, m_delayFilterSampleRate);
-        }
-    }
-
-    for (int i = 0; i < exhaustSystemCount; ++i) {
+    for (int i = 0; i < exhaustSystemCount + 2; ++i) {
         m_exhaustFlowStagingBuffer[i] = 0;
     }
 
-    // Fade out below ~380 rpm, as the original signal does, so a stopped
-    // engine is silent.
+    // Fade out below ~380 rpm, as the original signal does, so a stopped engine is silent.
     const double attenuation = std::min(std::abs(filteredEngineSpeed()), 40.0) / 40.0;
-    const double attenuation_3 = attenuation * attenuation * attenuation;
-
-    for (int i = 0; i < cylinderCount; ++i) {
-        Piston *piston = m_engine->getPiston(i);
-        CylinderHead *head = m_engine->getHead(piston->getCylinderBank()->getIndex());
-        ExhaustSystem *exhaust = head->getExhaustSystem(piston->getCylinderIndex());
-        CombustionChamber *chamber = m_engine->getChamber(i);
-        const GasSystem &runner = chamber->m_exhaustRunnerAndPrimary;
-
-        // Moles leaving the cylinder this step, as volume at runner conditions.
-        const double molesPerSecond = chamber->getLastTimestepExhaustFlow() / timestep;
-        const double volumeFlow =
-            molesPerSecond * constants::R * runner.temperature() / runner.pressure();
-
-        m_exhaustFlowStagingBuffer[exhaust->getIndex()] +=
-            head->getSoundAttenuation(piston->getCylinderIndex())
-            * m_delayFilters[i].fast_f(volumeFlow);
-    }
-
-    for (int i = 0; i < exhaustSystemCount; ++i) {
-        const double tailpipeVolumeFlow = m_exhaustFlowStagingBuffer[i];
-        const double soundPressure = AirDensity / (4.0 * constants::pi * ListenerDistance)
-            * (tailpipeVolumeFlow - m_lastTailpipeVolumeFlow[i]) / timestep;
-        m_lastTailpipeVolumeFlow[i] = tailpipeVolumeFlow;
-        m_exhaustFlowStagingBuffer[i] =
-            attenuation_3 * m_engine->getExhaustSystem(i)->getAudioVolume() * soundPressure;
-    }
-
+    const double fade = attenuation * attenuation * attenuation;
+    writeExhaustSound(fade);
+    writeIntakeSound(fade);
+    writeBlockSound(fade);
     synthesizer().writeInput(m_exhaustFlowStagingBuffer);
 }
 
-void PistonEngineSimulator::writeToSynthesizer() {
-    if (m_physicalExhaustSound) {
-        writePhysicalExhaustSound();
-        return;
-    }
-
-    const int exhaustSystemCount = m_engine->getExhaustSystemCount();
-    for (int i = 0; i < exhaustSystemCount; ++i) {
-        m_exhaustFlowStagingBuffer[i] = 0;
-    }
-
-    const double attenuation = std::min(std::abs(filteredEngineSpeed()), 40.0) / 40.0;
-    const double attenuation_3 = attenuation * attenuation * attenuation;
-
+void PistonEngineSimulator::writeExhaustSound(double fade) {
+    // The tail pipe: the gas leaving each exhaust system for the atmosphere, as volume at the exhaust's conditions.
+    // The exhaust's own volume smooths each cylinder's blowdown as a real one does; its impulse response adds the
+    // pipe and silencers.
     const double timestep = getTimestep();
-    const int cylinderCount = m_engine->getCylinderCount();
-    for (int i = 0; i < cylinderCount; ++i) {
-        Piston *piston = m_engine->getPiston(i);
-        CylinderBank *bank = piston->getCylinderBank();
-        CylinderHead *head = m_engine->getHead(bank->getIndex());
-        ExhaustSystem *exhaust = head->getExhaustSystem(piston->getCylinderIndex());
-        CombustionChamber *chamber = m_engine->getChamber(i);
-
-        const double exhaustLength =
-            head->getHeaderPrimaryLength(piston->getCylinderIndex())
-            + exhaust->getLength();
-
-        double exhaustFlow =
-            attenuation_3 * 1600 * (
-                1.0 * (chamber->m_exhaustRunnerAndPrimary.pressure() - units::pressure(1.0, units::atm))
-                + 0.1 * chamber->m_exhaustRunnerAndPrimary.dynamicPressure(1.0, 0.0)
-                + 0.1 * chamber->m_exhaustRunnerAndPrimary.dynamicPressure(-1.0, 0.0));
-
-        const double delayedExhaustPulse =
-            m_delayFilters[i].fast_f(exhaustFlow);
-
-        ExhaustSystem *exhaustSystem = head->getExhaustSystem(piston->getCylinderIndex());
-        m_exhaustFlowStagingBuffer[exhaustSystem->getIndex()] +=
-            head->getSoundAttenuation(piston->getCylinderIndex())
-            * (exhaustSystem->getAudioVolume() * delayedExhaustPulse / cylinderCount)
-            * (1 / (exhaustLength * exhaustLength));
+    for (int i = 0; i < m_engine->getExhaustSystemCount(); ++i) {
+        ExhaustSystem *exhaust = m_engine->getExhaustSystem(i);
+        const GasSystem &gas = *exhaust->getSystem();
+        const double tailpipeVolumeFlow =
+            exhaust->m_outletFlowThisStep / timestep * constants::R * gas.temperature() / gas.pressure();
+        m_exhaustFlowStagingBuffer[i] =
+            fade * monopoleSoundPressure(tailpipeVolumeFlow, m_lastTailpipeVolumeFlow[i], timestep);
+        m_lastTailpipeVolumeFlow[i] = tailpipeVolumeFlow;
     }
+}
 
-    synthesizer().writeInput(m_exhaustFlowStagingBuffer);
+void PistonEngineSimulator::writeIntakeSound(double fade) {
+    // The intake mouth: the air drawn in through the throttle and idle circuit, as outside-air volume.
+    const double timestep = getTimestep();
+    double mouthVolumeFlow = 0.0;
+    for (int i = 0; i < m_engine->getIntakeCount(); ++i) {
+        mouthVolumeFlow +=
+            m_engine->getIntake(i)->m_mouthFlowThisStep / timestep * constants::R * AmbientTemperature / AmbientPressure;
+    }
+    m_exhaustFlowStagingBuffer[intakeSoundChannel()] =
+        fade * AirBoxTransmission * monopoleSoundPressure(mouthVolumeFlow, m_lastIntakeMouthVolumeFlow, timestep);
+    m_lastIntakeMouthVolumeFlow = mouthVolumeFlow;
+}
+
+void PistonEngineSimulator::writeBlockSound(double fade) {
+    const double timestep = getTimestep();
+    if (1.0 / timestep != m_soundFilterSampleRate) {
+        m_soundFilterSampleRate = 1.0 / timestep;
+        m_blockStructureLowPass.setCutoffFrequency(BlockStructureCornerHz, m_soundFilterSampleRate);
+    }
+    const double hemisphereArea = 2.0 * constants::pi * ListenerDistance * ListenerDistance;
+    double pressureRiseRateOnWalls = 0.0; // sum of sqrt(Ac) dp/dt over the cylinders
+    for (int i = 0; i < m_engine->getCylinderCount(); ++i) {
+        const double bore = m_engine->getPiston(i)->getCylinderBank()->getBore();
+        const double pistonArea = constants::pi * bore * bore / 4.0;
+        const double pressure = m_engine->getChamber(i)->m_system.pressure();
+        pressureRiseRateOnWalls += std::sqrt(pistonArea) * (pressure - m_lastCylinderPressure[i]) / timestep;
+        m_lastCylinderPressure[i] = pressure;
+    }
+    const double structureBorne =
+        pressureRiseRateOnWalls - m_blockStructureLowPass.fast_f(pressureRiseRateOnWalls);
+    m_exhaustFlowStagingBuffer[blockSoundChannel()] = fade
+        * std::sqrt(BlockTransmissionAt1kHz / hemisphereArea)
+        * structureBorne / (2.0 * constants::pi * BlockTransmissionReferenceHz);
 }

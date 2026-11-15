@@ -100,6 +100,8 @@ void Intake::process(double dt) {
     flowParams.k_flow = m_idleFlowK;
     const double idleCircuitFlow = m_system.flow(flowParams);
 
+    m_mouthFlowThisStep += m_flow + idleCircuitFlow;
+
     m_system.dissipateExcessVelocity();
     m_system.updateVelocity(dt, m_velocityDecay);
 

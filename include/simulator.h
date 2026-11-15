@@ -80,8 +80,14 @@ public:
     Dynamometer m_dyno;
     StarterMotor m_starterMotor;
 
+    // After the exhaust systems' channels: the intake's and the engine block's sound (dry channels, heard
+    // directly unless the host gives them an impulse response).
+    int intakeSoundChannel() const;
+    int blockSoundChannel() const;
+
 protected:
     void initializeSynthesizer();
+
     virtual void simulateStep_();
     virtual void writeToSynthesizer() = 0;
 
